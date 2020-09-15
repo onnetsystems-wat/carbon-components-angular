@@ -11,11 +11,11 @@ import {
 } from "@carbon/icons-angular";
 
 // internal module imports
-import { NFormsModule } from "carbon-components-angular/forms";
-import { DialogModule } from "carbon-components-angular/dialog";
-import { I18nModule } from "carbon-components-angular/i18n";
-import { ButtonModule } from "carbon-components-angular/button";
-import { SearchModule } from "carbon-components-angular/search";
+import { NFormsModule } from "@onnetsystems-wat/onnet-design-systems/forms";
+import { DialogModule } from "@onnetsystems-wat/onnet-design-systems/dialog";
+import { I18nModule } from "@onnetsystems-wat/onnet-design-systems/i18n";
+import { ButtonModule } from "@onnetsystems-wat/onnet-design-systems/button";
+import { SearchModule } from "@onnetsystems-wat/onnet-design-systems/search";
 
 // table utilities/toolbar imports
 import { TableToolbar } from "./toolbar/table-toolbar.component";

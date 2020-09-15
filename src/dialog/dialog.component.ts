@@ -18,9 +18,9 @@ import {
 import { throttleTime } from "rxjs/operators";
 // the AbsolutePosition is required to import the declaration correctly
 import Position, { position, AbsolutePosition, Positions } from "@carbon/utils-position";
-import { cycleTabs, getFocusElementList } from "carbon-components-angular/common";
+import { cycleTabs, getFocusElementList } from "@onnetsystems-wat/onnet-design-systems/common";
 import { DialogConfig } from "./dialog-config.interface";
-import { ElementService } from "carbon-components-angular/utils";
+import { ElementService } from "@onnetsystems-wat/onnet-design-systems/utils";
 
 /**
  * Implements a `Dialog` that can be positioned anywhere on the page.

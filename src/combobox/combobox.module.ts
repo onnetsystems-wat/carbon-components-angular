@@ -7,9 +7,9 @@ import {
 } from "@carbon/icons-angular";
 
 import { ComboBox } from "./combobox.component";
-import { DropdownModule, DropdownService } from "carbon-components-angular/dropdown";
-import { I18nModule } from "carbon-components-angular/i18n";
-import { UtilsModule } from "carbon-components-angular/utils";
+import { DropdownModule, DropdownService } from "@onnetsystems-wat/onnet-design-systems/dropdown";
+import { I18nModule } from "@onnetsystems-wat/onnet-design-systems/i18n";
+import { UtilsModule } from "@onnetsystems-wat/onnet-design-systems/utils";
 
 @NgModule({
 	declarations: [

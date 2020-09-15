@@ -23,9 +23,9 @@ import { NG_VALUE_ACCESSOR } from "@angular/forms";
 import { carbonFlatpickrMonthSelectPlugin } from "./carbon-flatpickr-month-select";
 import { Subscription } from "rxjs";
 import * as languages from "flatpickr/dist/l10n/index";
-import { DatePickerInput } from "carbon-components-angular/datepicker-input";
-import { ElementService } from "carbon-components-angular/utils";
-import { I18n } from "carbon-components-angular/i18n";
+import { DatePickerInput } from "@onnetsystems-wat/onnet-design-systems/datepicker-input";
+import { ElementService } from "@onnetsystems-wat/onnet-design-systems/utils";
+import { I18n } from "@onnetsystems-wat/onnet-design-systems/i18n";
 
 /**
  * [See demo](../../?path=/story/date-picker--single)

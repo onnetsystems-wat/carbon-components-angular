@@ -5,7 +5,7 @@ import { CommonModule } from "@angular/common";
 import { SearchModule as SearchIconModule, CloseModule } from "@carbon/icons-angular";
 
 // imports
-import { I18nModule } from "carbon-components-angular/i18n";
+import { I18nModule } from "@onnetsystems-wat/onnet-design-systems/i18n";
 import { Search } from "./search.component";
 
 @NgModule({

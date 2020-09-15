@@ -1,11 +1,11 @@
 {
-	"name": "carbon-components-angular",
+	"name": "@onnetsystems-wat/onnet-design-systems",
 	"version": "0.0.0",
 	"description": "Next generation components",
 	"main": "index.js",
 	"repository": {
 		"type": "git",
-		"url": "git@github.com:IBM/carbon-components-angular.git"
+		"url": "git@github.com:IBM/@onnetsystems-wat/onnet-design-systems.git"
 	},
 	"license": "Apache-2.0",
 	"author": "IBM",

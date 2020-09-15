@@ -4,7 +4,7 @@ import { FormsModule } from "@angular/forms";
 import { CommonModule } from "@angular/common";
 import { CopyModule, ChevronDownModule } from "@carbon/icons-angular";
 
-import { I18nModule } from "carbon-components-angular/i18n";
+import { I18nModule } from "@onnetsystems-wat/onnet-design-systems/i18n";
 
 // imports
 import { CodeSnippet } from "./code-snippet.component";

@@ -8,8 +8,8 @@ import {
 } from "@carbon/icons-angular";
 
 import { Pagination } from "./pagination.component";
-import { I18nModule } from "carbon-components-angular/i18n";
-import { ExperimentalModule } from "carbon-components-angular/experimental";
+import { I18nModule } from "@onnetsystems-wat/onnet-design-systems/i18n";
+import { ExperimentalModule } from "@onnetsystems-wat/onnet-design-systems/experimental";
 
 @NgModule({
 	declarations: [

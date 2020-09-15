@@ -2,7 +2,7 @@ import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 
 import { Slider } from "./slider.component";
-import { UtilsModule } from "carbon-components-angular/utils";
+import { UtilsModule } from "@onnetsystems-wat/onnet-design-systems/utils";
 
 @NgModule({
 	declarations: [Slider],

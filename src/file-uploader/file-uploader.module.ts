@@ -8,8 +8,8 @@ import {
 
 import { FileUploader } from "./file-uploader.component";
 import { FileComponent } from "./file.component";
-import { ButtonModule } from "carbon-components-angular/button";
-import { LoadingModule } from "carbon-components-angular/loading";
+import { ButtonModule } from "@onnetsystems-wat/onnet-design-systems/button";
+import { LoadingModule } from "@onnetsystems-wat/onnet-design-systems/loading";
 
 @NgModule({
 	declarations: [FileUploader, FileComponent],

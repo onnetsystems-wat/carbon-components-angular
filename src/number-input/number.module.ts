@@ -10,7 +10,7 @@ import {
 
 // imports
 import { Number } from "./number.component";
-import { I18nModule } from "carbon-components-angular/i18n";
+import { I18nModule } from "@onnetsystems-wat/onnet-design-systems/i18n";
 
 @NgModule({
 	declarations: [

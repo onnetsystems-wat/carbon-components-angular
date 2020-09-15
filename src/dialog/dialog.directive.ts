@@ -15,7 +15,7 @@ import {
 } from "@angular/core";
 import { DialogService } from "./dialog.service";
 import { DialogConfig } from "./dialog-config.interface";
-import { EventService } from "carbon-components-angular/utils";
+import { EventService } from "@onnetsystems-wat/onnet-design-systems/utils";
 import { Dialog } from "./dialog.component";
 
 /**

@@ -33,21 +33,21 @@ If you want to help improve the docs, it's a good idea to let others know what y
 
 ### Setup
 
-1. Fork the project by navigating to the main [repository](https://github.com/IBM/carbon-components-angular) and clicking the **Fork** button on the top-right corner.
+1. Fork the project by navigating to the main [repository](https://github.com/IBM/@onnetsystems-wat/onnet-design-systems) and clicking the **Fork** button on the top-right corner.
 
 2. Navigate to your forked repository and copy the **SSH url**. Clone your fork by running the following in your terminal:
 
    ```
-   $ git clone git@github.com:{ YOUR_USERNAME }/carbon-components-angular.git
-   $ cd carbon-components-angular
+   $ git clone git@github.com:{ YOUR_USERNAME }/@onnetsystems-wat/onnet-design-systems.git
+   $ cd @onnetsystems-wat/onnet-design-systems
    ```
 
    See [GitHub docs](https://help.github.com/articles/fork-a-repo/) for more details on forking a repository.
 
-3. Once cloned, you will see `origin` as your default remote, pointing to your personal forked repository. Add a remote named `upstream` pointing to the main `carbon-components-angular`:
+3. Once cloned, you will see `origin` as your default remote, pointing to your personal forked repository. Add a remote named `upstream` pointing to the main `@onnetsystems-wat/onnet-design-systems`:
 
    ```
-   $ git remote add upstream git@github.com:IBM/carbon-components-angular.git
+   $ git remote add upstream git@github.com:IBM/@onnetsystems-wat/onnet-design-systems.git
    $ git remote -v
    ```
 

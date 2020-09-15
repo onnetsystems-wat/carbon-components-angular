@@ -22,7 +22,7 @@
 			"./node_modules/@types"
 		],
 		"paths": {
-			"carbon-components-angular/*": [
+			"@onnetsystems-wat/onnet-design-systems/*": [
 				"./src/*/index"
 			]
 		}

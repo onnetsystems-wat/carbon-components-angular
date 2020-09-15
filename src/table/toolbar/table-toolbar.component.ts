@@ -5,7 +5,7 @@ import {
 	Input,
 	Output
 } from "@angular/core";
-import { I18n, Overridable } from "carbon-components-angular/i18n";
+import { I18n, Overridable } from "@onnetsystems-wat/onnet-design-systems/i18n";
 
 /**
  * The table toolbar is reserved for global table actions such as table settings, complex filter, export, or editing table data.

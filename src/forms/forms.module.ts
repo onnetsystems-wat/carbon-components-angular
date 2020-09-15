@@ -4,11 +4,11 @@ import { FormsModule } from "@angular/forms";
 import { CommonModule } from "@angular/common";
 
 // imports
-import { CheckboxModule } from "carbon-components-angular/checkbox";
-import { ToggleModule } from "carbon-components-angular/toggle";
-import { RadioModule } from "carbon-components-angular/radio";
-import { InputModule } from "carbon-components-angular/input";
-import { ButtonModule } from "carbon-components-angular/button";
+import { CheckboxModule } from "@onnetsystems-wat/onnet-design-systems/checkbox";
+import { ToggleModule } from "@onnetsystems-wat/onnet-design-systems/toggle";
+import { RadioModule } from "@onnetsystems-wat/onnet-design-systems/radio";
+import { InputModule } from "@onnetsystems-wat/onnet-design-systems/input";
+import { ButtonModule } from "@onnetsystems-wat/onnet-design-systems/button";
 
 @NgModule({
 	exports: [

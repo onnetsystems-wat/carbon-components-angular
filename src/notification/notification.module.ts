@@ -1,5 +1,5 @@
 import { NgModule } from "@angular/core";
-import { ButtonModule } from "carbon-components-angular/button";
+import { ButtonModule } from "@onnetsystems-wat/onnet-design-systems/button";
 import { CommonModule } from "@angular/common";
 import {
 	CloseModule,
@@ -18,9 +18,9 @@ import { NotificationSubtitle } from "./notification-subtitle.directive";
 import { Notification } from "./notification.component";
 import { NotificationService } from "./notification.service";
 import { NotificationDisplayService } from "./notification-display.service";
-import { I18nModule } from "carbon-components-angular/i18n";
-import { ExperimentalModule } from "carbon-components-angular/experimental";
-import { LinkModule } from "carbon-components-angular/link";
+import { I18nModule } from "@onnetsystems-wat/onnet-design-systems/i18n";
+import { ExperimentalModule } from "@onnetsystems-wat/onnet-design-systems/experimental";
+import { LinkModule } from "@onnetsystems-wat/onnet-design-systems/link";
 
 @NgModule({
 	declarations: [

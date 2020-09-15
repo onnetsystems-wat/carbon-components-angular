@@ -4,8 +4,8 @@ import {
 	EventEmitter,
 	Input
 } from "@angular/core";
-import { I18n } from "carbon-components-angular/i18n";
-import { ExperimentalService } from "carbon-components-angular/experimental";
+import { I18n } from "@onnetsystems-wat/onnet-design-systems/i18n";
+import { ExperimentalService } from "@onnetsystems-wat/onnet-design-systems/experimental";
 
 /**
  * ***Inputs***

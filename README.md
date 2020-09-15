@@ -3,11 +3,11 @@
 	<p align="center">
 	An Angular implementation of the Carbon Design System
 		<br /><br />
-		<a href="https://travis-ci.com/IBM/carbon-components-angular">
-			<img src="https://travis-ci.com/IBM/carbon-components-angular.svg?branch=master" />
+		<a href="https://travis-ci.com/IBM/@onnetsystems-wat/onnet-design-systems">
+			<img src="https://travis-ci.com/IBM/@onnetsystems-wat/onnet-design-systems.svg?branch=master" />
 		</a>
-		<a href="https://www.npmjs.com/package/carbon-components-angular">
-			<img src="https://img.shields.io/npm/v/carbon-components-angular.svg" />
+		<a href="https://www.npmjs.com/package/@onnetsystems-wat/onnet-design-systems">
+			<img src="https://img.shields.io/npm/v/@onnetsystems-wat/onnet-design-systems.svg" />
 		</a>
 		<img alt="semantic-release" src="https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg">
 		<a href="https://www.netlify.com" target="_blank">
@@ -23,7 +23,7 @@ Assuming we're starting with a new @angular/cli project:
 ```shell
 $ npx @angular/cli new my-project --style=scss
 $ cd my-project
-$ npm i --save carbon-components-angular carbon-components @carbon/icons-angular
+$ npm i --save @onnetsystems-wat/onnet-design-systems carbon-components @carbon/icons-angular
 ```
 
 Then we need to include carbon-components in `src/styles.scss`:
@@ -36,14 +36,14 @@ Then we need to include carbon-components in `src/styles.scss`:
 
 That's it! Now we can run `npm start` and start building out our application!
 
-> *Note:* This isn't the only way to bootstrap a `carbon-components-angular` application, but the combination of `@angular/cli` and the `carbon-components` scss is our recommended setup.
+> *Note:* This isn't the only way to bootstrap a `@onnetsystems-wat/onnet-design-systems` application, but the combination of `@angular/cli` and the `carbon-components` scss is our recommended setup.
 
 [![Edit Carbon Components Angular](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/0129r494ql)
 
 ### Contributing
 
 #### Quickstart
-- fork IBM/carbon-components-angular and clone it locally
+- fork IBM/@onnetsystems-wat/onnet-design-systems and clone it locally
 - run `npm install` to grab all the dependencies, then `npm run storybook` to start storybook
 - **if you are adding a component**:
   - add a folder with your component code, styles, tests and story under `src`
@@ -92,8 +92,8 @@ To keep our build dependencies local we use npm scripts to run our webpack, gulp
 - `npm test` to run tests
 
 ### Resources
- - [Style guide (WIP)](https://github.com/IBM/carbon-components-angular/wiki/Style-guide)
- - [General component API guidelines (WIP)](https://github.com/IBM/carbon-components-angular/wiki/Component-API-guidelines)
+ - [Style guide (WIP)](https://github.com/IBM/@onnetsystems-wat/onnet-design-systems/wiki/Style-guide)
+ - [General component API guidelines (WIP)](https://github.com/IBM/@onnetsystems-wat/onnet-design-systems/wiki/Component-API-guidelines)
  - [Angular style guide](https://angular.io/styleguide)
  - I18N tooling
 	- [I18N guide](https://angular.io/guide/i18n)

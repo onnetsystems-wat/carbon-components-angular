@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "carbon-components-angular": {
+    "@onnetsystems-wat/onnet-design-systems": {
       "root": "src",
       "sourceRoot": "src",
       "projectType": "library",
@@ -43,7 +43,7 @@
         }
       }
     },
-    "carbon-components-angular-e2e": {
+    "@onnetsystems-wat/onnet-design-systems-e2e": {
       "root": "e2e",
       "sourceRoot": "e2e",
       "projectType": "application",
@@ -52,7 +52,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "./protractor.conf.js",
-            "devServerTarget": "carbon-components-angular:serve"
+            "devServerTarget": "@onnetsystems-wat/onnet-design-systems:serve"
           }
         },
         "lint": {
@@ -69,7 +69,7 @@
       }
     }
   },
-  "defaultProject": "carbon-components-angular",
+  "defaultProject": "@onnetsystems-wat/onnet-design-systems",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "ibm",

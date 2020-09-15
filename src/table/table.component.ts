@@ -16,9 +16,9 @@ import { TableModel } from "./table-model.class";
 import { TableHeaderItem } from "./table-header-item.class";
 import { TableItem } from "./table-item.class";
 
-import { getFocusElementList, tabbableSelectorIgnoreTabIndex } from "carbon-components-angular/common";
-import { I18n, Overridable } from "carbon-components-angular/i18n";
-import { merge } from "carbon-components-angular/utils";
+import { getFocusElementList, tabbableSelectorIgnoreTabIndex } from "@onnetsystems-wat/onnet-design-systems/common";
+import { I18n, Overridable } from "@onnetsystems-wat/onnet-design-systems/i18n";
+import { merge } from "@onnetsystems-wat/onnet-design-systems/utils";
 import { DataGridInteractionModel } from "./data-grid-interaction-model.class";
 import { TableDomAdapter } from "./table-adapter.class";
 import { TableRowSize } from "./table.types";

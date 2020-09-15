@@ -4,7 +4,7 @@ import {
 	Output,
 	EventEmitter
 } from "@angular/core";
-import { ExperimentalService } from "carbon-components-angular/experimental";
+import { ExperimentalService } from "@onnetsystems-wat/onnet-design-systems/experimental";
 import { Step } from "./progress-indicator-step.interface";
 
 /**

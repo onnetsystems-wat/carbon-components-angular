@@ -24,10 +24,10 @@
 			"node"
 		],
 		"paths": {
-			"carbon-components-angular": [
+			"@onnetsystems-wat/onnet-design-systems": [
 				"./src/index"
 			],
-			"carbon-components-angular/*": [
+			"@onnetsystems-wat/onnet-design-systems/*": [
 				"./src/*/index"
 			]
 		},

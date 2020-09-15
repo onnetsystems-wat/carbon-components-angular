@@ -1,4 +1,4 @@
-Closes IBM/carbon-components-angular#
+Closes IBM/@onnetsystems-wat/onnet-design-systems#
 
 {{short description}}
 

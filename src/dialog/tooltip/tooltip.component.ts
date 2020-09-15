@@ -5,11 +5,11 @@ import {
 	ElementRef,
 	Optional
 } from "@angular/core";
-import { getFocusElementList } from "carbon-components-angular/common";
+import { getFocusElementList } from "@onnetsystems-wat/onnet-design-systems/common";
 
 import { Dialog } from "../dialog.component";
 import { position } from "@carbon/utils-position";
-import { ElementService } from "carbon-components-angular/utils";
+import { ElementService } from "@onnetsystems-wat/onnet-design-systems/utils";
 
 /**
  * Extend the `Dialog` component to create a tooltip for exposing content.

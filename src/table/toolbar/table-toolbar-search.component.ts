@@ -1,4 +1,4 @@
-import { Search } from "carbon-components-angular/search";
+import { Search } from "@onnetsystems-wat/onnet-design-systems/search";
 import {
 	Component,
 	HostBinding,

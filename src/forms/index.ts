@@ -8,28 +8,28 @@ export {
 	CheckboxChange,
 	CheckboxState,
 	CheckboxValue
-} from "carbon-components-angular/checkbox";
+} from "@onnetsystems-wat/onnet-design-systems/checkbox";
 export {
 	ToggleModule,
 	Toggle,
 	ToggleChange,
 	ToggleState
-} from "carbon-components-angular/toggle";
+} from "@onnetsystems-wat/onnet-design-systems/toggle";
 export {
 	RadioModule,
 	Radio,
 	RadioChange,
 	RadioGroup
-} from "carbon-components-angular/radio";
+} from "@onnetsystems-wat/onnet-design-systems/radio";
 export {
 	InputModule,
 	Label,
 	TextArea,
 	TextInput
-} from "carbon-components-angular/input";
+} from "@onnetsystems-wat/onnet-design-systems/input";
 export {
 	ButtonModule,
 	Button,
 	ButtonSize,
 	ButtonType
-} from "carbon-components-angular/button";
+} from "@onnetsystems-wat/onnet-design-systems/button";

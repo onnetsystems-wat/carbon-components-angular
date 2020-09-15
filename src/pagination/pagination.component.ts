@@ -6,9 +6,9 @@ import {
 	EventEmitter
 } from "@angular/core";
 
-import { I18n, Overridable } from "carbon-components-angular/i18n";
-import { ExperimentalService } from "carbon-components-angular/experimental";
-import { merge } from "carbon-components-angular/utils";
+import { I18n, Overridable } from "@onnetsystems-wat/onnet-design-systems/i18n";
+import { ExperimentalService } from "@onnetsystems-wat/onnet-design-systems/experimental";
+import { merge } from "@onnetsystems-wat/onnet-design-systems/utils";
 
 export interface PaginationTranslations {
 	ITEMS_PER_PAGE: string;

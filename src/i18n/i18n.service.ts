@@ -7,7 +7,7 @@ import {
 	Subscription
 } from "rxjs";
 import { map } from "rxjs/operators";
-import { merge } from "carbon-components-angular/utils";
+import { merge } from "@onnetsystems-wat/onnet-design-systems/utils";
 
 import EN from "./en";
 

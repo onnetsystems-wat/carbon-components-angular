@@ -11,7 +11,7 @@ import {
 	SimpleChanges,
 	OnChanges
 } from "@angular/core";
-import { cycleTabs, getFocusElementList } from "carbon-components-angular/common";
+import { cycleTabs, getFocusElementList } from "@onnetsystems-wat/onnet-design-systems/common";
 
 /**
  * Component to create modals for presenting content.

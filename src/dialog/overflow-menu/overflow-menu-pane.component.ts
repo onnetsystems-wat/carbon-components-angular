@@ -7,10 +7,10 @@ import {
 } from "@angular/core";
 import { Dialog } from "../dialog.component";
 import { position } from "@carbon/utils-position";
-import { isFocusInLastItem, isFocusInFirstItem } from "carbon-components-angular/common";
-import { I18n } from "carbon-components-angular/i18n";
-import { ExperimentalService } from "carbon-components-angular/experimental";
-import { ElementService } from "carbon-components-angular/utils";
+import { isFocusInLastItem, isFocusInFirstItem } from "@onnetsystems-wat/onnet-design-systems/common";
+import { I18n } from "@onnetsystems-wat/onnet-design-systems/i18n";
+import { ExperimentalService } from "@onnetsystems-wat/onnet-design-systems/experimental";
+import { ElementService } from "@onnetsystems-wat/onnet-design-systems/utils";
 
 /**
  * Extend the `Dialog` component to create an overflow menu.
