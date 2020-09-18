@@ -7,6 +7,9 @@ rm -rf dist
 # run the angular/ng-packagr build
 npm run ng:build
 
+#copy styles to dist
+cp -r ./src/styles ./dist/styles
+
 # move/generate/update meta files into dist
 gulp buildMeta
 
