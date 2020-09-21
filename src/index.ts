@@ -31,7 +31,6 @@ export * from "@onnetsystems-wat/onnet-design-systems/select";
 export * from "@onnetsystems-wat/onnet-design-systems/skeleton";
 export * from "@onnetsystems-wat/onnet-design-systems/slider";
 export * from "@onnetsystems-wat/onnet-design-systems/structured-list";
-export * from "@onnetsystems-wat/onnet-design-systems/structured-list";
 export * from "@onnetsystems-wat/onnet-design-systems/table";
 export * from "@onnetsystems-wat/onnet-design-systems/tabs";
 export * from "@onnetsystems-wat/onnet-design-systems/tag";

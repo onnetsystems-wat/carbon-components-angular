@@ -1,0 +1,22 @@
+
+//------------------------------
+// 🍕 Component style overrides
+//------------------------------
+
+@import '../globals/scss/vars';
+
+// Checkbox
+
+.bx--checkbox-label::before{
+  border: 1px solid $ui-03;
+  border-radius: 3px;
+}
+
+.#{$prefix}--checkbox:checked + .#{$prefix}--checkbox-label::before,
+.#{$prefix}--checkbox:indeterminate + .#{$prefix}--checkbox-label::before,
+.#{$prefix}--checkbox-label[data-contained-checkbox-state='true']::before,
+.#{$prefix}--checkbox-label[data-contained-checkbox-state='mixed']::before {
+  background-color: $active-primary;
+  border-color: $active-primary;
+  border-width: 1px;
+}
