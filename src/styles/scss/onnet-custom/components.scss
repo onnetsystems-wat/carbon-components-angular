@@ -5,9 +5,36 @@
 
 @import '../globals/scss/vars';
 
-// Checkbox
 
-.bx--checkbox-label::before{
+// Accordion
+.#{$prefix}--accordion__item {
+  border-bottom: 1px solid $ui-03;
+  border-top: 0;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+
+// Button
+.#{$prefix}--btn{
+  border-radius: 8px;
+}
+
+.#{$prefix}--btn--secondary{
+  background-color: $ui-01;
+  color: $text-01;
+  &:hover,
+  &:focus {
+    background: $hover-row;
+    color: $interactive-01;
+  }
+}
+
+
+// Checkbox
+.#{$prefix}--checkbox-label::before{
   border: 1px solid $ui-03;
   border-radius: 3px;
 }
@@ -20,3 +47,198 @@
   border-color: $active-primary;
   border-width: 1px;
 }
+
+
+// Code snippet
+.#{$prefix}--snippet{
+  border-radius: 8px;
+}
+
+.#{$prefix}--snippet--single{
+  border-radius: 0px;
+}
+
+
+// Date-Picker
+.#{$prefix}--date-picker__input {
+  border-bottom: 0;
+  border: 1px solid $ui-03;
+  border-radius: 6px;
+}
+
+.flatpickr-calendar.open {
+  background-color: $ui-02;
+  border-radius: 6px;
+}
+
+.flatpickr-prev-month,
+.flatpickr-next-month, .flatpickr-day {
+  border-radius: 4px;
+}
+
+.flatpickr-current-month .cur-month, .numInputWrapper {
+  border-radius: 2px;
+}
+
+
+// Dropdown
+.#{$prefix}--dropdown, .#{$prefix}--list-box, .#{$prefix}--list-box--light{
+  border-bottom: 0;
+  border: 1px solid $ui-03;
+}
+
+.#{$prefix}--dropdown, .#{$prefix}--dropdown--invalid,
+.#{$prefix}--dropdown--open .#{$prefix}--dropdown-list,
+.#{$prefix}--list-box {
+  border-radius: 6px;
+}
+
+.#{$prefix}--list-box__selection--multi {
+  background-color: $interactive-01;
+  border: none;
+}
+
+.#{$prefix}--list-box__selection--multi > svg:hover {
+  background-color: $hover-primary;
+}
+
+
+// File Uploader
+.#{$prefix}--file__drop-container, .#{$prefix}--file__selected-file {
+  border-radius: 8px;
+}
+
+.#{$prefix}--file-browse-btn {
+  &:hover,
+  &:focus {
+    outline: none;
+    .#{$prefix}--file__drop-container {
+      outline: none;
+      border: 2px dashed $interactive-01;
+    }
+  }
+}
+
+
+// Input
+.#{$prefix}--text-input, .#{$prefix}--text-area {
+  border-bottom: 0;
+  border: 1px solid $ui-03;
+  border-radius: 6px;
+}
+
+.#{$prefix}--text-input:disabled, .#{$prefix}--text-area:disabled {
+  border: 1px solid $ui-03;
+}
+
+
+// Modal
+.#{$prefix}--modal-container {
+  padding: $spacing-05;
+  border-radius: 8px;
+  background-color: $ui-background;
+}
+
+.#{$prefix}--modal-footer button.#{$prefix}--btn {
+  flex: 0 1 30%; 
+  margin-left: $spacing-02;
+}
+
+
+// Notification
+.#{$prefix}--inline-notification, .#{$prefix}--toast-notification {
+  border-radius: 8px;
+}
+
+
+// Number
+.#{$prefix}--number input[type='number'] {
+  border-bottom: 0;
+  border: 1px solid $ui-03;
+  border-radius: 6px;
+}
+
+.#{$prefix}--number input[type='number']:disabled {
+  border: 1px solid $ui-03;
+}
+
+
+// Pagination
+.#{$prefix}--pagination {
+  background: $ui-background;
+}
+
+
+// Radio
+.#{$prefix}--radio-button:checked
+  + .#{$prefix}--radio-button__label
+  .#{$prefix}--radio-button__appearance {
+    border-color: $interactive-01;
+    &::before {
+      background: $interactive-01;
+    }
+  }
+
+
+// Search
+.#{$prefix}--search-input {
+  border-bottom: 0;
+  border: 1px solid $ui-03;
+  border-radius: 6px;
+}
+
+.#{$prefix}--search-input:disabled {
+  border: 1px solid $ui-03;
+}
+
+
+// Table
+.#{$prefix}--data-table thead, .bx--data-table th, .bx--data-table th.bx--table-column-checkbox, .bx--table-sort,
+.#{$prefix}--data-table tbody, .#{$prefix}--data-table td, .#{$prefix}--data-table tbody th {
+  background-color: $ui-02;
+}
+
+.#{$prefix}--table-sort {
+  padding-right: $spacing-05;
+  padding-left: $spacing-05;
+  &:hover {
+    background-color: $ui-01 ;
+  }
+}
+
+.#{$prefix}--table-sort.#{$prefix}--table-sort--active {
+  background-color: $ui-02;
+  &:hover {
+    background-color: $ui-01 ;
+  }
+}
+
+.#{$prefix}--data-table--zebra
+  tbody
+  tr:not(.#{$prefix}--parent-row):nth-child(odd)
+  td {
+  background-color: $ui-01;
+  border-top: 1px solid $ui-01;
+  border-bottom: 1px solid $ui-01;
+}
+
+.#{$prefix}--data-table-header {
+  border-radius: 8px;
+}
+
+.#{$prefix}--toolbar-content {
+  background-color: $ui-background;
+}
+
+.#{$prefix}--table-toolbar {
+  background-color: $ui-background;
+  margin-top: $spacing-02;
+  margin-bottom: $spacing-02;
+}
+
+.#{$prefix}--toolbar-search-container-expandable .#{$prefix}--search .#{$prefix}--search-magnifier {
+  border-radius: 6px;
+}
+
+
+

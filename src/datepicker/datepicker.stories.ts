@@ -286,7 +286,7 @@ storiesOf("Components|Date Picker", module)
 				<button
 					ibmButton
 					(click)="single = [date]"
-					style="margin-left: 5px">
+					style="margin-left: 5px; margin-top: 5px">
 					Send date
 				</button>
 				<br>
@@ -309,7 +309,7 @@ storiesOf("Components|Date Picker", module)
 				<button
 					ibmButton
 					(click)="range = rangeDates"
-					style="margin-left: 5px">
+					style="margin-left: 5px; margin-top: 5px">
 					Send date
 				</button>
 				<br>

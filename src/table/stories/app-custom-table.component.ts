@@ -31,7 +31,7 @@ export class CustomHeaderItem extends TableHeaderItem {
 	template: `
 		<ibm-table-toolbar [model]="model">
 			<button ibmButton="primary" (click)="addRow()">Add row</button>
-			<button ibmButton="primary" (click)="addColumn()">Add column</button>
+			<button ibmButton="primary" (click)="addColumn()" style="margin-left: 4px">Add column</button>
 		</ibm-table-toolbar>
 
 		<ng-template #customTableItemTemplate let-data="data">
