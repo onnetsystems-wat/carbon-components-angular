@@ -32,7 +32,7 @@ import { Tab } from "./tab.component";
 			role="navigation"
 			[attr.aria-label]="ariaLabel"
 			[attr.aria-labelledby]="ariaLabelledby">
-			<div
+			<div style="display: none"
 				class="bx--tabs-trigger"
 				tabindex="0"
 				(click)="showTabList()"

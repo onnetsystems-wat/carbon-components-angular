@@ -69,9 +69,9 @@ export class Header {
 	 */
 	@Input() name: string;
 	/**
-	 * Top level branding. Defaults to "IBM"
+	 * Top level branding. Defaults to "Onnet"
 	 */
-	@Input() brand: string | TemplateRef<any> = "IBM";
+	@Input() brand: string | TemplateRef<any> = "Onnet";
 	/**
 	 * Optional link for the header
 	 */

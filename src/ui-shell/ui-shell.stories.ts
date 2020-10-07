@@ -56,13 +56,13 @@ storiesOf("Components|UI Shell", module)
 	.addDecorator(withKnobs)
 	.add("Header", () => ({
 		template: `
-			<ibm-header name="[Platform]">
+			<ibm-header name="Systems">
 				<ibm-hamburger *ngIf="hasHamburger" (click)="expanded($event)"></ibm-hamburger>
 				<ibm-header-navigation>
-					<ibm-header-item>Catalog</ibm-header-item>
-					<ibm-header-item isCurrentPage="true">Docs</ibm-header-item>
-					<ibm-header-item>Support</ibm-header-item>
-					<ibm-header-menu title="Manage">
+					<ibm-header-item>Home</ibm-header-item>
+					<ibm-header-item isCurrentPage="true">Users</ibm-header-item>
+					<ibm-header-item>Statistics</ibm-header-item>
+					<ibm-header-menu title="Settings">
 						<ibm-header-item>Link 1</ibm-header-item>
 						<ibm-header-item>Link 2</ibm-header-item>
 						<ibm-header-item>Link 3</ibm-header-item>
@@ -109,9 +109,7 @@ storiesOf("Components|UI Shell", module)
 
 			<ng-template #brandTemplate>
 				<a class="bx--header__name">
-					<ibm-icon-carbon size="32" style="stroke:white;fill:white"></ibm-icon-carbon>
-					<span class="bx--header__name--prefix">IBM</span>
-					[Platform]
+					<span class="bx--header__name--prefix">Onnet</span>
 				</a>
 			</ng-template>
 		`,

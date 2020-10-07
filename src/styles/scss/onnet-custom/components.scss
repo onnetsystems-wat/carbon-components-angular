@@ -241,4 +241,52 @@
 }
 
 
+// Tiles
+.#{$prefix}--tile, .#{$prefix}--tile--clickable, .bx--tile--selectable {
+  border-radius: 8px;
+  border: 1px solid transparent;
+}
+
+.#{$prefix}--tile--clickable, .bx--tile--selectable {
+  margin-bottom: 4px;
+}
+
+.#{$prefix}--tile--is-selected {
+  border: 1px solid $ui-05;
+  outline: none;
+  &:focus {
+    outline: none;
+  }
+}
+
+
+// Time picker
+.#{$prefix}--time-picker .#{$prefix}--select-input {
+  border-bottom: 0;
+  border: 1px solid $ui-03;
+  border-radius: 6px;
+}
+
+.#{$prefix}--time-picker .#{$prefix}--select-input:disabled {
+  border: 1px solid $ui-03;
+}
+
+
+// Toggle
+.#{$prefix}--toggle-input:checked + .#{$prefix}--toggle-input__label > .#{$prefix}--toggle__switch::before {
+  background-color: $support-04;
+}
+
+
+// Tooltip
+.#{$prefix}--tooltip {
+  border-radius: 8px;
+}
+.bx--tooltip__trigger.bx--tooltip__trigger--definition + .bx--assistive-text {
+  border-radius: 8px;
+}
+
+
+
+
 

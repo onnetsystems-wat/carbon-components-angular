@@ -2,7 +2,7 @@ import { storiesOf, moduleMetadata } from "@storybook/angular";
 import { withKnobs } from "@storybook/addon-knobs/angular";
 import { action } from "@storybook/addon-actions";
 
-import { TilesModule } from "../";
+import { TilesModule } from "../tiles";
 import { SkeletonModule } from "../skeleton/index";
 import { RouterModule } from "@angular/router";
 import { APP_BASE_HREF } from "@angular/common";
@@ -59,10 +59,10 @@ storiesOf("Components|Tiles", module)
 	.add("Multiple", () => ({
 		template: `
 		<div style="display: flex; flex-flow: row wrap; justify-content: space-around;">
-			<ibm-tile>
+			<ibm-tile style="margin-right: 4px">
 				Tile 1
 			</ibm-tile>
-			<ibm-tile>
+			<ibm-tile style="margin-right: 4px">
 				Tile 2
 			</ibm-tile>
 			<ibm-tile>
@@ -73,8 +73,8 @@ storiesOf("Components|Tiles", module)
 	}))
 	.add("Clickable", () => ({
 		template: `
-		<ibm-clickable-tile href="https://www.carbondesignsystem.com/" target="_blank">
-			Click the tile to open the Carbon Design System
+		<ibm-clickable-tile href="https://www.onnetsystems.net/" target="_blank">
+			Click the tile to open the Onnet website
 		</ibm-clickable-tile>
 		`
 	}))
