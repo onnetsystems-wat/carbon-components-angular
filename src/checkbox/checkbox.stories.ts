@@ -2,7 +2,7 @@ import { storiesOf, moduleMetadata } from "@storybook/angular";
 import { action } from "@storybook/addon-actions";
 import { withKnobs, boolean, text } from "@storybook/addon-knobs/angular";
 
-import { CheckboxModule } from "../";
+import { CheckboxModule } from "./";
 import { DocumentationModule } from "../documentation-component/documentation.module";
 
 storiesOf("Components|Checkbox", module).addDecorator(
@@ -15,26 +15,26 @@ storiesOf("Components|Checkbox", module).addDecorator(
 		template: `
 		<fieldset class="bx--fieldset">
 			<legend class="bx--label">{{label}}</legend>
-			<ibm-checkbox
+			<os-checkbox
 				checked="true"
 				[hideLabel]="hideLabel"
 				(change)="onChange($event)">
 				Checkbox
-			</ibm-checkbox>
-			<ibm-checkbox
+			</os-checkbox>
+			<os-checkbox
 				indeterminate="true"
 				(change)="onChange($event)"
 				[hideLabel]="hideLabel"
 				(indeterminateChange)="onIndeterminateChange($event)">
 				Indeterminate checkbox
-			</ibm-checkbox>
-			<ibm-checkbox
+			</os-checkbox>
+			<os-checkbox
 				disabled="true"
 				(change)="onChange($event)"
 				[hideLabel]="hideLabel"
 				(indeterminateChange)="onIndeterminateChange($event)">
 				Disabled checkbox
-			</ibm-checkbox>
+			</os-checkbox>
 		</fieldset>
 	`,
 		props: {
@@ -45,10 +45,10 @@ storiesOf("Components|Checkbox", module).addDecorator(
 		}
 	}))
 	.add("Skeleton", () => ({
-		template: `<ibm-checkbox skeleton="true"></ibm-checkbox>`
+		template: `<os-checkbox skeleton="true"></os-checkbox>`
 }))
 .add("Documentation", () => ({
 	template: `
-		<ibm-documentation src="documentation/components/Checkbox.html"></ibm-documentation>
+		<os-documentation src="documentation/components/Checkbox.html"></os-documentation>
 	`
 }));

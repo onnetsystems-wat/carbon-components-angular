@@ -9,11 +9,11 @@ import { CheckmarkOutlineModule, WarningModule } from "@carbon/icons-angular";
 import { Step } from "./progress-indicator-step.interface";
 
 @Component({
-	template: `<ibm-progress-indicator
+	template: `<os-progress-indicator
 					[steps]="steps"
 					[current]="current"
 					(stepSelected)="stepSelected.emit($event)">
-				</ibm-progress-indicator>`
+				</os-progress-indicator>`
 })
 class ProgressIndicatorTest {
 	steps = [
@@ -78,7 +78,7 @@ describe("ProgressIndicator", () => {
 	it("should set current to 2 and set current step to Third step", () => {
 		fixture = TestBed.createComponent(ProgressIndicatorTest);
 		fixture.detectChanges();
-		element = fixture.debugElement.query(By.css("ibm-progress-indicator"));
+		element = fixture.debugElement.query(By.css("os-progress-indicator"));
 		expect(element.componentInstance.current).toBe(2);
 		expect(element.nativeElement.querySelector(".bx--progress-step--current").textContent).toContain("Third step");
 	});
@@ -88,7 +88,7 @@ describe("ProgressIndicator", () => {
 		wrapper = fixture.componentInstance;
 		wrapper.current = 3;
 		fixture.detectChanges();
-		element = fixture.debugElement.query(By.css("ibm-progress-indicator"));
+		element = fixture.debugElement.query(By.css("os-progress-indicator"));
 		expect(element.nativeElement.querySelector(".bx--progress-step--current").textContent).toContain("Fourth step");
 		expect(element.nativeElement.querySelector(".bx--progress__warning")).toBeTruthy();
 	});
@@ -98,12 +98,12 @@ describe("ProgressIndicator", () => {
 		wrapper = fixture.componentInstance;
 		wrapper.current = 2;
 		fixture.detectChanges();
-		element = fixture.debugElement.query(By.css("ibm-progress-indicator"));
+		element = fixture.debugElement.query(By.css("os-progress-indicator"));
 		let tooltipTrigger = element.nativeElement.querySelector(".bx--progress-step--current .bx--tooltip__trigger");
 		tooltipTrigger.click();
 		fixture.detectChanges();
 		expect(tooltipTrigger.getAttribute("aria-expanded")).toEqual("true");
-		expect(element.nativeElement.querySelector("ibm-tooltip").textContent).toContain("Test");
+		expect(element.nativeElement.querySelector("os-tooltip").textContent).toContain("Test");
 	});
 
 	it("should emit the step and index when a step is clicked", () => {
@@ -113,7 +113,7 @@ describe("ProgressIndicator", () => {
 		let index = 2;
 		wrapper.current = index;
 		fixture.detectChanges();
-		element = fixture.debugElement.query(By.css("ibm-progress-indicator"));
+		element = fixture.debugElement.query(By.css("os-progress-indicator"));
 		let step = element.nativeElement.querySelector(".bx--progress-step--current .bx--progress-label");
 		step.click();
 		fixture.detectChanges();

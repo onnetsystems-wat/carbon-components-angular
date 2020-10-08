@@ -13,7 +13,7 @@ import { TableHeaderItem } from "../table-header-item.class";
 
 @Component({
 	// tslint:disable-next-line: component-selector
-	selector: "[ibmTableHeadCell]",
+	selector: "[osTableHeadCell]",
 	template: `
 		<button
 			class="bx--table-sort"
@@ -79,7 +79,7 @@ import { TableHeaderItem } from "../table-header-item.class";
 			type="button"
 			aria-expanded="false"
 			aria-haspopup="true"
-			[ibmTooltip]="column.filterTemplate"
+			[osTooltip]="column.filterTemplate"
 			trigger="click"
 			[title]="getFilterTitle() | async"
 			placement="bottom,top"

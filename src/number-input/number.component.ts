@@ -32,7 +32,7 @@ export class NumberChange {
  * <example-url>../../iframe.html?id=number--basic</example-url>
  */
 @Component({
-	selector: "ibm-number",
+	selector: "os-number",
 	template: `
 		<label *ngIf="skeleton && label" class="bx--label bx--skeleton"></label>
 		<label *ngIf="!skeleton && label" [for]="id" class="bx--label">

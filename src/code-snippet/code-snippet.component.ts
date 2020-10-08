@@ -19,13 +19,13 @@ export enum SnippetType {
  * [See demo](../../?path=/story/code-snippet--basic)
  *
  * ```html
- * <ibm-code-snippet>Code</ibm-code-snippet>
+ * <os-code-snippet>Code</os-code-snippet>
  * ```
  *
  * <example-url>../../iframe.html?id=code-snippet--basic</example-url>
  */
 @Component({
-	selector: "ibm-code-snippet",
+	selector: "os-code-snippet",
 	template: `
 		<ng-container *ngIf="display === 'inline'; else notInline">
 			<ng-container *ngTemplateOutlet="codeTemplate"></ng-container>

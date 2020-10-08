@@ -23,7 +23,7 @@ import { ScrollCustomEvent } from "./scroll-custom-event.interface";
 
 /**
  * ```html
- * <ibm-dropdown-list [items]="listItems"></ibm-dropdown-list>
+ * <os-dropdown-list [items]="listItems"></os-dropdown-list>
  * ```
  * ```typescript
  * listItems = [
@@ -47,7 +47,7 @@ import { ScrollCustomEvent } from "./scroll-custom-event.interface";
  * ```
  */
 @Component({
-	selector: "ibm-dropdown-list",
+	selector: "os-dropdown-list",
 	template: `
 		<ul
 			#list

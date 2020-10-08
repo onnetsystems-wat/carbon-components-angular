@@ -74,7 +74,7 @@ const getProps = (overrides = {}) => Object.assign({}, {
 	template: `
 		<form [formGroup]="formGroup">
 			<div style="width: 300px">
-				<ibm-dropdown
+				<os-dropdown
 					[label]="label"
 					[helperText]="helperText"
 					[invalid]="invalid"
@@ -86,8 +86,8 @@ const getProps = (overrides = {}) => Object.assign({}, {
 					(selected)="selected.emit($event)"
 					(onClose)="onClose.emit($event)"
 					formControlName="roles">
-					<ibm-dropdown-list [items]="items"></ibm-dropdown-list>
-				</ibm-dropdown>
+					<os-dropdown-list [items]="items"></os-dropdown-list>
+				</os-dropdown>
 			</div>
 		</form>
 
@@ -133,19 +133,19 @@ class ReactiveFormsStory implements OnInit {
 @Component({
 	selector: "app-dropdown-modal",
 	template: `
-        <ibm-modal [open]="true">
-            <ibm-modal-header>Header label</ibm-modal-header>
+        <os-modal [open]="true">
+            <os-modal-header>Header label</os-modal-header>
             <section class="bx--modal-content">
                 <h1>Sample modal works.</h1>
                 <p class="bx--modal-content__text">{{modalText}}</p>
                 <div style="width: 300px">
-					<ibm-dropdown placeholder="Select">
-						<ibm-dropdown-list [items]="items"></ibm-dropdown-list>
-					</ibm-dropdown>
+					<os-dropdown placeholder="Select">
+						<os-dropdown-list [items]="items"></os-dropdown-list>
+					</os-dropdown>
 				</div>
                 <p class="bx--modal-content__text">{{modalText}}</p>
             </section>
-        </ibm-modal>
+        </os-modal>
     `
 })
 class DropdownModal {
@@ -170,7 +170,7 @@ storiesOf("Components|Dropdown", module)
 	.add("Basic", () => ({
 		template: `
 		<div style="width: 300px">
-			<ibm-dropdown
+			<os-dropdown
 				[label]="label"
 				[helperText]="helperText"
 				[size]="size"
@@ -182,8 +182,8 @@ storiesOf("Components|Dropdown", module)
 				[disabled]="disabled"
 				(selected)="selected($event)"
 				(onClose)="onClose($event)">
-				<ibm-dropdown-list [items]="items"></ibm-dropdown-list>
-			</ibm-dropdown>
+				<os-dropdown-list [items]="items"></os-dropdown-list>
+			</os-dropdown>
 		</div>
 	`,
 		props: getProps()
@@ -191,7 +191,7 @@ storiesOf("Components|Dropdown", module)
 	.add("Multi-select", () => ({
 		template: `
 		<div style="width: 300px">
-			<ibm-dropdown
+			<os-dropdown
 				[label]="label"
 				[helperText]="helperText"
 				[size]="size"
@@ -204,8 +204,8 @@ storiesOf("Components|Dropdown", module)
 				[disabled]="disabled"
 				(selected)="selected($event)"
 				(onClose)="onClose($event)">
-				<ibm-dropdown-list [items]="items"></ibm-dropdown-list>
-			</ibm-dropdown>
+				<os-dropdown-list [items]="items"></os-dropdown-list>
+			</os-dropdown>
 		</div>
 	`,
 		props: {
@@ -216,7 +216,7 @@ storiesOf("Components|Dropdown", module)
 	.add("Multi-select with ngModel", () => ({
 		template: `
 		<div style="width: 300px">
-			<ibm-dropdown
+			<os-dropdown
 				type="multi"
 				[label]="label"
 				[helperText]="helperText"
@@ -229,8 +229,8 @@ storiesOf("Components|Dropdown", module)
 				[disabled]="disabled"
 				[(ngModel)]="model"
 				value="id">
-				<ibm-dropdown-list [items]="items"></ibm-dropdown-list>
-			</ibm-dropdown>
+				<os-dropdown-list [items]="items"></os-dropdown-list>
+			</os-dropdown>
 			<span>{{model | json}}</span>
 		</div>
 		`,
@@ -248,7 +248,7 @@ storiesOf("Components|Dropdown", module)
 	.add("With ngModel", () => ({
 		template: `
 		<div style="width: 300px">
-			<ibm-dropdown
+			<os-dropdown
 				[label]="label"
 				[helperText]="helperText"
 				[size]="size"
@@ -258,8 +258,8 @@ storiesOf("Components|Dropdown", module)
 				[disabled]="disabled"
 				[(ngModel)]="model"
 				value="content">
-				<ibm-dropdown-list [items]="items"></ibm-dropdown-list>
-			</ibm-dropdown>
+				<os-dropdown-list [items]="items"></os-dropdown-list>
+			</os-dropdown>
 			<span>{{model | json}}</span>
 		</div>
 		`,
@@ -313,7 +313,7 @@ storiesOf("Components|Dropdown", module)
 	.add("With Observable items", () => ({
 		template: `
 		<div style="width: 300px">
-			<ibm-dropdown
+			<os-dropdown
 				[label]="label"
 				[helperText]="helperText"
 				[invalid]="invalid"
@@ -324,8 +324,8 @@ storiesOf("Components|Dropdown", module)
 				[disabled]="disabled"
 				(selected)="selected($event)"
 				(onClose)="onClose($event)">
-				<ibm-dropdown-list [items]="items"></ibm-dropdown-list>
-			</ibm-dropdown>
+				<os-dropdown-list [items]="items"></os-dropdown-list>
+			</os-dropdown>
 		</div>
 	`,
 		props: getProps({
@@ -340,7 +340,7 @@ storiesOf("Components|Dropdown", module)
 	.add("With Template", () => ({
 		template: `
 		<div style="width: 300px;">
-			<ibm-dropdown
+			<os-dropdown
 				[theme]="theme"
 				placeholder="Select"
 				[displayValue]="dropdownRenderer"
@@ -350,8 +350,8 @@ storiesOf("Components|Dropdown", module)
 				[disabled]="disabled"
 				(selected)="selected($event)"
 				(onClose)="onClose($event)">
-				<ibm-dropdown-list [items]="items" [listTpl]="dropdownRenderer"></ibm-dropdown-list>
-			</ibm-dropdown>
+				<os-dropdown-list [items]="items" [listTpl]="dropdownRenderer"></os-dropdown-list>
+			</os-dropdown>
 			<ng-template #dropdownRenderer let-item="item">
 				<div *ngIf="item && item.content" style="font-size: 14px;">
 					<svg focusable="false" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg"
@@ -369,19 +369,19 @@ storiesOf("Components|Dropdown", module)
 	.add("Skeleton", () => ({
 		template: `
 		<div style="width: 300px">
-			<ibm-dropdown skeleton="true">
-				<ibm-dropdown-list [items]="items"></ibm-dropdown-list>
-			</ibm-dropdown>
+			<os-dropdown skeleton="true">
+				<os-dropdown-list [items]="items"></os-dropdown-list>
+			</os-dropdown>
 			&nbsp;
-			<ibm-dropdown skeleton="true" inline="true">
-				<ibm-dropdown-list [items]="items"></ibm-dropdown-list>
-			</ibm-dropdown>
+			<os-dropdown skeleton="true" inline="true">
+				<os-dropdown-list [items]="items"></os-dropdown-list>
+			</os-dropdown>
 		</div>
 		`,
 		props: getProps()
 	}))
 	.add("Documentation", () => ({
 		template: `
-			<ibm-documentation src="documentation/components/Dropdown.html"></ibm-documentation>
+			<os-documentation src="documentation/components/Dropdown.html"></os-documentation>
 		`
 	}));

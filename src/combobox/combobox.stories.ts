@@ -54,12 +54,12 @@ const getOptions = (override = {}) => {
 @Component({
 	selector: "app-dynamic-list-combobox",
 	template: `
-		<ibm-combo-box
+		<os-combo-box
 			[(items)]="items"
 			type="multi"
 			(selected)="updateSelected($event)">
-			<ibm-dropdown-list></ibm-dropdown-list>
-		</ibm-combo-box>
+			<os-dropdown-list></os-dropdown-list>
+		</os-combo-box>
 	`
 })
 class DynamicListComboBox implements AfterViewInit {
@@ -101,7 +101,7 @@ class DynamicListComboBox implements AfterViewInit {
 	selector: "app-reactive-combobox",
 	template: `
 		<form [formGroup]="sampleForm" (ngSubmit)="onSubmit(sampleForm)">
-			<ibm-combo-box
+			<os-combo-box
 				formControlName="combobox"
 				[size]="size"
 				[label]="label"
@@ -109,10 +109,10 @@ class DynamicListComboBox implements AfterViewInit {
 				itemValueKey="content"
 				[theme]="theme"
 				[items]="items">
-				<ibm-dropdown-list></ibm-dropdown-list>
-			</ibm-combo-box>
+				<os-dropdown-list></os-dropdown-list>
+			</os-combo-box>
 			selected: {{ sampleForm.get("combobox").value | json }}
-			<ibm-combo-box
+			<os-combo-box
 				style="margin-top: 40px"
 				formControlName="multibox"
 				[label]="label"
@@ -121,8 +121,8 @@ class DynamicListComboBox implements AfterViewInit {
 				[helperText]="helperText"
 				type="multi"
 				[items]="items">
-				<ibm-dropdown-list></ibm-dropdown-list>
-			</ibm-combo-box>
+				<os-dropdown-list></os-dropdown-list>
+			</os-combo-box>
 			selected: {{ sampleForm.get("multibox").value | json }}
 		</form>
 	`
@@ -151,12 +151,12 @@ class ReactiveFormsCombobox implements OnInit {
 @Component({
 	selector: "app-mock-query-search",
 	template: `
-		<ibm-combo-box
+		<os-combo-box
 			appendInline="true"
 			[items]="filterItems"
 			(search)="onSearch($event)">
-			<ibm-dropdown-list></ibm-dropdown-list>
-		</ibm-combo-box>
+			<os-dropdown-list></os-dropdown-list>
+		</os-combo-box>
 	`
 })
 class MockQueryCombobox {
@@ -177,17 +177,17 @@ class MockQueryCombobox {
 @Component({
 	selector: "app-combobox-modal",
 	template: `
-        <ibm-modal [open]="true" [hasScrollingContent]="false">
-            <ibm-modal-header>Header label</ibm-modal-header>
+        <os-modal [open]="true" [hasScrollingContent]="false">
+            <os-modal-header>Header label</os-modal-header>
             <section class="bx--modal-content">
                 <h1>Sample modal works.</h1>
                 <p class="bx--modal-content__text">{{modalText}}</p>
-                <ibm-combo-box [items]="items">
-					<ibm-dropdown-list></ibm-dropdown-list>
-				</ibm-combo-box>
+                <os-combo-box [items]="items">
+					<os-dropdown-list></os-dropdown-list>
+				</os-combo-box>
             </section>
-		</ibm-modal>
-		<ibm-placeholder></ibm-placeholder>
+		</os-modal>
+		<os-placeholder></os-placeholder>
     `
 })
 class ComboBoxModal {
@@ -218,7 +218,7 @@ storiesOf("Components|Combobox", module)
 	.add("Basic", () => ({
 		template: `
 			<div style="width: 300px">
-				<ibm-combo-box
+				<os-combo-box
 					[disabled]="disabled"
 					[invalid]="invalid"
 					[size]="size"
@@ -230,8 +230,8 @@ storiesOf("Components|Combobox", module)
 					(selected)="selected($event)"
 					(submit)="submit($event)"
 					(search)="search($event)">
-					<ibm-dropdown-list></ibm-dropdown-list>
-				</ibm-combo-box>
+					<os-dropdown-list></os-dropdown-list>
+				</os-combo-box>
 			</div>
 		`,
 		props: getOptions()
@@ -246,7 +246,7 @@ storiesOf("Components|Combobox", module)
 	.add("Basic with max length", () => ({
 		template: `
 			<div style="width: 300px">
-				<ibm-combo-box
+				<os-combo-box
 					[disabled]="disabled"
 					[invalid]="invalid"
 					[size]="size"
@@ -258,8 +258,8 @@ storiesOf("Components|Combobox", module)
 					(selected)="selected($event)"
 					(submit)="submit($event)"
 					[maxLength]="maxLength">
-					<ibm-dropdown-list></ibm-dropdown-list>
-				</ibm-combo-box>
+					<os-dropdown-list></os-dropdown-list>
+				</os-combo-box>
 			</div>
 		`,
 		props: {
@@ -270,7 +270,7 @@ storiesOf("Components|Combobox", module)
 	.add("With dynamic search", () => ({
 		template: `
 			<div style="width: 300px">
-				<ibm-combo-box
+				<os-combo-box
 					[disabled]="disabled"
 					[invalid]="invalid"
 					[size]="size"
@@ -281,8 +281,8 @@ storiesOf("Components|Combobox", module)
 					[theme]="theme"
 					(selected)="onSelected()"
 					(search)="onSearch($event)">
-					<ibm-dropdown-list></ibm-dropdown-list>
-				</ibm-combo-box>
+					<os-dropdown-list></os-dropdown-list>
+				</os-combo-box>
 			</div>
 		`,
 		props: getOptions({
@@ -305,7 +305,7 @@ storiesOf("Components|Combobox", module)
 	.add("With template", () => ({
 		template: `
 			<div style="width: 300px">
-				<ibm-combo-box
+				<os-combo-box
 					[disabled]="disabled"
 					[invalid]="invalid"
 					[invalidText]="invalidText"
@@ -316,8 +316,8 @@ storiesOf("Components|Combobox", module)
 					[theme]="theme"
 					(selected)="onSelected()"
 					(search)="onSearch($event)">
-					<ibm-dropdown-list></ibm-dropdown-list>
-				</ibm-combo-box>
+					<os-dropdown-list></os-dropdown-list>
+				</os-combo-box>
 
 				<ng-template #invalidText>
 					<div class="bx--form-requirement">This is a template</div>
@@ -344,7 +344,7 @@ storiesOf("Components|Combobox", module)
 	.add("Multi-select", () => ({
 		template: `
 			<div style="width: 300px">
-				<ibm-combo-box
+				<os-combo-box
 					[invalid]="invalid"
 					[invalidText]="invalidText"
 					[label]="label"
@@ -356,8 +356,8 @@ storiesOf("Components|Combobox", module)
 					type="multi"
 					(selected)="selected($event)"
 					(submit)="submit($event)">
-					<ibm-dropdown-list></ibm-dropdown-list>
-				</ibm-combo-box>
+					<os-dropdown-list></os-dropdown-list>
+				</os-combo-box>
 			</div>
 		`,
 		props: {
@@ -382,7 +382,7 @@ storiesOf("Components|Combobox", module)
 	.add("With submit", () => ({
 		template: `
 			<div style="width: 300px">
-				<ibm-combo-box
+				<os-combo-box
 					[invalid]="invalid"
 					[invalidText]="invalidText"
 					[label]="label"
@@ -394,8 +394,8 @@ storiesOf("Components|Combobox", module)
 					type="multi"
 					(selected)="selected($event)"
 					(submit)="submit($event)">
-					<ibm-dropdown-list></ibm-dropdown-list>
-				</ibm-combo-box>
+					<os-dropdown-list></os-dropdown-list>
+				</os-combo-box>
 			</div>
 		`,
 		props: {
@@ -417,7 +417,7 @@ storiesOf("Components|Combobox", module)
 	.add("With ngModel", () => ({
 		template: `
 			<div style="width: 300px">
-				<ibm-combo-box
+				<os-combo-box
 					[invalid]="invalid"
 					[invalidText]="invalidText"
 					[label]="label"
@@ -429,8 +429,8 @@ storiesOf("Components|Combobox", module)
 					[(ngModel)]="model"
 					(selected)="selected($event)"
 					(submit)="submit($event)">
-					<ibm-dropdown-list></ibm-dropdown-list>
-				</ibm-combo-box>
+					<os-dropdown-list></os-dropdown-list>
+				</os-combo-box>
 
 				<p>model: {{model | json}}</p>
 			</div>
@@ -452,6 +452,6 @@ storiesOf("Components|Combobox", module)
 	}))
 	.add("Documentation", () => ({
 		template: `
-			<ibm-documentation src="documentation/components/ComboBox.html"></ibm-documentation>
+			<os-documentation src="documentation/components/ComboBox.html"></os-documentation>
 		`
 	}));

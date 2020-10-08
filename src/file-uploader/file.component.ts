@@ -11,7 +11,7 @@ import { I18n } from "@onnetsystems-wat/onnet-design-systems/i18n";
 import { FileItem } from "./file-item.interface";
 
 @Component({
-	selector: "ibm-file",
+	selector: "os-file",
 	template: `
 		<p class="bx--file-filename">{{fileItem.file.name}}</p>
 		<span
@@ -34,7 +34,7 @@ import { FileItem } from "./file-item.interface";
 		</span>
 		<span *ngIf="fileItem.state === 'upload'">
 			<div class="bx--inline-loading__animation">
-				<ibm-loading size="sm"></ibm-loading>
+				<os-loading size="sm"></os-loading>
 			</div>
 		</span>
 		<span

@@ -10,16 +10,16 @@ import { ExperimentalService } from "@onnetsystems-wat/onnet-design-systems/expe
 /**
  * ***Inputs***
  * ```html
- * <ibm-modal-header>Header text</ibm-modal-header>
+ * <os-modal-header>Header text</os-modal-header>
  * ```
  *
  * ***Outputs***
  * ```html
- * <ibm-modal-header (closeSelect)="closeModal()">Header text</ibm-modal-header>
+ * <os-modal-header (closeSelect)="closeModal()">Header text</os-modal-header>
  * ```
  */
 @Component({
-	selector: "ibm-modal-header",
+	selector: "os-modal-header",
 	template: `
 		<header class="{{theme}} bx--modal-header">
 			<ng-content></ng-content>

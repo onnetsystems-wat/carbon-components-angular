@@ -9,7 +9,7 @@ import {
  * Contained by `HeaderGlobal`. Generally used to trigger `Panel`s
  */
 @Component({
-	selector: "ibm-header-action",
+	selector: "os-header-action",
 	template: `
 		<button
 			class="bx--header__action"

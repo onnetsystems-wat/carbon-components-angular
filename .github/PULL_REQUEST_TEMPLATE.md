@@ -1,4 +1,4 @@
-Closes IBM/@onnetsystems-wat/onnet-design-systems#
+Closes os/@onnetsystems-wat/onnet-design-systems#
 
 {{short description}}
 

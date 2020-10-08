@@ -25,16 +25,16 @@ storiesOf("Components|Time Picker", module)
 	.addDecorator(withKnobs)
 	.add("Simple", () => ({
 		template: `
-		<ibm-timepicker [theme]="theme" (valueChange)="timePickerChange($event)" [value]="value" [disabled]="disableTime" label="Select a time">
-			<ibm-timepicker-select [theme]="theme" (valueChange)="timePickerSelectChange($event)" [disabled]="disabledSelect" display="inline">
+		<os-timepicker [theme]="theme" (valueChange)="timePickerChange($event)" [value]="value" [disabled]="disableTime" label="Select a time">
+			<os-timepicker-select [theme]="theme" (valueChange)="timePickerSelectChange($event)" [disabled]="disabledSelect" display="inline">
 				<option selected value="AM">AM</option>
 				<option value="PM">PM</option>
-			</ibm-timepicker-select>
-			<ibm-timepicker-select [theme]="theme" (valueChange)="timePickerSelectChange($event)" [disabled]="disabledSelect" display="inline">
+			</os-timepicker-select>
+			<os-timepicker-select [theme]="theme" (valueChange)="timePickerSelectChange($event)" [disabled]="disabledSelect" display="inline">
 				<option selected value="Time Zone 1">Time Zone 1</option>
 				<option value="Time Zone 2">Time Zone 2</option>
-			</ibm-timepicker-select>
-		</ibm-timepicker>
+			</os-timepicker-select>
+		</os-timepicker>
 
 		`,
 		props: {
@@ -48,12 +48,12 @@ storiesOf("Components|Time Picker", module)
 	}))
 	.add("With ngModel", () => ({
 		template: `
-		<ibm-timepicker [theme]="theme"
+		<os-timepicker [theme]="theme"
 			(valueChange)="timePickerChange($event)"
 			[(ngModel)]="model"
 			[disabled]="disableTime"
 			label="Select a time">
-			<ibm-timepicker-select
+			<os-timepicker-select
 				[theme]="theme"
 				(valueChange)="timePickerSelectChange($event)"
 				[disabled]="disabledSelect"
@@ -61,8 +61,8 @@ storiesOf("Components|Time Picker", module)
 				[(ngModel)]="period">
 				<option selected value="AM">AM</option>
 				<option value="PM">PM</option>
-			</ibm-timepicker-select>
-			<ibm-timepicker-select
+			</os-timepicker-select>
+			<os-timepicker-select
 				[theme]="theme"
 				(valueChange)="timePickerSelectChange($event)"
 				[disabled]="disabledSelect"
@@ -70,8 +70,8 @@ storiesOf("Components|Time Picker", module)
 				[(ngModel)]="timeZone">
 				<option selected value="Time Zone 1">Time Zone 1</option>
 				<option value="Time Zone 2">Time Zone 2</option>
-			</ibm-timepicker-select>
-		</ibm-timepicker>
+			</os-timepicker-select>
+		</os-timepicker>
 		<br>
 		<span> Input: {{model}} </span>
 		<span> Period: {{period}} </span>
@@ -90,6 +90,6 @@ storiesOf("Components|Time Picker", module)
 	}))
 	.add("Documentation", () => ({
 		template: `
-			<ibm-documentation src="documentation/components/TimePicker.html"></ibm-documentation>
+			<os-documentation src="documentation/components/TimePicker.html"></os-documentation>
 		`
 	}));

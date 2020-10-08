@@ -11,7 +11,7 @@ import { Tab } from "./tab.component";
 import { EventEmitter } from "@angular/core";
 
 @Component({
-	selector: "ibm-tab-header",
+	selector: "os-tab-header",
 	template: `
 		<li
 			[ngClass]="{

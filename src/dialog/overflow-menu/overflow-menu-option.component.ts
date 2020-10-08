@@ -13,15 +13,15 @@ import {
  *
  * Presently it has three possible states - normal, disabled, and danger:
  * ```
- * <ibm-overflow-menu-option>Simple option</ibm-overflow-menu-option>
- * <ibm-overflow-menu-option disabled="true">Disabled</ibm-overflow-menu-option>
- * <ibm-overflow-menu-option type="danger">Danger option</ibm-overflow-menu-option>
+ * <os-overflow-menu-option>Simple option</os-overflow-menu-option>
+ * <os-overflow-menu-option disabled="true">Disabled</os-overflow-menu-option>
+ * <os-overflow-menu-option type="danger">Danger option</os-overflow-menu-option>
  * ```
  *
  * For content that expands beyond the overflow menu `OverflowMenuOption` automatically adds a title attribute.
  */
 @Component({
-	selector: "ibm-overflow-menu-option",
+	selector: "os-overflow-menu-option",
 	template: `
 		<button
 			*ngIf="!href"

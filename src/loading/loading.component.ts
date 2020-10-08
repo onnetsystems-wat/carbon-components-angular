@@ -7,7 +7,7 @@ import { I18n } from "@onnetsystems-wat/onnet-design-systems/i18n";
  * <example-url>../../iframe.html?id=loading--basic</example-url>
  */
 @Component({
-	selector: "ibm-loading",
+	selector: "os-loading",
 	template: `
 		<div
 			[ngClass]="{

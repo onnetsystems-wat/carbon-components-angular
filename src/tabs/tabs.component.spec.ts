@@ -9,11 +9,11 @@ import { TabHeaders } from "./tab-headers.component";
 
 @Component({
 	template: `
-		<ibm-tabs [followFocus]="followFocus" [isNavigation]="isNavigation">
-			<ibm-tab heading="one" (selected)="onSelected()">Tab Content 1</ibm-tab>
-			<ibm-tab heading="two">Tab Content 2</ibm-tab>
-			<ibm-tab heading="three">Tab Content 3</ibm-tab>
-		</ibm-tabs>
+		<os-tabs [followFocus]="followFocus" [isNavigation]="isNavigation">
+			<os-tab heading="one" (selected)="onSelected()">Tab Content 1</os-tab>
+			<os-tab heading="two">Tab Content 2</os-tab>
+			<os-tab heading="three">Tab Content 3</os-tab>
+		</os-tabs>
 	`
 })
 class TabsTest {
@@ -49,7 +49,7 @@ describe("Sample", () => {
 	beforeEach(() => {
 		fixture = TestBed.createComponent(TabsTest);
 		wrapper = fixture.componentInstance;
-		element = fixture.debugElement.query(By.css("ibm-tabs"));
+		element = fixture.debugElement.query(By.css("os-tabs"));
 		fixture.detectChanges();
 	});
 
@@ -71,7 +71,7 @@ describe("Sample", () => {
 
 	it("should increment currentSelectedTab on right arrow and decrement on left arrow", () => {
 		const navItem = element.nativeElement.querySelector(".bx--tabs__nav-item");
-		const tabHeaders = fixture.debugElement.query(By.css("ibm-tab-headers"));
+		const tabHeaders = fixture.debugElement.query(By.css("os-tab-headers"));
 
 		navItem.click();
 		expect(tabHeaders.componentInstance.currentSelectedTab).toBe(0);
@@ -88,7 +88,7 @@ describe("Sample", () => {
 
 	it("should set currentSelectedTab to the first tab on arrowRight when done on the last tab", () => {
 		const navItem = element.nativeElement.querySelector(".bx--tabs__nav-item");
-		const tabHeaders = fixture.debugElement.query(By.css("ibm-tab-headers"));
+		const tabHeaders = fixture.debugElement.query(By.css("os-tab-headers"));
 
 		navItem.click();
 
@@ -102,7 +102,7 @@ describe("Sample", () => {
 
 	it("should set currentSelectedTab to the last tab on left arrow when done on the first tab", () => {
 		const navItem = element.nativeElement.querySelector(".bx--tabs__nav-item");
-		const tabHeaders = fixture.debugElement.query(By.css("ibm-tab-headers"));
+		const tabHeaders = fixture.debugElement.query(By.css("os-tab-headers"));
 		navItem.click();
 		tabHeaders.nativeElement.dispatchEvent(arrowLeft);
 		fixture.detectChanges();
@@ -119,7 +119,7 @@ describe("Sample", () => {
 		fixture = TestBed.createComponent(TabsTest);
 		wrapper = fixture.componentInstance;
 		wrapper.isNavigation = false;
-		element = fixture.debugElement.query(By.css("ibm-tabs"));
+		element = fixture.debugElement.query(By.css("os-tabs"));
 		fixture.detectChanges();
 		element.componentInstance.tabs.forEach(tab => {
 			expect(tab.tabIndex).toBe(0);
@@ -127,7 +127,7 @@ describe("Sample", () => {
 	});
 
 	it("should set tabListVisible to true when tabs trigger is clicked", () => {
-		let tabHeaders = fixture.debugElement.query(By.css("ibm-tab-headers"));
+		let tabHeaders = fixture.debugElement.query(By.css("os-tab-headers"));
 		fixture.detectChanges();
 		let tabsTrigger = tabHeaders.nativeElement.querySelector(".bx--tabs-trigger");
 		tabsTrigger.click();

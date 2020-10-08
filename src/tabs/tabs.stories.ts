@@ -6,39 +6,39 @@ import { Component, Input } from "@angular/core";
 import { DocumentationModule } from "../documentation-component/documentation.module";
 
 @Component({
-	selector: "ibm-header-group",
+	selector: "os-header-group",
 	template: `
-		<ibm-tab-header-group
+		<os-tab-header-group
 			[type]="type"
 			[followFocus]="followFocus"
 			[cacheActive]="cacheActive"
 			[isNavigation]="isNavigation">
-			<ibm-tab-header [paneReference]="content1">
+			<os-tab-header [paneReference]="content1">
 				Content 1
-			</ibm-tab-header>
-			<ibm-tab-header [paneReference]="content2">
+			</os-tab-header>
+			<os-tab-header [paneReference]="content2">
 				Content 2
-			</ibm-tab-header>
-			<ibm-tab-header [paneReference]="content3" disabled="true">
+			</os-tab-header>
+			<os-tab-header [paneReference]="content3" disabled="true">
 				Content 3
-			</ibm-tab-header>
-			<ibm-tab-header [paneReference]="content4">
+			</os-tab-header>
+			<os-tab-header [paneReference]="content4">
 				Content 4
-			</ibm-tab-header>
-		</ibm-tab-header-group>
+			</os-tab-header>
+		</os-tab-header-group>
 
-		<ibm-tab #content1>
+		<os-tab #content1>
 			Tab Content 1
-		</ibm-tab>
-		<ibm-tab #content2>
+		</os-tab>
+		<os-tab #content2>
 			Tab Content 2
-		</ibm-tab>
-		<ibm-tab #content3>
+		</os-tab>
+		<os-tab #content3>
 			Tab Content 3
-		</ibm-tab>
-		<ibm-tab #content4>
+		</os-tab>
+		<os-tab #content4>
 			Tab Content 4
-		</ibm-tab>
+		</os-tab>
 	`
 })
 class TabStory {
@@ -61,12 +61,12 @@ storiesOf("Components|Tabs", module)
 	.addDecorator(withKnobs)
 	.add("Basic", () => ({
 		template: `
-			<ibm-tabs [followFocus]="followFocus" [isNavigation]="isNavigation" [cacheActive]="cacheActive">
-				<ibm-tab heading="one">Tab Content 1</ibm-tab>
-				<ibm-tab heading="two">Tab Content 2</ibm-tab>
-				<ibm-tab heading="three">Tab Content 3</ibm-tab>
-				<ibm-tab heading="four" disabled="true">Tab Content 4</ibm-tab>
-			</ibm-tabs>
+			<os-tabs [followFocus]="followFocus" [isNavigation]="isNavigation" [cacheActive]="cacheActive">
+				<os-tab heading="one">Tab Content 1</os-tab>
+				<os-tab heading="two">Tab Content 2</os-tab>
+				<os-tab heading="three">Tab Content 3</os-tab>
+				<os-tab heading="four" disabled="true">Tab Content 4</os-tab>
+			</os-tabs>
 		`,
 		props: {
 			followFocus: boolean("followFocus", true),
@@ -76,12 +76,12 @@ storiesOf("Components|Tabs", module)
 	}))
 	.add("Container", () => ({
 		template: `
-			<ibm-tabs type="container" [followFocus]="followFocus" [isNavigation]="isNavigation" [cacheActive]="cacheActive">
-				<ibm-tab heading="one">Tab Content 1</ibm-tab>
-				<ibm-tab heading="two">Tab Content 2</ibm-tab>
-				<ibm-tab heading="three">Tab Content 3</ibm-tab>
-				<ibm-tab heading="four" disabled="true">Tab Content 4</ibm-tab>
-			</ibm-tabs>
+			<os-tabs type="container" [followFocus]="followFocus" [isNavigation]="isNavigation" [cacheActive]="cacheActive">
+				<os-tab heading="one">Tab Content 1</os-tab>
+				<os-tab heading="two">Tab Content 2</os-tab>
+				<os-tab heading="three">Tab Content 3</os-tab>
+				<os-tab heading="four" disabled="true">Tab Content 4</os-tab>
+			</os-tabs>
 		`,
 		props: {
 			followFocus: boolean("followFocus", true),
@@ -105,10 +105,10 @@ storiesOf("Components|Tabs", module)
 					</svg>
 				</div>
 			</ng-template>
-			<ibm-tabs [type]="type" [followFocus]="followFocus" [isNavigation]="isNavigation">
-				<ibm-tab *ngFor="let item of data; let i = index;" [heading]="customTabs" [context]="item">Tab Content {{i + 1}}</ibm-tab>
-				<ibm-tab [heading]="iconTab">Tab Content Custom</ibm-tab>
-			</ibm-tabs>
+			<os-tabs [type]="type" [followFocus]="followFocus" [isNavigation]="isNavigation">
+				<os-tab *ngFor="let item of data; let i = index;" [heading]="customTabs" [context]="item">Tab Content {{i + 1}}</os-tab>
+				<os-tab [heading]="iconTab">Tab Content Custom</os-tab>
+			</os-tabs>
 		`,
 		props: {
 			followFocus: boolean("followFocus", true),
@@ -124,24 +124,24 @@ storiesOf("Components|Tabs", module)
 	.add("Width before and after content", () => ({
 		template: `
 			<div style="font-weight: 600; padding-bottom: 10px; padding-top: 20px;">before</div>
-			<ibm-tabs [type]="type" [followFocus]="followFocus" [isNavigation]="isNavigation">
-				<ibm-tab heading="one">foo</ibm-tab>
-				<ibm-tab heading="two">bar</ibm-tab>
+			<os-tabs [type]="type" [followFocus]="followFocus" [isNavigation]="isNavigation">
+				<os-tab heading="one">foo</os-tab>
+				<os-tab heading="two">bar</os-tab>
 				<span before>content before</span>
-			</ibm-tabs>
+			</os-tabs>
 			<div style="font-weight: 600; padding-bottom: 10px; padding-top: 20px;">after</div>
-			<ibm-tabs [type]="type" [followFocus]="followFocus" [isNavigation]="isNavigation">
-				<ibm-tab heading="one">foo</ibm-tab>
-				<ibm-tab heading="two">bar</ibm-tab>
+			<os-tabs [type]="type" [followFocus]="followFocus" [isNavigation]="isNavigation">
+				<os-tab heading="one">foo</os-tab>
+				<os-tab heading="two">bar</os-tab>
 				<span after>content after</span>
-			</ibm-tabs>
+			</os-tabs>
 			<div style="font-weight: 600; padding-bottom: 10px; padding-top: 20px;">both</div>
-			<ibm-tabs [type]="type" [followFocus]="followFocus" [isNavigation]="isNavigation">
-				<ibm-tab heading="one">foo</ibm-tab>
-				<ibm-tab heading="two">bar</ibm-tab>
+			<os-tabs [type]="type" [followFocus]="followFocus" [isNavigation]="isNavigation">
+				<os-tab heading="one">foo</os-tab>
+				<os-tab heading="two">bar</os-tab>
 				<span before>content before</span>
 				<span after>content after</span>
-			</ibm-tabs>
+			</os-tabs>
 		`,
 		props: {
 			followFocus: boolean("followFocus", true),
@@ -151,12 +151,12 @@ storiesOf("Components|Tabs", module)
 	}))
 	.add("With TabHeaderGroup", () => ({
 		template: `
-			<ibm-header-group
+			<os-header-group
 				[type]="type"
 				[followFocus]="followFocus"
 				[cacheActive]="cacheActive"
 				[isNavigation]="isNavigation">
-			</ibm-header-group>
+			</os-header-group>
 		`,
 		props: {
 			followFocus: boolean("followFocus", true),
@@ -167,14 +167,14 @@ storiesOf("Components|Tabs", module)
 	}))
 	.add("Skeleton", () => ({
 		template: `
-			<ibm-tabs skeleton="true">
-				<ibm-tab></ibm-tab>
-				<ibm-tab></ibm-tab>
-			</ibm-tabs>
+			<os-tabs skeleton="true">
+				<os-tab></os-tab>
+				<os-tab></os-tab>
+			</os-tabs>
 		`
 	}))
 	.add("Documentation", () => ({
 		template: `
-			<ibm-documentation src="documentation/components/Tabs.html"></ibm-documentation>
+			<os-documentation src="documentation/components/Tabs.html"></os-documentation>
 		`
 	}));

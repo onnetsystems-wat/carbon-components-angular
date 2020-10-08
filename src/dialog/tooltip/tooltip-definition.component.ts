@@ -1,7 +1,7 @@
 import { Component, Input, HostBinding } from "@angular/core";
 
 @Component({
-	selector: "ibm-tooltip-definition",
+	selector: "os-tooltip-definition",
 	template: `
 		<button
 			type="button"

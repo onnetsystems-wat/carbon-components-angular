@@ -31,7 +31,7 @@ import { Observable } from "rxjs";
  * <example-url>../../iframe.html?id=combobox--basic</example-url>
  */
 @Component({
-	selector: "ibm-combo-box",
+	selector: "os-combo-box",
 	template: `
 		<label
 			*ngIf="label"

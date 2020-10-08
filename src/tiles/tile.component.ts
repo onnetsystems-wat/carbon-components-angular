@@ -11,15 +11,15 @@ import {
  * ## Basic usage
  *
  * ```html
- * <ibm-tile>
+ * <os-tile>
  * 		tile content
- * </ibm-tile>
+ * </os-tile>
  * ```
  *
  * <example-url>../../iframe.html?id=tiles--basic</example-url>
  */
 @Component({
-	selector: "ibm-tile",
+	selector: "os-tile",
 	template: `<ng-content></ng-content>`
 })
 export class Tile {

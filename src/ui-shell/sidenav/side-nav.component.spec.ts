@@ -17,13 +17,13 @@ class FooComponent {}
 
 @Component({
 	template: `
-		<ibm-sidenav [allowExpansion]="allowExpansion" [hidden]="hidden">
-			<ibm-sidenav-menu title="Example Title"></ibm-sidenav-menu>
-			<ibm-sidenav-item
+		<os-sidenav [allowExpansion]="allowExpansion" [hidden]="hidden">
+			<os-sidenav-menu title="Example Title"></os-sidenav-menu>
+			<os-sidenav-item
 				[route]="route"
 				(navigation)="onNavigation($event)">
-			</ibm-sidenav-item>
-		</ibm-sidenav>
+			</os-sidenav-item>
+		</os-sidenav>
 	`
 })
 class SideNavTest {
@@ -100,7 +100,7 @@ describe("SideNav", () => {
 	it("should set the sidenav-menu title to Example Title", () => {
 		fixture = TestBed.createComponent(SideNavTest);
 		fixture.detectChanges();
-		element = fixture.debugElement.query(By.css("ibm-sidenav-menu"));
+		element = fixture.debugElement.query(By.css("os-sidenav-menu"));
 		expect(element.nativeElement.textContent).toEqual("Example Title");
 	});
 
@@ -109,7 +109,7 @@ describe("SideNav", () => {
 		wrapper = fixture.componentInstance;
 		wrapper.allowExpansion = true;
 		fixture.detectChanges();
-		element = fixture.debugElement.query(By.css("ibm-sidenav"));
+		element = fixture.debugElement.query(By.css("os-sidenav"));
 		let sidenavButton = element.nativeElement.querySelector(".bx--side-nav__toggle");
 		element.componentInstance.expanded = false;
 		sidenavButton.click();

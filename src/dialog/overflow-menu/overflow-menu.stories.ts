@@ -38,40 +38,40 @@ storiesOf("Components|Overflow Menu", module)
 		template: `
 			<div>
 				<h1 style="margin-bottom: 1rem">Bottom placement</h1>
-				<ibm-overflow-menu
+				<os-overflow-menu
 					[flip]="flip"
 					[offset]="offset">
-					<ibm-overflow-menu-option (selected)="selected($event)" (click)="click($event)">
+					<os-overflow-menu-option (selected)="selected($event)" (click)="click($event)">
 						An example option that is really long to show what should be done to handle long text
-					</ibm-overflow-menu-option>
-					<ibm-overflow-menu-option (selected)="selected($event)">Option 2</ibm-overflow-menu-option>
+					</os-overflow-menu-option>
+					<os-overflow-menu-option (selected)="selected($event)">Option 2</os-overflow-menu-option>
 					<li class="bx--overflow-menu-options__option">
 						<button class="bx--overflow-menu-options__btn">A fully custom option</button>
 					</li>
-					<ibm-overflow-menu-option (selected)="selected($event)">Option 4</ibm-overflow-menu-option>
-					<ibm-overflow-menu-option disabled="true" (selected)="selected($event)">Disabled</ibm-overflow-menu-option>
-					<ibm-overflow-menu-option type="danger" (selected)="selected($event)">Danger option</ibm-overflow-menu-option>
-				</ibm-overflow-menu>
-				<ibm-placeholder></ibm-placeholder>
+					<os-overflow-menu-option (selected)="selected($event)">Option 4</os-overflow-menu-option>
+					<os-overflow-menu-option disabled="true" (selected)="selected($event)">Disabled</os-overflow-menu-option>
+					<os-overflow-menu-option type="danger" (selected)="selected($event)">Danger option</os-overflow-menu-option>
+				</os-overflow-menu>
+				<os-placeholder></os-placeholder>
 			</div>
 			<div style="margin-top: 8rem">
 				<h1 style="margin-bottom: 1rem">Top placement</h1>
-				<ibm-overflow-menu
+				<os-overflow-menu
 					[flip]="flip"
 					placement="top"
 					[offset]="offset">
-					<ibm-overflow-menu-option (selected)="selected($event)" (click)="click($event)">
+					<os-overflow-menu-option (selected)="selected($event)" (click)="click($event)">
 						An example option that is really long to show what should be done to handle long text
-					</ibm-overflow-menu-option>
-					<ibm-overflow-menu-option (selected)="selected($event)">Option 2</ibm-overflow-menu-option>
+					</os-overflow-menu-option>
+					<os-overflow-menu-option (selected)="selected($event)">Option 2</os-overflow-menu-option>
 					<li class="bx--overflow-menu-options__option">
 						<button class="bx--overflow-menu-options__btn">A fully custom option</button>
 					</li>
-					<ibm-overflow-menu-option (selected)="selected($event)">Option 4</ibm-overflow-menu-option>
-					<ibm-overflow-menu-option disabled="true" (selected)="selected($event)">Disabled</ibm-overflow-menu-option>
-					<ibm-overflow-menu-option type="danger" (selected)="selected($event)">Danger option</ibm-overflow-menu-option>
-				</ibm-overflow-menu>
-				<ibm-placeholder></ibm-placeholder>
+					<os-overflow-menu-option (selected)="selected($event)">Option 4</os-overflow-menu-option>
+					<os-overflow-menu-option disabled="true" (selected)="selected($event)">Disabled</os-overflow-menu-option>
+					<os-overflow-menu-option type="danger" (selected)="selected($event)">Danger option</os-overflow-menu-option>
+				</os-overflow-menu>
+				<os-placeholder></os-placeholder>
 			</div>
 		`,
 		props: {
@@ -85,40 +85,40 @@ storiesOf("Components|Overflow Menu", module)
 		template: `
 			<div>
 				<h1 style="margin-bottom: 1rem">Bottom placement</h1>
-				<ibm-overflow-menu
+				<os-overflow-menu
 					[flip]="flip"
 					[offset]="offset">
-					<ibm-overflow-menu-option href="https://www.ibm.com" (selected)="selected($event)" (click)="click($event)">
+					<os-overflow-menu-option href="https://www.os.com" (selected)="selected($event)" (click)="click($event)">
 						An example option that is really long to show what should be done to handle long text
-					</ibm-overflow-menu-option>
-					<ibm-overflow-menu-option href="https://www.ibm.com" (selected)="selected($event)">Option 2</ibm-overflow-menu-option>
-					<ibm-overflow-menu-option href="https://www.ibm.com" (selected)="selected($event)">Option 3</ibm-overflow-menu-option>
-					<ibm-overflow-menu-option href="https://www.ibm.com" (selected)="selected($event)">Option 4</ibm-overflow-menu-option>
-					<ibm-overflow-menu-option href="https://www.ibm.com" disabled="true" (selected)="selected($event)">Disabled</ibm-overflow-menu-option>
-					<ibm-overflow-menu-option href="https://www.ibm.com" type="danger" (selected)="selected($event)">
+					</os-overflow-menu-option>
+					<os-overflow-menu-option href="https://www.os.com" (selected)="selected($event)">Option 2</os-overflow-menu-option>
+					<os-overflow-menu-option href="https://www.os.com" (selected)="selected($event)">Option 3</os-overflow-menu-option>
+					<os-overflow-menu-option href="https://www.os.com" (selected)="selected($event)">Option 4</os-overflow-menu-option>
+					<os-overflow-menu-option href="https://www.os.com" disabled="true" (selected)="selected($event)">Disabled</os-overflow-menu-option>
+					<os-overflow-menu-option href="https://www.os.com" type="danger" (selected)="selected($event)">
 						Danger option
-					</ibm-overflow-menu-option>
-				</ibm-overflow-menu>
+					</os-overflow-menu-option>
+				</os-overflow-menu>
 			</div>
 			<div style="margin-top: 8rem">
 				<h1 style="margin-bottom: 1rem">Top placement</h1>
-				<ibm-overflow-menu
+				<os-overflow-menu
 					[flip]="flip"
 					placement="top"
 					[offset]="offset">
-					<ibm-overflow-menu-option href="https://www.ibm.com" (selected)="selected($event)" (click)="click($event)">
+					<os-overflow-menu-option href="https://www.os.com" (selected)="selected($event)" (click)="click($event)">
 						An example option that is really long to show what should be done to handle long text
-					</ibm-overflow-menu-option>
-					<ibm-overflow-menu-option href="https://www.ibm.com" (selected)="selected($event)">Option 2</ibm-overflow-menu-option>
-					<ibm-overflow-menu-option href="https://www.ibm.com" (selected)="selected($event)">Option 3</ibm-overflow-menu-option>
-					<ibm-overflow-menu-option href="https://www.ibm.com" (selected)="selected($event)">Option 4</ibm-overflow-menu-option>
-					<ibm-overflow-menu-option href="https://www.ibm.com" disabled="true" (selected)="selected($event)">Disabled</ibm-overflow-menu-option>
-					<ibm-overflow-menu-option href="https://www.ibm.com" type="danger" (selected)="selected($event)">
+					</os-overflow-menu-option>
+					<os-overflow-menu-option href="https://www.os.com" (selected)="selected($event)">Option 2</os-overflow-menu-option>
+					<os-overflow-menu-option href="https://www.os.com" (selected)="selected($event)">Option 3</os-overflow-menu-option>
+					<os-overflow-menu-option href="https://www.os.com" (selected)="selected($event)">Option 4</os-overflow-menu-option>
+					<os-overflow-menu-option href="https://www.os.com" disabled="true" (selected)="selected($event)">Disabled</os-overflow-menu-option>
+					<os-overflow-menu-option href="https://www.os.com" type="danger" (selected)="selected($event)">
 						Danger option
-					</ibm-overflow-menu-option>
-				</ibm-overflow-menu>
+					</os-overflow-menu-option>
+				</os-overflow-menu>
 			</div>
-			<ibm-placeholder></ibm-placeholder>
+			<os-placeholder></os-placeholder>
 		`,
 		props: {
 			click: () => console.log("click"),
@@ -130,17 +130,17 @@ storiesOf("Components|Overflow Menu", module)
 	.add("With custom trigger", () => ({
 		template: `
 				<span>Overflow menu with custom trigger icon</span>
-				<ibm-overflow-menu
+				<os-overflow-menu
 					[flip]="flip"
 					[customTrigger]="customTrigger"
 					placement="bottom"
 					[offset]="offset">
-					<ibm-overflow-menu-option (selected)="selected($event)" (click)="click($event)">Option 1</ibm-overflow-menu-option>
-					<ibm-overflow-menu-option (selected)="selected($event)">Option 2</ibm-overflow-menu-option>
-					<ibm-overflow-menu-option disabled="true" (selected)="selected($event)">Disabled</ibm-overflow-menu-option>
-					<ibm-overflow-menu-option type="danger" (selected)="selected($event)">Danger option</ibm-overflow-menu-option>
-				</ibm-overflow-menu>
-				<ibm-placeholder></ibm-placeholder>
+					<os-overflow-menu-option (selected)="selected($event)" (click)="click($event)">Option 1</os-overflow-menu-option>
+					<os-overflow-menu-option (selected)="selected($event)">Option 2</os-overflow-menu-option>
+					<os-overflow-menu-option disabled="true" (selected)="selected($event)">Disabled</os-overflow-menu-option>
+					<os-overflow-menu-option type="danger" (selected)="selected($event)">Danger option</os-overflow-menu-option>
+				</os-overflow-menu>
+				<os-placeholder></os-placeholder>
 				<ng-template #customTrigger><svg ibmIconDocument size="16"></svg></ng-template>
 		`,
 		props: {
@@ -157,11 +157,11 @@ storiesOf("Components|Overflow Menu", module)
 				using the <code style="font-family: monospace;">optionCount</code> knob <br/>
 				to change the number of menu options
 			</span>
-			<ibm-overflow-menu [offset]="offset">
-				<ibm-overflow-menu-option *ngFor="let option of options(optionCount)">
+			<os-overflow-menu [offset]="offset">
+				<os-overflow-menu-option *ngFor="let option of options(optionCount)">
 					{{option}}
-				</ibm-overflow-menu-option>
-			</ibm-overflow-menu>
+				</os-overflow-menu-option>
+			</os-overflow-menu>
 		`,
 		props: {
 			optionCount: number("optionCount", 10),
@@ -171,19 +171,19 @@ storiesOf("Components|Overflow Menu", module)
 	}))
 	.add("Programmatically", () => ({
 		template: `
-			<ibm-overflow-menu [flip]="flip" [open]="open">
-				<ibm-overflow-menu-option (selected)="selected($event)" (click)="click($event)">
+			<os-overflow-menu [flip]="flip" [open]="open">
+				<os-overflow-menu-option (selected)="selected($event)" (click)="click($event)">
 					An example option that is really long to show what should be done to handle long text
-				</ibm-overflow-menu-option>
-				<ibm-overflow-menu-option (selected)="selected($event)">Option 2</ibm-overflow-menu-option>
+				</os-overflow-menu-option>
+				<os-overflow-menu-option (selected)="selected($event)">Option 2</os-overflow-menu-option>
 				<li class="bx--overflow-menu-options__option">
 					<button class="bx--overflow-menu-options__btn">A fully custom option</button>
 				</li>
-				<ibm-overflow-menu-option (selected)="selected($event)">Option 4</ibm-overflow-menu-option>
-				<ibm-overflow-menu-option disabled="true" (selected)="selected($event)">Disabled</ibm-overflow-menu-option>
-				<ibm-overflow-menu-option type="danger" (selected)="selected($event)">Danger option</ibm-overflow-menu-option>
-			</ibm-overflow-menu>
-			<ibm-placeholder></ibm-placeholder>
+				<os-overflow-menu-option (selected)="selected($event)">Option 4</os-overflow-menu-option>
+				<os-overflow-menu-option disabled="true" (selected)="selected($event)">Disabled</os-overflow-menu-option>
+				<os-overflow-menu-option type="danger" (selected)="selected($event)">Danger option</os-overflow-menu-option>
+			</os-overflow-menu>
+			<os-placeholder></os-placeholder>
 		`,
 		props: {
 			open: boolean("Open", false)
@@ -191,6 +191,6 @@ storiesOf("Components|Overflow Menu", module)
 	}))
 	.add("Documentation", () => ({
 		template: `
-			<ibm-documentation src="documentation/components/OverflowMenu.html"></ibm-documentation>
+			<os-documentation src="documentation/components/OverflowMenu.html"></os-documentation>
 		`
 	}));

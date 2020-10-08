@@ -18,7 +18,7 @@ storiesOf("Components|Search", module).addDecorator(
 	.addDecorator(withKnobs)
 	.add("Basic", () => ({
 		template: `
-			<ibm-search
+			<os-search
 				[theme]="theme"
 				[placeholder]="placeholder"
 				[autocomplete]="autocomplete"
@@ -26,7 +26,7 @@ storiesOf("Components|Search", module).addDecorator(
 				[size]="size"
 				(valueChange)="valueChange($event)"
 				(clear)="clear()">
-			</ibm-search>
+			</os-search>
 		`,
 		props: {
 			size: select("size", ["sm", "md", "xl"], "md"),
@@ -41,21 +41,21 @@ storiesOf("Components|Search", module).addDecorator(
 	.add("Toolbar search", () => ({
 		template: `
 		<div class="bx--toolbar">
-			<ibm-search placeholder="search" size="sm" toolbar="true"></ibm-search>
+			<os-search placeholder="search" size="sm" toolbar="true"></os-search>
 		</div>
 		`
 	}))
 	.add("Skeleton", () => ({
 		template: `
 		<div style="width: 200px;">
-			<ibm-search skeleton="true"></ibm-search>
+			<os-search skeleton="true"></os-search>
 			&nbsp;
-			<ibm-search skeleton="true" size="sm"></ibm-search>
+			<os-search skeleton="true" size="sm"></os-search>
 		</div>
 		`
 	}))
 	.add("Documentation", () => ({
 		template: `
-			<ibm-documentation src="documentation/components/Search.html"></ibm-documentation>
+			<os-documentation src="documentation/components/Search.html"></os-documentation>
 		`
 	}));

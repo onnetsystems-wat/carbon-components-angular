@@ -33,8 +33,8 @@ import { EventService } from "@onnetsystems-wat/onnet-design-systems/utils";
  * <example-url>../../iframe.html?id=tooltip--basic</example-url>
  */
 @Directive({
-	selector: "[ibmTooltip]",
-	exportAs: "ibmTooltip",
+	selector: "[osTooltip]",
+	exportAs: "osTooltip",
 	providers: [
 		DialogService
 	]
@@ -43,7 +43,7 @@ export class TooltipDirective extends DialogDirective {
 	/**
 	 * The string or template content to be exposed by the tooltip.
 	 */
-	@Input() ibmTooltip: string | TemplateRef<any>;
+	@Input() osTooltip: string | TemplateRef<any>;
 	/**
 	 * Set tooltip type to reflect 'warning' or 'error' styles.
 	 */
@@ -72,7 +72,7 @@ export class TooltipDirective extends DialogDirective {
 	}
 
 	updateConfig() {
-		this.dialogConfig.content = this.ibmTooltip;
+		this.dialogConfig.content = this.osTooltip;
 		this.dialogConfig.type = this.tooltipType;
 		this.dialogConfig.offset = this.offset;
 	}

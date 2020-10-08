@@ -16,7 +16,7 @@ import { TabHeader } from "./tab-header.component";
 import { Subscription } from "rxjs";
 
 @Component({
-	selector: "ibm-tab-header-group",
+	selector: "os-tab-header-group",
 	template: `
 	<nav
 		class="bx--tabs"

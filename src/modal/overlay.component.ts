@@ -15,7 +15,7 @@ import {
  * the bounds of the `Modal` component.
  */
 @Component({
-	selector: "ibm-overlay",
+	selector: "os-overlay",
 	template: `
 		<section
 			class="bx--modal bx--modal-tall"

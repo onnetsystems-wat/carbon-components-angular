@@ -14,63 +14,63 @@ import { UIShellModule } from "../../ui-shell/index";
 @Component({
 	selector: "app-sample-multi-categories",
 	template: `
-	<div ibmGrid>
-		<div ibmRow class="header">
-			<ibm-header name="Patterns">
-				<ibm-hamburger></ibm-hamburger>
-			</ibm-header>
+	<div osGrid>
+		<div osRow class="header">
+			<os-header name="Patterns">
+				<os-hamburger></os-hamburger>
+			</os-header>
 		</div>
-		<div ibmRow>
-			<div ibmCol [columnNumbers]="{'lg': 2, 'md': 2, 'sm': 1}" class="multi-selection">
-				<button ibmButton (click)="resetFilters()" class="reset-button">Reset Filters</button>
+		<div osRow>
+			<div osCol [columnNumbers]="{'lg': 2, 'md': 2, 'sm': 1}" class="multi-selection">
+				<button osButton (click)="resetFilters()" class="reset-button">Reset Filters</button>
 				<fieldset class="bx--fieldset">
 					<legend class="bx--label">Radio button label</legend>
-					<ibm-radio-group
+					<os-radio-group
 						aria-label="radiogroup"
 						orientation="vertical"
 						labelPlacement="right"
 						[(ngModel)]="radio"
 						(change)="onRadioChange($event)">
-						<ibm-radio *ngFor="let radio of radios"
+						<os-radio *ngFor="let radio of radios"
 							[value]="radio.color"
 							[disabled]="radio.disabled">
 							{{radio.color}}
-						</ibm-radio>
-					</ibm-radio-group>
+						</os-radio>
+					</os-radio-group>
 				</fieldset>
 				<fieldset class="bx--fieldset">
-					<div ibmRow>
-						<div ibmCol [columnNumbers]="{'lg': 2, 'md': 2, 'sm': 1}">
+					<div osRow>
+						<div osCol [columnNumbers]="{'lg': 2, 'md': 2, 'sm': 1}">
 							<legend class="bx--label">Type</legend>
 						</div>
-						<div ibmCol [columnNumbers]="{'lg': 2, 'md': 2, 'sm': 1}">
-							<ibm-tag-filter
+						<div osCol [columnNumbers]="{'lg': 2, 'md': 2, 'sm': 1}">
+							<os-tag-filter
 								*ngIf="checkBoxFilters.size > 0"
 								(close)="resetCheckboxList()">
 								{{checkBoxFilters.size}}
-							</ibm-tag-filter>
+							</os-tag-filter>
 						</div>
 					</div>
-					<ibm-checkbox
+					<os-checkbox
 						*ngFor="let listItem of checkboxList"
 						[hideLabel]="hideLabel"
 						[checked]="listItem.checked"
 						[value]="listItem.value"
 						(change)="onCheckboxChange($event)">
 						{{ listItem.value }}
-					</ibm-checkbox>
+					</os-checkbox>
 				</fieldset>
 			</div>
-			<div ibmCol [columnNumbers]="{'lg': 10, 'md': 10, 'sm': 3}" class="data-table">
-				<ibm-table-container>
-					<ibm-table
+			<div osCol [columnNumbers]="{'lg': 10, 'md': 10, 'sm': 3}" class="data-table">
+				<os-table-container>
+					<os-table
 						class="data-table"
 						[model]="model"
 						size="lg"
 						[showSelectionColumn]="false">
 						<ng-content></ng-content>
-					</ibm-table>
-				</ibm-table-container>
+					</os-table>
+				</os-table-container>
 			</div>
 		</div>
 	</div>

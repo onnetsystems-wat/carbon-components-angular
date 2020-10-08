@@ -147,10 +147,10 @@ export class TableHeaderItem {
 	 * Example:
 	 * ```html
 	 * <ng-template #filter let-popover="popover">
-	 * 	<ibm-label class="first-label">
+	 * 	<os-label class="first-label">
 	 * 		Value
 	 * 		<input type="text" [(ngModel)]="filter1" class="input-field">
-	 * 	</ibm-label>
+	 * 	</os-label>
 	 * </ng-template>
 	 *
 	 * <ng-template #filterFooter let-popover="popover" let-filter="data">

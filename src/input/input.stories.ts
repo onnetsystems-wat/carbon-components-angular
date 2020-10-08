@@ -19,20 +19,20 @@ storiesOf("Components|Input", module).addDecorator(
 	.addDecorator(withKnobs)
 	.add("Label", () => ({
 		template: `
-		<ibm-label
+		<os-label
 			[helperText]="helperText"
 			[invalid]="invalid"
 			[invalidText]="invalidText">
 			{{label}}
 			<input
-				ibmText
+				osText
 				[size]="size"
 				[invalid]="invalid"
 				[disabled]="disabled"
 				[theme]="theme"
 				[placeholder]="placeholder"
 				[autocomplete]="autocomplete">
-		</ibm-label>
+		</os-label>
 	`,
 		props: {
 			theme: select("Theme", ["dark", "light"], "dark"),
@@ -48,13 +48,13 @@ storiesOf("Components|Input", module).addDecorator(
 	}))
 	.add("TextArea", () => ({
 		template: `
-		<ibm-label
+		<os-label
 			[helperText]="helperText"
 			[invalid]="invalid"
 			[invalidText]="invalidText">
 			{{label}}
 			<textarea
-				ibmTextArea
+				osTextArea
 				[placeholder]="placeholder"
 				[invalid]="invalid"
 				[disabled]="disabled"
@@ -62,7 +62,7 @@ storiesOf("Components|Input", module).addDecorator(
 				[rows]="rows"
 				[cols]="cols"
 				aria-label="textarea"></textarea>
-		</ibm-label>
+		</os-label>
 	`,
 		props: {
 			theme: select("Theme", ["dark", "light"], "dark"),
@@ -78,19 +78,19 @@ storiesOf("Components|Input", module).addDecorator(
 	}))
 	.add("Skeleton", () => ({
 		template: `
-		<ibm-label skeleton="true">
-			<input ibmText skeleton="true">
-		</ibm-label>
+		<os-label skeleton="true">
+			<input osText skeleton="true">
+		</os-label>
 		<br>
-		<input ibmText skeleton="true">
+		<input osText skeleton="true">
 		<br><br>
-		<ibm-label skeleton="true">
-			<div ibmTextArea skeleton="true"></div>
-		</ibm-label>
+		<os-label skeleton="true">
+			<div osTextArea skeleton="true"></div>
+		</os-label>
 		`
 	}))
 	.add("Documentation", () => ({
 		template: `
-			<ibm-documentation src="documentation/components/Label.html"></ibm-documentation>
+			<os-documentation src="documentation/components/Label.html"></os-documentation>
 		`
 	}));

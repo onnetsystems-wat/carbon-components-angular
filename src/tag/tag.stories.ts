@@ -16,36 +16,36 @@ storiesOf("Components|Tag", module)
 	.addDecorator(withKnobs)
 	.add("Basic", () => ({
 		template: `
-			<ibm-tag type="warm-gray">Warm-gray</ibm-tag>
+			<os-tag type="warm-gray">Warm-gray</os-tag>
 			<br><br>
-			<ibm-tag type="red">Red</ibm-tag>
+			<os-tag type="red">Red</os-tag>
 			<br><br>
-			<ibm-tag type="magenta">Magenta</ibm-tag>
+			<os-tag type="magenta">Magenta</os-tag>
 			<br><br>
-			<ibm-tag type="purple">Purple</ibm-tag>
+			<os-tag type="purple">Purple</os-tag>
 			<br><br>
-			<ibm-tag type="blue">Blue</ibm-tag>
+			<os-tag type="blue">Blue</os-tag>
 			<br><br>
-			<ibm-tag type="cyan">Cyan</ibm-tag>
+			<os-tag type="cyan">Cyan</os-tag>
 			<br><br>
-			<ibm-tag type="teal">Teal</ibm-tag>
+			<os-tag type="teal">Teal</os-tag>
 			<br><br>
-			<ibm-tag type="green">Green</ibm-tag>
+			<os-tag type="green">Green</os-tag>
 			<br><br>
-			<ibm-tag type="cool-gray">Cool-gray</ibm-tag>
+			<os-tag type="cool-gray">Cool-gray</os-tag>
 		`
 	}))
 	.add("Filter", () => ({
 		template: `
-			<ibm-tag-filter
+			<os-tag-filter
 				type="blue"
 				title="Filter"
 				closeButtonLabel="Clear"
-			>filter</ibm-tag-filter>
+			>filter</os-tag-filter>
 		`
 	}))
 	.add("Documentation", () => ({
 		template: `
-			<ibm-documentation src="documentation/components/Tag.html"></ibm-documentation>
+			<os-documentation src="documentation/components/Tag.html"></os-documentation>
 		`
 	}));

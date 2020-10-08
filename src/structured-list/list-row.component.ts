@@ -18,21 +18,21 @@ import { ListColumn } from "./list-column.component";
  *
  * Example:
  * ```html
- * 	<ibm-list-row>
- *		<ibm-list-column>Row 1</ibm-list-column>
- *		<ibm-list-column nowrap="true">Row One</ibm-list-column>
- *		<ibm-list-column>
+ * 	<os-list-row>
+ *		<os-list-column>Row 1</os-list-column>
+ *		<os-list-column nowrap="true">Row One</os-list-column>
+ *		<os-list-column>
  *			Lorem ipsum dolor sit amet,
  *			consectetur adipiscing elit. Nunc dui magna,
  *			finibus id tortor sed, aliquet bibendum augue.
  *			Aenean posuere sem vel euismod dignissim. Nulla ut cursus dolor.
  *			Pellentesque vulputate nisl a porttitor interdum.
- *		</ibm-list-column>
- *	</ibm-list-row>
+ *		</os-list-column>
+ *	</os-list-row>
  * ```
  */
 @Component({
-	selector: "ibm-list-row",
+	selector: "os-list-row",
 	template: `
 		<ng-content></ng-content>
 		<ng-container *ngIf="selection">

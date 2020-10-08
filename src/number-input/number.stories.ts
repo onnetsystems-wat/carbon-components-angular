@@ -12,7 +12,7 @@ storiesOf("Components|Number", module).addDecorator(
 	.addDecorator(withKnobs)
 	.add("Basic", () => ({
 		template: `
-			<ibm-number
+			<os-number
 				[label]="label"
 				[helperText]="[helperText]"
 				[theme]="theme"
@@ -22,7 +22,7 @@ storiesOf("Components|Number", module).addDecorator(
 				[invalidText]="invalidText"
 				[size]="size"
 				[disabled]="disabled">
-			</ibm-number>
+			</os-number>
 		`,
 		props: {
 			label: text("label", "Number Input Label"),
@@ -38,7 +38,7 @@ storiesOf("Components|Number", module).addDecorator(
 	}))
 	.add("With ngModel", () => ({
 		template: `
-			<ibm-number
+			<os-number
 				[label]="label"
 				[helperText]="[helperText]"
 				[theme]="theme"
@@ -49,7 +49,7 @@ storiesOf("Components|Number", module).addDecorator(
 				[invalidText]="invalidText"
 				[disabled]="disabled"
 				[(ngModel)]="value">
-			</ibm-number>
+			</os-number>
 			{{ value }}
 		`,
 		props: {
@@ -67,7 +67,7 @@ storiesOf("Components|Number", module).addDecorator(
 	}))
 	.add("Skeleton", () => ({
 		template: `
-			<ibm-number [label]="label" skeleton="true"></ibm-number>
+			<os-number [label]="label" skeleton="true"></os-number>
 		`,
 		props: {
 			label: text("label", "Number Input Label")
@@ -75,6 +75,6 @@ storiesOf("Components|Number", module).addDecorator(
 	}))
 	.add("Documentation", () => ({
 		template: `
-			<ibm-documentation src="documentation/components/Number.html"></ibm-documentation>
+			<os-documentation src="documentation/components/Number.html"></os-documentation>
 		`
 	}));

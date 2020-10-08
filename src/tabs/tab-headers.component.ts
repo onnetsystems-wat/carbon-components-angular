@@ -21,7 +21,7 @@ import { Tab } from "./tab.component";
  * if content has overflow.
  */
 @Component({
-	selector: "ibm-tab-headers",
+	selector: "os-tab-headers",
 	template: `
 		<nav
 			class="bx--tabs"

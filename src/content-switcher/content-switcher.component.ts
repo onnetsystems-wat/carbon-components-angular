@@ -19,17 +19,17 @@ import { isFocusInLastItem, isFocusInFirstItem } from "@onnetsystems-wat/onnet-d
  * [See demo](../../?path=/story/content-switcher--basic)
  *
  * ```html
- * <ibm-content-switcher (selected)="selected($event)">
- *		<button ibmContentOption>First section</button>
- *		<button ibmContentOption>Second section</button>
- *		<button ibmContentOption>Third section</button>
- *	</ibm-content-switcher>
+ * <os-content-switcher (selected)="selected($event)">
+ *		<button osContentOption>First section</button>
+ *		<button osContentOption>Second section</button>
+ *		<button osContentOption>Third section</button>
+ *	</os-content-switcher>
  *	```
  *
  * <example-url>../../iframe.html?id=content-switcher--basic</example-url>
  */
 @Component({
-	selector: "ibm-content-switcher",
+	selector: "os-content-switcher",
 	template: `
 		<div
 			[attr.aria-label]="ariaLabel"
@@ -73,7 +73,7 @@ export class ContentSwitcher implements AfterViewInit {
 
 	@HostListener("keydown", ["$event"])
 	hostkeys(event: KeyboardEvent) {
-		const buttonList = Array.from<any>(this.elementRef.nativeElement.querySelectorAll("[ibmContentOption]"));
+		const buttonList = Array.from<any>(this.elementRef.nativeElement.querySelectorAll("[osContentOption]"));
 
 		switch (event.key) {
 			case "Right": // IE specific value

@@ -20,13 +20,13 @@ import { PlaceholderModule } from "./../placeholder/index";
 
 @Component({
 	template: `
-	<ibm-combo-box
+	<os-combo-box
 		placeholder="placeholder"
 		label="label"
 		[items]="items"
 		[(ngModel)]="model">
-		<ibm-dropdown-list></ibm-dropdown-list>
-	</ibm-combo-box>`
+		<os-dropdown-list></os-dropdown-list>
+	</os-combo-box>`
 })
 class ComboboxTest {
 	items = [
@@ -70,7 +70,7 @@ describe("Combo box", () => {
 		fixture = TestBed.createComponent(ComboboxTest);
 		wrapper = fixture.componentInstance;
 		fixture.detectChanges();
-		element = fixture.debugElement.query(By.css("ibm-combo-box"));
+		element = fixture.debugElement.query(By.css("os-combo-box"));
 
 		const dropdownToggle = element.nativeElement.querySelector(".bx--list-box__field");
 		dropdownToggle.click();
@@ -95,7 +95,7 @@ describe("Combo box", () => {
 		fixture = TestBed.createComponent(ComboboxTest);
 		wrapper = fixture.componentInstance;
 		fixture.detectChanges();
-		element = fixture.debugElement.query(By.css("ibm-combo-box"));
+		element = fixture.debugElement.query(By.css("os-combo-box"));
 		spyOn(element.componentInstance, "clearInput");
 
 		// Select an item from the dropdown
@@ -121,7 +121,7 @@ describe("Combo box", () => {
 		fixture = TestBed.createComponent(ComboboxTest);
 		wrapper = fixture.componentInstance;
 		fixture.detectChanges();
-		element = fixture.debugElement.query(By.css("ibm-combo-box"));
+		element = fixture.debugElement.query(By.css("os-combo-box"));
 		element.componentInstance.open = false;
 
 		element.nativeElement.dispatchEvent(keyDown);
@@ -139,7 +139,7 @@ describe("Combo box", () => {
 		fixture = TestBed.createComponent(ComboboxTest);
 		wrapper = fixture.componentInstance;
 		fixture.detectChanges();
-		element = fixture.debugElement.query(By.css("ibm-combo-box"));
+		element = fixture.debugElement.query(By.css("os-combo-box"));
 		spyOn(element.componentInstance, "onSearch");
 
 		const textInput = element.nativeElement.querySelector(".bx--text-input");
@@ -153,7 +153,7 @@ describe("Combo box", () => {
 		fixture = TestBed.createComponent(ComboboxTest);
 		wrapper = fixture.componentInstance;
 		fixture.detectChanges();
-		element = fixture.debugElement.query(By.css("ibm-combo-box"));
+		element = fixture.debugElement.query(By.css("os-combo-box"));
 		expect(element.nativeElement.textContent).toBe("labelopen menu");
 	});
 

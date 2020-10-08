@@ -19,7 +19,7 @@ const noop = () => { };
  * <example-url>../../iframe.html?id=file-uploader--basic</example-url>
  */
 @Component({
-	selector: "ibm-file-uploader",
+	selector: "os-file-uploader",
 	template: `
 		<ng-container *ngIf="!skeleton; else skeletonTemplate">
 			<label [for]="fileUploaderId" class="bx--file--label">{{title}}</label>
@@ -45,7 +45,7 @@ const noop = () => { };
 				<button
 					*ngIf="!drop"
 					type="button"
-					[ibmButton]="buttonType"
+					[osButton]="buttonType"
 					(click)="fileInput.click()"
 					[attr.for]="fileUploaderId"
 					[size]="size"
@@ -64,7 +64,7 @@ const noop = () => { };
 					[disabled]="disabled"/>
 				<div class="bx--file-container">
 					<div *ngFor="let fileItem of files">
-						<ibm-file [fileItem]="fileItem" (remove)="removeFile(fileItem)"></ibm-file>
+						<os-file [fileItem]="fileItem" (remove)="removeFile(fileItem)"></os-file>
 						<div *ngIf="fileItem.invalid" class="bx--form-requirement">
 							{{fileItem.invalidText}}
 						</div>
@@ -76,7 +76,7 @@ const noop = () => { };
 		<ng-template #skeletonTemplate>
 			<div class="bx--skeleton__text" style="width: 100px"></div>
 			<div class="bx--skeleton__text" style="width: 225px"></div>
-			<button ibmButton skeleton="true"></button>
+			<button osButton skeleton="true"></button>
 		</ng-template>
 	`,
 	providers: [

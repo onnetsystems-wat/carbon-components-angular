@@ -18,19 +18,19 @@ import { OverflowMenuDirective } from "./overflow-menu.directive";
  *
  * html:
  * ```
- * <ibm-overflow-menu>
- *	<ibm-overflow-menu-option>Option 1</ibm-overflow-menu-option>
- *	<ibm-overflow-menu-option>Option 2</ibm-overflow-menu-option>
- * </ibm-overflow-menu>
+ * <os-overflow-menu>
+ *	<os-overflow-menu-option>Option 1</os-overflow-menu-option>
+ *	<os-overflow-menu-option>Option 2</os-overflow-menu-option>
+ * </os-overflow-menu>
  * ```
  *
  * <example-url>../../iframe.html?id=overflow-menu--basic</example-url>
  */
 @Component({
-	selector: "ibm-overflow-menu",
+	selector: "os-overflow-menu",
 	template: `
 		<div
-			[ibmOverflowMenu]="options"
+			[osOverflowMenu]="options"
 			[ngClass]="{'bx--overflow-menu--open': open}"
 			[attr.aria-label]="buttonLabel"
 			[flip]="flip"

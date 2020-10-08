@@ -1,7 +1,7 @@
 import { Directive, HostBinding } from "@angular/core";
 
 @Directive({
-	selector: "[ibmToastSubtitle]"
+	selector: "[osToastSubtitle]"
 })
 export class ToastSubtitle {
 	@HostBinding("class.bx--toast-notification__subtitle") baseClass = true;

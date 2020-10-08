@@ -14,12 +14,12 @@ import { TableRowSize } from "../table.types";
 
 @Component({
 	// tslint:disable-next-line: component-selector
-	selector: "[ibmTableRow]",
+	selector: "[osTableRow]",
 	template: `
 		<ng-container *ngIf="model">
 			<td
 				*ngIf="model.hasExpandableRows()"
-				ibmTableExpandButton
+				osTableExpandButton
 				class="bx--table-expand-v2"
 				[expanded]="expanded"
 				[expandable]="expandable"
@@ -30,7 +30,7 @@ import { TableRowSize } from "../table.types";
 			</td>
 			<td
 				*ngIf="!skeleton && showSelectionColumn && !enableSingleSelect"
-				ibmTableCheckbox
+				osTableCheckbox
 				class="bx--table-column-checkbox"
 				[size]="size"
 				[selected]="selected"
@@ -42,7 +42,7 @@ import { TableRowSize } from "../table.types";
 			</td>
 			<td
 				*ngIf="!skeleton && showSelectionColumn && enableSingleSelect"
-				ibmTableRadio
+				osTableRadio
 				[selected]="selected"
 				[label]="getCheckboxLabel()"
 				[row]="row"
@@ -53,7 +53,7 @@ import { TableRowSize } from "../table.types";
 			<ng-container *ngFor="let item of row; let j = index">
 				<td
 					*ngIf="item && model.getHeader(j) && model.getHeader(j).visible"
-					ibmTableData
+					osTableData
 					[headers]="model.getHeaderId(j, item.colSpan)"
 					[item]="item"
 					[class]="model.getHeader(j).className"
@@ -66,7 +66,7 @@ import { TableRowSize } from "../table.types";
 				</td>
 				<td
 					*ngIf="item && model.getHeader(j) == null"
-					ibmTableData
+					osTableData
 					[headers]="model.getHeaderId(j, item.colSpan)"
 					[item]="item"
 					[skeleton]="skeleton"
@@ -132,7 +132,7 @@ export class TableRowComponent {
 	 *
 	 * Example:
 	 * ```
-	 * <ibm-table [selectionLabelColumn]="0"></ibm-table>
+	 * <os-table [selectionLabelColumn]="0"></os-table>
 	 * <!-- results in aria-label="Select first column value"
 	 * (where "first column value" is the value of the first column in the row -->
 	 * ```

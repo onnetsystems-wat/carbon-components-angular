@@ -13,14 +13,14 @@ import { Table } from "../index";
 @Component({
 	selector: "app-skeleton-table",
 	template: `
-		<ibm-table
+		<os-table
 			style="display: block; width: 800px;"
 			[model]="skeletonModel"
 			[skeleton]="skeleton"
 			[size]="size"
 			[striped]="striped">
 			<ng-content></ng-content>
-		</ibm-table>
+		</os-table>
 	`
 })
 export class SkeletonTableStory implements OnInit, OnChanges {

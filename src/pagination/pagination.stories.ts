@@ -13,14 +13,14 @@ import { DocumentationModule } from "./../documentation-component/documentation.
 @Component({
 	selector: "app-pagination",
 	template: `
-		<ibm-pagination
+		<os-pagination
 			[model]="model"
 			[disabled]="disabled"
 			[pageInputDisabled]="pageInputDisabled"
 			[pagesUnknown]="pagesUnknown"
 			[skeleton]="skeleton"
 			(selectPage)="selectPage($event)">
-		</ibm-pagination>
+		</os-pagination>
 	`
 })
 class PaginationStory implements OnInit {
@@ -92,7 +92,7 @@ storiesOf("Components|Pagination", module).addDecorator(
 	}))
 	.add("Documentation", () => ({
 		template: `
-			<ibm-documentation src="documentation/components/Pagination.html"></ibm-documentation>
+			<os-documentation src="documentation/components/Pagination.html"></os-documentation>
 		`
 	}));
 

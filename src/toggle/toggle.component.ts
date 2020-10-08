@@ -42,13 +42,13 @@ export class ToggleChange {
  * [See demo](../../?path=/story/toggle--basic)
  *
  * ```html
- * <ibm-toggle [(ngModel)]="toggleState">Toggle</ibm-toggle>
+ * <os-toggle [(ngModel)]="toggleState">Toggle</os-toggle>
  * ```
  *
  * <example-url>../../iframe.html?id=toggle--basic</example-url>
  */
 @Component({
-	selector: "ibm-toggle",
+	selector: "os-toggle",
 	template: `
 		<label *ngIf="label" [id]="ariaLabelledby" class="bx--label">
 			<ng-container *ngIf="!isTemplate(label)">{{label}}</ng-container>

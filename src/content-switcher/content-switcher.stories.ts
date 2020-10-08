@@ -17,11 +17,11 @@ storiesOf("Components|Content Switcher", module)
 	.addDecorator(withKnobs)
 	.add("Basic", () => ({
 		template: `
-			<ibm-content-switcher (selected)="selected($event)">
-				<button ibmContentOption name="First">First section</button>
-				<button ibmContentOption name="Second">Second section</button>
-				<button ibmContentOption name="Third">Third section</button>
-			</ibm-content-switcher>
+			<os-content-switcher (selected)="selected($event)">
+				<button osContentOption name="First">First section</button>
+				<button osContentOption name="Second">Second section</button>
+				<button osContentOption name="Third">Third section</button>
+			</os-content-switcher>
 		`,
 		props: {
 			selected: action("selection changed")
@@ -29,6 +29,6 @@ storiesOf("Components|Content Switcher", module)
 	}))
 	.add("Documentation", () => ({
 		template: `
-			<ibm-documentation src="documentation/components/ContentSwitcher.html"></ibm-documentation>
+			<os-documentation src="documentation/components/ContentSwitcher.html"></os-documentation>
 		`
 	}));

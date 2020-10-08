@@ -1,7 +1,7 @@
 import { Component, HostBinding } from "@angular/core";
 
 @Component({
-	selector: "ibm-table-container",
+	selector: "os-table-container",
 	template: `<ng-content></ng-content>`,
 	styles: [`
 		:host { display: block }

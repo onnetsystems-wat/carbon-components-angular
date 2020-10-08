@@ -10,15 +10,15 @@ import { Observable } from "rxjs";
 
 @Component({
 	// tslint:disable-next-line: component-selector
-	selector: "[ibmTableRadio]",
+	selector: "[osTableRadio]",
 	template: `
-		<ibm-radio
+		<os-radio
 			*ngIf="!skeleton"
 			[attr.aria-label]="getLabel() | i18nReplace:getSelectionLabelValue(row) | async"
 			[ariaLabel]="getLabel() | i18nReplace:getSelectionLabelValue(row) | async"
 			[checked]="selected"
 			(change)="change.emit()">
-		</ibm-radio>
+		</os-radio>
 	`
 })
 export class TableRadio {
@@ -40,7 +40,7 @@ export class TableRadio {
 	 *
 	 * Example:
 	 * ```
-	 * <ibm-table [selectionLabelColumn]="0"></ibm-table>
+	 * <os-table [selectionLabelColumn]="0"></os-table>
 	 * <!-- results in aria-label="Select first column value"
 	 * (where "first column value" is the value of the first column in the row -->
 	 * ```

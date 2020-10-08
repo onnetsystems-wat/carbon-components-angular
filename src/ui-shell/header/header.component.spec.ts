@@ -8,15 +8,15 @@ import { Hamburger } from "../index";
 import { RouterModule } from "@angular/router";
 
 /**
- * Testing component for projecting an ibm-hamburger component
- * inside of an ibm-header component.
+ * Testing component for projecting an os-hamburger component
+ * inside of an os-header component.
  */
 @Component({
-	selector: "ibm-hamburger-test",
+	selector: "os-hamburger-test",
 	template: `
-		<ibm-header>
-			<ibm-hamburger></ibm-hamburger>
-		</ibm-header>
+		<os-header>
+			<os-hamburger></os-hamburger>
+		</os-header>
 	`
 })
 class HamburgerTest { }
@@ -43,10 +43,10 @@ describe("UI Shell Header", () => {
 		expect(component instanceof Header).toBe(true);
 	});
 
-	it("should have a default brand of 'IBM'", () => {
+	it("should have a default brand of 'os'", () => {
 		const brandElement = element.querySelector(".bx--header__name--prefix");
 		expect(brandElement).toBeDefined();
-		expect(brandElement.textContent.trim()).toEqual("IBM");
+		expect(brandElement.textContent.trim()).toEqual("os");
 	});
 
 	it("should be able to set a custom brand", () => {
@@ -73,6 +73,6 @@ describe("UI Shell Header", () => {
 		const headerWithHamburger = TestBed.createComponent(HamburgerTest);
 		const element = headerWithHamburger.nativeElement;
 
-		expect(element.querySelector("header > ibm-hamburger")).toBeDefined();
+		expect(element.querySelector("header > os-hamburger")).toBeDefined();
 	});
 });

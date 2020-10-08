@@ -19,7 +19,7 @@ import { I18n } from "@onnetsystems-wat/onnet-design-systems/i18n";
  * <example-url>../../iframe.html?id=notification--toast</example-url>
  */
 @Component({
-	selector: "ibm-toast",
+	selector: "os-toast",
 	template: `
 		<svg
 			ibmIconErrorFilled
@@ -46,14 +46,14 @@ import { I18n } from "@onnetsystems-wat/onnet-design-systems/i18n";
 			class="bx--toast-notification__icon">
 		</svg>
 		<div class="bx--toast-notification__details">
-			<h3 *ngIf="!notificationObj.template" ibmToastTitle [innerHTML]="notificationObj.title"></h3>
-			<div *ngIf="!notificationObj.template" ibmToastSubtitle>
+			<h3 *ngIf="!notificationObj.template" osToastTitle [innerHTML]="notificationObj.title"></h3>
+			<div *ngIf="!notificationObj.template" osToastSubtitle>
 				<span [innerHTML]="notificationObj.subtitle"></span>
 				<ng-container *ngFor="let link of notificationObj.links">
-					<a ibmLink [href]="link.href"> {{link.text}}</a>
+					<a osLink [href]="link.href"> {{link.text}}</a>
 				</ng-container>
 			</div>
-			<p *ngIf="!notificationObj.template" ibmToastCaption [innerHTML]="notificationObj.caption"></p>
+			<p *ngIf="!notificationObj.template" osToastCaption [innerHTML]="notificationObj.caption"></p>
 			<ng-container *ngTemplateOutlet="notificationObj.template; context: { $implicit: notificationObj}"></ng-container>
 		</div>
 		<button

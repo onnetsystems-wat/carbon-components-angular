@@ -56,27 +56,27 @@ storiesOf("Components|UI Shell", module)
 	.addDecorator(withKnobs)
 	.add("Header", () => ({
 		template: `
-			<ibm-header name="Systems">
-				<ibm-hamburger *ngIf="hasHamburger" (click)="expanded($event)"></ibm-hamburger>
-				<ibm-header-navigation>
-					<ibm-header-item>Home</ibm-header-item>
-					<ibm-header-item isCurrentPage="true">Users</ibm-header-item>
-					<ibm-header-item>Statistics</ibm-header-item>
-					<ibm-header-menu title="Settings">
-						<ibm-header-item>Link 1</ibm-header-item>
-						<ibm-header-item>Link 2</ibm-header-item>
-						<ibm-header-item>Link 3</ibm-header-item>
-					</ibm-header-menu>
-				</ibm-header-navigation>
-				<ibm-header-global>
-					<ibm-header-action title="action">
+			<os-header name="Systems">
+				<os-hamburger *ngIf="hasHamburger" (click)="expanded($event)"></os-hamburger>
+				<os-header-navigation>
+					<os-header-item>Home</os-header-item>
+					<os-header-item isCurrentPage="true">Users</os-header-item>
+					<os-header-item>Statistics</os-header-item>
+					<os-header-menu title="Settings">
+						<os-header-item>Link 1</os-header-item>
+						<os-header-item>Link 2</os-header-item>
+						<os-header-item>Link 3</os-header-item>
+					</os-header-menu>
+				</os-header-navigation>
+				<os-header-global>
+					<os-header-action title="action">
 						<svg icon ibmIconFade size="20"></svg>
-					</ibm-header-action>
-					<ibm-header-action title="action">
+					</os-header-action>
+					<os-header-action title="action">
 						<svg icon ibmIconFade size="20"></svg>
-					</ibm-header-action>
-				</ibm-header-global>
-			</ibm-header>
+					</os-header-action>
+				</os-header-global>
+			</os-header>
 		`,
 		props: {
 			hasHamburger: boolean("Show Hamburger", true),
@@ -85,27 +85,27 @@ storiesOf("Components|UI Shell", module)
 	}))
 	.add("Header with template", () => ({
 		template: `
-			<ibm-header name="[Platform]" [brand]="brandTemplate">
-				<ibm-hamburger *ngIf="hasHamburger" (click)="expanded($event)"></ibm-hamburger>
-				<ibm-header-navigation>
-					<ibm-header-item>Catalog</ibm-header-item>
-					<ibm-header-item>Docs</ibm-header-item>
-					<ibm-header-item>Support</ibm-header-item>
-					<ibm-header-menu title="Manage">
-						<ibm-header-item>Link 1</ibm-header-item>
-						<ibm-header-item>Link 2</ibm-header-item>
-						<ibm-header-item>Link 3</ibm-header-item>
-					</ibm-header-menu>
-				</ibm-header-navigation>
-				<ibm-header-global>
-					<ibm-header-action title="action">
+			<os-header name="[Platform]" [brand]="brandTemplate">
+				<os-hamburger *ngIf="hasHamburger" (click)="expanded($event)"></os-hamburger>
+				<os-header-navigation>
+					<os-header-item>Catalog</os-header-item>
+					<os-header-item>Docs</os-header-item>
+					<os-header-item>Support</os-header-item>
+					<os-header-menu title="Manage">
+						<os-header-item>Link 1</os-header-item>
+						<os-header-item>Link 2</os-header-item>
+						<os-header-item>Link 3</os-header-item>
+					</os-header-menu>
+				</os-header-navigation>
+				<os-header-global>
+					<os-header-action title="action">
 						<svg icon ibmIconFade size="20"></svg>
-					</ibm-header-action>
-					<ibm-header-action title="action">
+					</os-header-action>
+					<os-header-action title="action">
 						<svg icon ibmIconFade size="20"></svg>
-					</ibm-header-action>
-				</ibm-header-global>
-			</ibm-header>
+					</os-header-action>
+				</os-header-global>
+			</os-header>
 
 			<ng-template #brandTemplate>
 				<a class="bx--header__name">
@@ -120,18 +120,18 @@ storiesOf("Components|UI Shell", module)
 	}))
 	.add("Header with router", () => ({
 		template: `
-			<ibm-header name="[Platform]" [route]="['bar']">
-				<ibm-header-navigation>
-					<ibm-header-item [route]="['foo']">Catalog</ibm-header-item>
-					<ibm-header-item [route]="['bar']">Docs</ibm-header-item>
-					<ibm-header-item [route]="['foo']">Support</ibm-header-item>
-					<ibm-header-menu title="Manage">
-						<ibm-header-item [route]="['foo']">Link 1</ibm-header-item>
-						<ibm-header-item [route]="['bar']">Link 2</ibm-header-item>
-						<ibm-header-item [route]="['foo']">Link 3</ibm-header-item>
-					</ibm-header-menu>
-				</ibm-header-navigation>
-			</ibm-header>
+			<os-header name="[Platform]" [route]="['bar']">
+				<os-header-navigation>
+					<os-header-item [route]="['foo']">Catalog</os-header-item>
+					<os-header-item [route]="['bar']">Docs</os-header-item>
+					<os-header-item [route]="['foo']">Support</os-header-item>
+					<os-header-menu title="Manage">
+						<os-header-item [route]="['foo']">Link 1</os-header-item>
+						<os-header-item [route]="['bar']">Link 2</os-header-item>
+						<os-header-item [route]="['foo']">Link 3</os-header-item>
+					</os-header-menu>
+				</os-header-navigation>
+			</os-header>
 			<div style="margin-top: 2rem">
 				<router-outlet></router-outlet>
 			</div>
@@ -142,22 +142,22 @@ storiesOf("Components|UI Shell", module)
 	}))
 	.add("Side Navigation", () => ({
 		template: `
-			<ibm-sidenav>
-				<ibm-sidenav-item>
+			<os-sidenav>
+				<os-sidenav-item>
 					<svg icon ibmIconFade size="16"></svg>
 					Link
-				</ibm-sidenav-item>
-				<ibm-sidenav-item>
+				</os-sidenav-item>
+				<os-sidenav-item>
 					<svg icon ibmIconFade size="16"></svg>
 					Link
-				</ibm-sidenav-item>
-				<ibm-sidenav-menu title="Category title">
+				</os-sidenav-item>
+				<os-sidenav-menu title="Category title">
 					<svg icon ibmIconFade size="16"></svg>
-					<ibm-sidenav-item>Link</ibm-sidenav-item>
-					<ibm-sidenav-item>Link</ibm-sidenav-item>
-					<ibm-sidenav-item>Link</ibm-sidenav-item>
-				</ibm-sidenav-menu>
-			</ibm-sidenav>
+					<os-sidenav-item>Link</os-sidenav-item>
+					<os-sidenav-item>Link</os-sidenav-item>
+					<os-sidenav-item>Link</os-sidenav-item>
+				</os-sidenav-menu>
+			</os-sidenav>
 		`,
 		props: {
 			options: [
@@ -178,22 +178,22 @@ storiesOf("Components|UI Shell", module)
 	}))
 	.add("Side Navigation with router", () => ({
 		template: `
-			<ibm-sidenav>
-				<ibm-sidenav-item [route]="['foo']">
+			<os-sidenav>
+				<os-sidenav-item [route]="['foo']">
 					<svg icon ibmIconFade size="16"></svg>
 					Link
-				</ibm-sidenav-item>
-				<ibm-sidenav-item [route]="['bar']">
+				</os-sidenav-item>
+				<os-sidenav-item [route]="['bar']">
 					<svg icon ibmIconFade size="16"></svg>
 					Link
-				</ibm-sidenav-item>
-				<ibm-sidenav-menu title="Category title">
+				</os-sidenav-item>
+				<os-sidenav-menu title="Category title">
 					<svg icon ibmIconFade size="16"></svg>
-					<ibm-sidenav-item [route]="['foo']">Link</ibm-sidenav-item>
-					<ibm-sidenav-item [route]="['bar']">Link</ibm-sidenav-item>
-					<ibm-sidenav-item [route]="['foo']">Link</ibm-sidenav-item>
-				</ibm-sidenav-menu>
-			</ibm-sidenav>
+					<os-sidenav-item [route]="['foo']">Link</os-sidenav-item>
+					<os-sidenav-item [route]="['bar']">Link</os-sidenav-item>
+					<os-sidenav-item [route]="['foo']">Link</os-sidenav-item>
+				</os-sidenav-menu>
+			</os-sidenav>
 			<div>
 				<router-outlet></router-outlet>
 			</div>
@@ -201,14 +201,14 @@ storiesOf("Components|UI Shell", module)
 	}))
 	.add("Right Panel with router", () => ({
 		template: `
-			<ibm-panel expanded="true">
-				<ibm-switcher-list>
-					<ibm-switcher-list-item [route]="['foo']">Switcher item one</ibm-switcher-list-item>
-					<ibm-switcher-list-item [route]="['bar']">Switcher item two</ibm-switcher-list-item>
-					<ibm-switcher-list-item [route]="['foo']">Switcher item three</ibm-switcher-list-item>
-					<ibm-switcher-list-item [route]="['bar']">Switcher item four</ibm-switcher-list-item>
-				</ibm-switcher-list>
-			</ibm-panel>
+			<os-panel expanded="true">
+				<os-switcher-list>
+					<os-switcher-list-item [route]="['foo']">Switcher item one</os-switcher-list-item>
+					<os-switcher-list-item [route]="['bar']">Switcher item two</os-switcher-list-item>
+					<os-switcher-list-item [route]="['foo']">Switcher item three</os-switcher-list-item>
+					<os-switcher-list-item [route]="['bar']">Switcher item four</os-switcher-list-item>
+				</os-switcher-list>
+			</os-panel>
 			<div>
 				<router-outlet></router-outlet>
 			</div>
@@ -216,52 +216,52 @@ storiesOf("Components|UI Shell", module)
 	}))
 	.add("Together", () => ({
 		template: `
-			<ibm-header name="[Platform]">
-				<ibm-hamburger *ngIf="hasHamburger" [active]="active" (selected)="active = !active"></ibm-hamburger>
-				<ibm-header-navigation>
-					<ibm-header-item>Catalog</ibm-header-item>
-					<ibm-header-item>Docs</ibm-header-item>
-					<ibm-header-item>Support</ibm-header-item>
-					<ibm-header-menu title="Manage">
-						<ibm-header-item>Link 1</ibm-header-item>
-						<ibm-header-item>Link 2</ibm-header-item>
-						<ibm-header-item>Link 3</ibm-header-item>
-					</ibm-header-menu>
-				</ibm-header-navigation>
-				<ibm-header-global>
-					<ibm-header-action #firstAction title="action">
+			<os-header name="[Platform]">
+				<os-hamburger *ngIf="hasHamburger" [active]="active" (selected)="active = !active"></os-hamburger>
+				<os-header-navigation>
+					<os-header-item>Catalog</os-header-item>
+					<os-header-item>Docs</os-header-item>
+					<os-header-item>Support</os-header-item>
+					<os-header-menu title="Manage">
+						<os-header-item>Link 1</os-header-item>
+						<os-header-item>Link 2</os-header-item>
+						<os-header-item>Link 3</os-header-item>
+					</os-header-menu>
+				</os-header-navigation>
+				<os-header-global>
+					<os-header-action #firstAction title="action">
 						<svg icon ibmIconFade size="20" ></svg>
-					</ibm-header-action>
-					<ibm-header-action [(active)]="secondAction" title="action">
+					</os-header-action>
+					<os-header-action [(active)]="secondAction" title="action">
 						<svg icon ibmIconFade size="20" ></svg>
-					</ibm-header-action>
-				</ibm-header-global>
-			</ibm-header>
-			<ibm-sidenav [expanded]="active">
-				<ibm-sidenav-item>
+					</os-header-action>
+				</os-header-global>
+			</os-header>
+			<os-sidenav [expanded]="active">
+				<os-sidenav-item>
 					<svg icon ibmIconFade size="16"></svg>
 					Link
-				</ibm-sidenav-item>
-				<ibm-sidenav-item>
+				</os-sidenav-item>
+				<os-sidenav-item>
 					<svg icon ibmIconFade size="16"></svg>
 					Link
-				</ibm-sidenav-item>
-				<ibm-sidenav-menu title="Category title">
+				</os-sidenav-item>
+				<os-sidenav-menu title="Category title">
 					<svg icon ibmIconFade size="16"></svg>
-					<ibm-sidenav-item>Link</ibm-sidenav-item>
-					<ibm-sidenav-item [active]="hasActiveChild">Link</ibm-sidenav-item>
-					<ibm-sidenav-item>Link</ibm-sidenav-item>
-				</ibm-sidenav-menu>
-			</ibm-sidenav>
-			<ibm-panel [expanded]="firstAction.active"></ibm-panel>
-			<ibm-panel [expanded]="secondAction">
-				<ibm-switcher-list>
-					<ibm-switcher-list-item active="true">Switcher item one</ibm-switcher-list-item>
-					<ibm-switcher-list-item>Switcher item two</ibm-switcher-list-item>
-					<ibm-switcher-list-item>Switcher item three</ibm-switcher-list-item>
-					<ibm-switcher-list-item>Switcher item four</ibm-switcher-list-item>
-				</ibm-switcher-list>
-			</ibm-panel>
+					<os-sidenav-item>Link</os-sidenav-item>
+					<os-sidenav-item [active]="hasActiveChild">Link</os-sidenav-item>
+					<os-sidenav-item>Link</os-sidenav-item>
+				</os-sidenav-menu>
+			</os-sidenav>
+			<os-panel [expanded]="firstAction.active"></os-panel>
+			<os-panel [expanded]="secondAction">
+				<os-switcher-list>
+					<os-switcher-list-item active="true">Switcher item one</os-switcher-list-item>
+					<os-switcher-list-item>Switcher item two</os-switcher-list-item>
+					<os-switcher-list-item>Switcher item three</os-switcher-list-item>
+					<os-switcher-list-item>Switcher item four</os-switcher-list-item>
+				</os-switcher-list>
+			</os-panel>
 		`,
 		props: {
 			hasHamburger: boolean("Show Hamburger", true),
@@ -286,22 +286,22 @@ storiesOf("Components|UI Shell", module)
 	}))
 	.add("Side Navigation Rail", () => ({
 		template: `
-			<ibm-sidenav rail="true" [expanded]="false">
-				<ibm-sidenav-item>
+			<os-sidenav rail="true" [expanded]="false">
+				<os-sidenav-item>
 					<svg icon ibmIconFade size="16"></svg>
 					Link
-				</ibm-sidenav-item>
-				<ibm-sidenav-item>
+				</os-sidenav-item>
+				<os-sidenav-item>
 					<svg icon ibmIconFade size="16"></svg>
 					Link
-				</ibm-sidenav-item>
-				<ibm-sidenav-menu title="Category title">
+				</os-sidenav-item>
+				<os-sidenav-menu title="Category title">
 					<svg icon ibmIconFade size="16"></svg>
-					<ibm-sidenav-item>Link</ibm-sidenav-item>
-					<ibm-sidenav-item>Link</ibm-sidenav-item>
-					<ibm-sidenav-item>Link</ibm-sidenav-item>
-				</ibm-sidenav-menu>
-			</ibm-sidenav>
+					<os-sidenav-item>Link</os-sidenav-item>
+					<os-sidenav-item>Link</os-sidenav-item>
+					<os-sidenav-item>Link</os-sidenav-item>
+				</os-sidenav-menu>
+			</os-sidenav>
 		`,
 		props: {
 			options: [
@@ -322,12 +322,12 @@ storiesOf("Components|UI Shell", module)
 	}))
 	.add("With Model", () => ({
 		template: `
-			<ibm-header name="[Platform]">
-				<ibm-hamburger *ngIf="hasHamburger" [active]="active" (selected)="active = !active"></ibm-hamburger>
-				<ibm-header-navigation [navigationItems]="headerItems">
-				</ibm-header-navigation>
-				<ibm-header-global>
-					<ibm-header-action #firstAction title="action">
+			<os-header name="[Platform]">
+				<os-hamburger *ngIf="hasHamburger" [active]="active" (selected)="active = !active"></os-hamburger>
+				<os-header-navigation [navigationItems]="headerItems">
+				</os-header-navigation>
+				<os-header-global>
+					<os-header-action #firstAction title="action">
 						<svg
 							width="20"
 							height="20"
@@ -342,8 +342,8 @@ storiesOf("Components|UI Shell", module)
 								10L3.86 9a13.89 13.89 0 0 0-1.64 4.54l2 .35A11.9 11.9 0 0 1 5.59
 								10zM16 2v2a12 12 0 0 1 0 24v2a14 14 0 0 0 0-28z" />
 						</svg>
-					</ibm-header-action>
-					<ibm-header-action #secondAction title="action">
+					</os-header-action>
+					<os-header-action #secondAction title="action">
 						<svg
 							width="20"
 							height="20"
@@ -358,11 +358,11 @@ storiesOf("Components|UI Shell", module)
 								10L3.86 9a13.89 13.89 0 0 0-1.64 4.54l2 .35A11.9 11.9 0 0 1 5.59
 								10zM16 2v2a12 12 0 0 1 0 24v2a14 14 0 0 0 0-28z" />
 						</svg>
-					</ibm-header-action>
-				</ibm-header-global>
-			</ibm-header>
-			<ibm-sidenav [navigationItems]="headerItems">
-				<ibm-sidenav-menu title="Category title">
+					</os-header-action>
+				</os-header-global>
+			</os-header>
+			<os-sidenav [navigationItems]="headerItems">
+				<os-sidenav-menu title="Category title">
 					<svg icon width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true">
 						<path
 							d="M8.24 25.14L7 26.67a14 14 0 0 0 4.18 2.44l.68-1.88a12
@@ -372,20 +372,20 @@ storiesOf("Components|UI Shell", module)
 							10L3.86 9a13.89 13.89 0 0 0-1.64 4.54l2 .35A11.9 11.9 0 0 1 5.59
 							10zM16 2v2a12 12 0 0 1 0 24v2a14 14 0 0 0 0-28z" />
 					</svg>
-					<ibm-sidenav-item>Link</ibm-sidenav-item>
-					<ibm-sidenav-item>Link</ibm-sidenav-item>
-					<ibm-sidenav-item>Link</ibm-sidenav-item>
-				</ibm-sidenav-menu>
-			</ibm-sidenav>
-			<ibm-panel [expanded]="firstAction.active"></ibm-panel>
-			<ibm-panel [expanded]="secondAction.active">
-				<ibm-switcher-list>
-					<ibm-switcher-list-item active="true">Switcher item one</ibm-switcher-list-item>
-					<ibm-switcher-list-item>Switcher item two</ibm-switcher-list-item>
-					<ibm-switcher-list-item>Switcher item three</ibm-switcher-list-item>
-					<ibm-switcher-list-item>Switcher item four</ibm-switcher-list-item>
-				</ibm-switcher-list>
-			</ibm-panel>
+					<os-sidenav-item>Link</os-sidenav-item>
+					<os-sidenav-item>Link</os-sidenav-item>
+					<os-sidenav-item>Link</os-sidenav-item>
+				</os-sidenav-menu>
+			</os-sidenav>
+			<os-panel [expanded]="firstAction.active"></os-panel>
+			<os-panel [expanded]="secondAction.active">
+				<os-switcher-list>
+					<os-switcher-list-item active="true">Switcher item one</os-switcher-list-item>
+					<os-switcher-list-item>Switcher item two</os-switcher-list-item>
+					<os-switcher-list-item>Switcher item three</os-switcher-list-item>
+					<os-switcher-list-item>Switcher item four</os-switcher-list-item>
+				</os-switcher-list>
+			</os-panel>
 			<router-outlet></router-outlet>
 		`,
 		props: {
@@ -443,18 +443,18 @@ storiesOf("Components|UI Shell", module)
 	.add("Use angular router attributes for routing", () => (
 		{
 			template: `
-			<ibm-header name="[Platform]" [route]="['bar']" [useRouter]="true">
-				<ibm-header-navigation>
-					<ibm-header-item [route]="['foo']" [useRouter]="true" [activeLinkClass]="'item--active'">Catalog</ibm-header-item>
-					<ibm-header-item [route]="['bar']" [useRouter]="true" [activeLinkClass]="['item--active', 'another-class']">Docs</ibm-header-item>
-					<ibm-header-item [route]="['foo']" [useRouter]="true">Support</ibm-header-item>
-					<ibm-header-menu title="Manage">
-						<ibm-header-item [route]="['foo']" [useRouter]="true">Link 1</ibm-header-item>
-						<ibm-header-item [route]="['bar']" [useRouter]="true">Link 2</ibm-header-item>
-						<ibm-header-item [route]="['foo']" [useRouter]="true">Link 3</ibm-header-item>
-					</ibm-header-menu>
-				</ibm-header-navigation>
-			</ibm-header>
+			<os-header name="[Platform]" [route]="['bar']" [useRouter]="true">
+				<os-header-navigation>
+					<os-header-item [route]="['foo']" [useRouter]="true" [activeLinkClass]="'item--active'">Catalog</os-header-item>
+					<os-header-item [route]="['bar']" [useRouter]="true" [activeLinkClass]="['item--active', 'another-class']">Docs</os-header-item>
+					<os-header-item [route]="['foo']" [useRouter]="true">Support</os-header-item>
+					<os-header-menu title="Manage">
+						<os-header-item [route]="['foo']" [useRouter]="true">Link 1</os-header-item>
+						<os-header-item [route]="['bar']" [useRouter]="true">Link 2</os-header-item>
+						<os-header-item [route]="['foo']" [useRouter]="true">Link 3</os-header-item>
+					</os-header-menu>
+				</os-header-navigation>
+			</os-header>
 			<div style="margin-top: 2rem">
 				<router-outlet></router-outlet>
 			</div>`
@@ -462,11 +462,11 @@ storiesOf("Components|UI Shell", module)
 	))
 	.add("Header Documentation", () => ({
 		template: `
-			<ibm-documentation src="documentation/components/Header.html"></ibm-documentation>
+			<os-documentation src="documentation/components/Header.html"></os-documentation>
 		`
 	}))
 	.add("Side Nav Documentation", () => ({
 		template: `
-			<ibm-documentation src="documentation/components/SideNav.html"></ibm-documentation>
+			<os-documentation src="documentation/components/SideNav.html"></os-documentation>
 		`
 	}));

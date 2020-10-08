@@ -33,13 +33,13 @@ import { TableRowSize } from "./table.types";
  *
  * Here, you create a view (with built-in controller) and provide it a model.
  * Changes you make to the model are reflected in the view. Provide same model you use
- * in the table to the `<ibm-pagination>` components.
+ * in the table to the `<os-pagination>` components.
  * They provide a different view over the same data.
  *
  * ## Basic usage
  *
  * ```html
- * <ibm-table [model]="model"></ibm-table>
+ * <os-table [model]="model"></os-table>
  * ```
  *
  * ```typescript
@@ -120,7 +120,7 @@ import { TableRowSize } from "./table.types";
  * When table has no data to show, it can show a message you provide it instead.
  *
  * ```html
- * <ibm-table [model]="model">No data.</ibm-table>
+ * <os-table [model]="model">No data.</os-table>
  * ```
  *
  * ... will show `No data.` message, but you can get creative and provide any template you want
@@ -129,7 +129,7 @@ import { TableRowSize } from "./table.types";
  * ## Use pagination as table footer
  *
  * ```html
- * <ibm-pagination [model]="model" (selectPage)="selectPage($event)"></ibm-pagination>
+ * <os-pagination [model]="model" (selectPage)="selectPage($event)"></os-pagination>
  * ```
  *
  * `selectPage()` function should fetch the data from backend, create new `data`, apply it to `model.data`,
@@ -168,10 +168,10 @@ import { TableRowSize } from "./table.types";
  * <example-url>../../iframe.html?id=table--basic</example-url>
  */
 @Component({
-	selector: "ibm-table",
+	selector: "os-table",
 	template: `
 	<table
-		ibmTable
+		osTable
 		[sortable]="sortable"
 		[noBorder]="noBorder"
 		[ngClass]="{'bx--data-table--sticky-header': stickyHeader}"
@@ -179,7 +179,7 @@ import { TableRowSize } from "./table.types";
 		[striped]="striped"
 		[skeleton]="skeleton">
 		<thead
-			ibmTableHead
+			osTableHead
 			[sortable]="sortable"
 			(deselectAll)="onDeselectAll()"
 			(selectAll)="onSelectAll()"
@@ -198,7 +198,7 @@ import { TableRowSize } from "./table.types";
 			[stickyHeader]="stickyHeader">
 		</thead>
 		<tbody
-			ibmTableBody
+			osTableBody
 			(deselectRow)="onSelectRow($event)"
 			(scroll)="onScroll($event)"
 			(selectRow)="onSelectRow($event)"
@@ -467,7 +467,7 @@ export class Table implements AfterViewInit, OnDestroy {
 	 *
 	 * Example:
 	 * ```
-	 * <ibm-table [selectionLabelColumn]="0"></ibm-table>
+	 * <os-table [selectionLabelColumn]="0"></os-table>
 	 * <!-- results in aria-label="Select first column value"
 	 * (where "first column value" is the value of the first column in the row -->
 	 * ```

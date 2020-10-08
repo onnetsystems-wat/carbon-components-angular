@@ -21,26 +21,26 @@ import { TabHeaders } from "./tab-headers.component";
  * `Tabs` expects a set of `n-tab` elements
  *
  * ```html
- * <ibm-tabs>
- * 	<ibm-tab heading='tab1'>
+ * <os-tabs>
+ * 	<os-tab heading='tab1'>
  * 		tab 1 content
- * 	</ibm-tab>
- * 	<ibm-tab heading='tab1'>
+ * 	</os-tab>
+ * 	<os-tab heading='tab1'>
  * 		tab 2 content
- * 	</ibm-tab>
+ * 	</os-tab>
  * 	<!-- ... -->
- * 	<ibm-tab heading='tab1'>
+ * 	<os-tab heading='tab1'>
  * 		tab n content
- * 	</ibm-tab>
- * </ibm-tabs>
+ * 	</os-tab>
+ * </os-tabs>
  * ```
  *
  * <example-url>../../iframe.html?id=tabs--basic</example-url>
  */
 @Component({
-	selector: "ibm-tabs",
+	selector: "os-tabs",
 	template: `
-			<ibm-tab-headers
+			<os-tab-headers
 				*ngIf="hasTabHeaders() && position === 'top'"
 				[skeleton]="skeleton"
 				[tabs]="tabs"
@@ -51,7 +51,7 @@ import { TabHeaders } from "./tab-headers.component";
 				[ariaLabel]="ariaLabel"
 				[ariaLabelledby]="ariaLabelledby"
 				[type]="type">
-			</ibm-tab-headers>
+			</os-tab-headers>
 			<ng-content></ng-content>
 			<ng-template #before>
 				<ng-content select="[before]"></ng-content>
@@ -59,13 +59,13 @@ import { TabHeaders } from "./tab-headers.component";
 			<ng-template #after>
 				<ng-content select="[after]"></ng-content>
 			</ng-template>
-			<ibm-tab-headers
+			<os-tab-headers
 				*ngIf="hasTabHeaders() && position === 'bottom'"
 				[skeleton]="skeleton"
 				[tabs]="tabs"
 				[cacheActive]="cacheActive"
 				[type]="type">
-			</ibm-tab-headers>
+			</os-tab-headers>
 	`
 })
 export class Tabs implements AfterContentInit, OnChanges {

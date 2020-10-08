@@ -18,19 +18,19 @@ import { EventService } from "@onnetsystems-wat/onnet-design-systems/utils";
  * class: OverflowMenuDirective (extends DialogDirective)
  *
  *
- * selector: `ibmOverflowMenu`
+ * selector: `osOverflowMenu`
  *
  *
  * ```html
- * <div [ibmOverflowMenu]="templateRef"></div>
+ * <div [osOverflowMenu]="templateRef"></div>
  * <ng-template #templateRef>
  * 	<!-- overflow menu options here -->
  * </ng-template>
  * ```
  */
 @Directive({
-	selector: "[ibmOverflowMenu]",
-	exportAs: "ibmOverflowMenu",
+	selector: "[osOverflowMenu]",
+	exportAs: "osOverflowMenu",
 	providers: [
 		DialogService
 	]
@@ -39,7 +39,7 @@ export class OverflowMenuDirective extends DialogDirective {
 	/**
 	 * Takes a template ref of `OverflowMenuOptions`s
 	 */
-	@Input() ibmOverflowMenu: TemplateRef<any>;
+	@Input() osOverflowMenu: TemplateRef<any>;
 	/**
 	 * Controls wether the overflow menu is flipped
 	 */
@@ -67,7 +67,7 @@ export class OverflowMenuDirective extends DialogDirective {
 	}
 
 	updateConfig() {
-		this.dialogConfig.content = this.ibmOverflowMenu;
+		this.dialogConfig.content = this.osOverflowMenu;
 		this.dialogConfig.flip = this.flip;
 		this.dialogConfig.offset = this.offset;
 		this.dialogConfig.wrapperClass = this.wrapperClass;

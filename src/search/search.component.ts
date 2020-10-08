@@ -17,7 +17,7 @@ import { I18n } from "@onnetsystems-wat/onnet-design-systems/i18n";
  * <example-url>../../iframe.html?id=search--basic</example-url>
  */
 @Component({
-	selector: "ibm-search",
+	selector: "os-search",
 	templateUrl: "search.component.html",
 	providers: [
 		{

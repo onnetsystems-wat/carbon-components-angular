@@ -15,7 +15,7 @@ import { NG_VALUE_ACCESSOR } from "@angular/forms";
  * <example-url>../../iframe.html?id=time-picker-select--simple</example-url>
  */
 @Component({
-	selector: "ibm-timepicker-select",
+	selector: "os-timepicker-select",
 	template: `
 		<label *ngIf="!skeleton && label" [attr.for]="id" class="bx--label bx--visually-hidden">{{label}}</label>
 		<div class="bx--select-input__wrapper">

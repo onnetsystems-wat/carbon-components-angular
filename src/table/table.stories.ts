@@ -114,11 +114,11 @@ storiesOf("Components|Table", module).addDecorator(
 	.addDecorator(withKnobs)
 	.add("Basic", () => ({
 		template: `
-		<ibm-table-container>
-			<ibm-table-header>
-				<h4 ibmTableHeaderTitle>{{title}}</h4>
-				<p ibmTableHeaderDescription>{{description}}</p>
-			</ibm-table-header>
+		<os-table-container>
+			<os-table-header>
+				<h4 osTableHeaderTitle>{{title}}</h4>
+				<p osTableHeaderDescription>{{description}}</p>
+			</os-table-header>
 			<app-table
 				[model]="model"
 				[stickyHeader]="stickyHeader"
@@ -130,7 +130,7 @@ storiesOf("Components|Table", module).addDecorator(
 				[sortable]="sortable"
 				[isDataGrid]="isDataGrid">
 			</app-table>
-		</ibm-table-container>
+		</os-table-container>
 	`,
 		props: getProps({
 			enableSingleSelect: boolean("Enable single select", false)
@@ -138,11 +138,11 @@ storiesOf("Components|Table", module).addDecorator(
 	}))
 	.add("With no data", () => ({
 		template: `
-		<ibm-table-container>
-			<ibm-table-header>
-				<h4 ibmTableHeaderTitle>{{title}}</h4>
-				<p ibmTableHeaderDescription>{{description}}</p>
-			</ibm-table-header>
+		<os-table-container>
+			<os-table-header>
+				<h4 osTableHeaderTitle>{{title}}</h4>
+				<p osTableHeaderDescription>{{description}}</p>
+			</os-table-header>
 			<app-no-data-table
 				[model]="model"
 				[size]="size"
@@ -151,7 +151,7 @@ storiesOf("Components|Table", module).addDecorator(
 				[striped]="striped">
 				<tbody><tr><td class="no-data" colspan="3"><div>No data.</div></td></tr></tbody>
 			</app-no-data-table>
-		</ibm-table-container>
+		</os-table-container>
 		`,
 		styles: [`
 			.no-data {
@@ -167,40 +167,40 @@ storiesOf("Components|Table", module).addDecorator(
 	}))
 	.add("With toolbar", () => ({
 		template: `
-		<ibm-table-container>
-			<ibm-table-header>
-				<h4 ibmTableHeaderTitle>{{title}}</h4>
-				<p ibmTableHeaderDescription>{{description}}</p>
-			</ibm-table-header>
-			<ibm-table-toolbar [model]="model" [batchText]="batchText" #toolbar>
-				<ibm-table-toolbar-actions>
-					<button ibmButton="primary" [tabindex]="toolbar.selected ? 0 : -1">
+		<os-table-container>
+			<os-table-header>
+				<h4 osTableHeaderTitle>{{title}}</h4>
+				<p osTableHeaderDescription>{{description}}</p>
+			</os-table-header>
+			<os-table-toolbar [model]="model" [batchText]="batchText" #toolbar>
+				<os-table-toolbar-actions>
+					<button osButton="primary" [tabindex]="toolbar.selected ? 0 : -1">
 						Delete
 						<ibm-icon-delete size="16" class="bx--btn__icon"></ibm-icon-delete>
 					</button>
-					<button ibmButton="primary" [tabindex]="toolbar.selected ? 0 : -1">
+					<button osButton="primary" [tabindex]="toolbar.selected ? 0 : -1">
 						Save
 						<ibm-icon-save size="16" class="bx--btn__icon"></ibm-icon-save>
 					</button>
-					<button ibmButton="primary" [tabindex]="toolbar.selected ? 0 : -1">
+					<button osButton="primary" [tabindex]="toolbar.selected ? 0 : -1">
 						Download
 						<ibm-icon-download size="16" class="bx--btn__icon"></ibm-icon-download>
 					</button>
-				</ibm-table-toolbar-actions>
-				<ibm-table-toolbar-content>
-					<ibm-table-toolbar-search
+				</os-table-toolbar-actions>
+				<os-table-toolbar-content>
+					<os-table-toolbar-search
 						ngDefaultControl
 						[expandable]="true"
 						[(ngModel)]="searchModel">
-					</ibm-table-toolbar-search>
-					<button ibmButton="ghost" class="toolbar-action" [tabindex]="toolbar.selected ? -1 : 0">
+					</os-table-toolbar-search>
+					<button osButton="ghost" class="toolbar-action" [tabindex]="toolbar.selected ? -1 : 0">
 						<ibm-icon-settings size="16" class="bx--toolbar-action__icon"></ibm-icon-settings>
 					</button>
-					<button ibmButton="primary" size="sm" [tabindex]="toolbar.selected ? -1 : 0">
+					<button osButton="primary" size="sm" [tabindex]="toolbar.selected ? -1 : 0">
 						Primary Button<ibm-icon-add size="20" class="bx--btn__icon"></ibm-icon-add>
 					</button>
-				</ibm-table-toolbar-content>
-			</ibm-table-toolbar>
+				</os-table-toolbar-content>
+			</os-table-toolbar>
 
 			<app-table
 				[model]="model"
@@ -213,7 +213,7 @@ storiesOf("Components|Table", module).addDecorator(
 				[stickyHeader]="stickyHeader"
 				[isDataGrid]="isDataGrid">
 			</app-table>
-		</ibm-table-container>
+		</os-table-container>
 	`,
 		props: getProps({
 			description: text("Description", "With toolbar"),
@@ -227,36 +227,36 @@ storiesOf("Components|Table", module).addDecorator(
 	}))
 	.add("With toolbar and disabled rows", () => ({
 		template: `
-		<ibm-table-container>
-			<ibm-table-header>
-				<h4 ibmTableHeaderTitle>{{title}}</h4>
-				<p ibmTableHeaderDescription>{{description}}</p>
-			</ibm-table-header>
-			<ibm-table-toolbar [model]="model" [batchText]="batchText">
-				<ibm-table-toolbar-actions>
-					<button ibmButton="primary">
+		<os-table-container>
+			<os-table-header>
+				<h4 osTableHeaderTitle>{{title}}</h4>
+				<p osTableHeaderDescription>{{description}}</p>
+			</os-table-header>
+			<os-table-toolbar [model]="model" [batchText]="batchText">
+				<os-table-toolbar-actions>
+					<button osButton="primary">
 						Delete
 						<ibm-icon-delete size="16" class="bx--btn__icon"></ibm-icon-delete>
 					</button>
-					<button ibmButton="primary">
+					<button osButton="primary">
 						Save
 						<ibm-icon-save size="16" class="bx--btn__icon"></ibm-icon-save>
 					</button>
-					<button ibmButton="primary">
+					<button osButton="primary">
 						Download
 						<ibm-icon-download size="16" class="bx--btn__icon"></ibm-icon-download>
 					</button>
-				</ibm-table-toolbar-actions>
-				<ibm-table-toolbar-content>
-					<ibm-table-toolbar-search [expandable]="true"></ibm-table-toolbar-search>
-					<button ibmButton="ghost" class="toolbar-action">
+				</os-table-toolbar-actions>
+				<os-table-toolbar-content>
+					<os-table-toolbar-search [expandable]="true"></os-table-toolbar-search>
+					<button osButton="ghost" class="toolbar-action">
 						<ibm-icon-settings size="16" class="bx--toolbar-action__icon"></ibm-icon-settings>
 					</button>
-					<button ibmButton="primary" size="sm">
+					<button osButton="primary" size="sm">
 						Primary Button<ibm-icon-add size="20" class="bx--btn__icon"></ibm-icon-add>
 					</button>
-				</ibm-table-toolbar-content>
-			</ibm-table-toolbar>
+				</os-table-toolbar-content>
+			</os-table-toolbar>
 
 			<app-no-data-table
 				[model]="model"
@@ -266,7 +266,7 @@ storiesOf("Components|Table", module).addDecorator(
 				[sortable]="sortable"
 				[isDataGrid]="isDataGrid">
 			</app-no-data-table>
-		</ibm-table-container>
+		</os-table-container>
 	`,
 		props: {
 			model: getModelWithDisabledRows(),
@@ -284,22 +284,22 @@ storiesOf("Components|Table", module).addDecorator(
 	}))
 	.add("With toolbar without toolbar action", () => ({
 		template: `
-		<ibm-table-container>
-			<ibm-table-header>
-				<h4 ibmTableHeaderTitle>{{title}}</h4>
-				<p ibmTableHeaderDescription>{{description}}</p>
-			</ibm-table-header>
-			<ibm-table-toolbar>
-				<ibm-table-toolbar-content>
-					<ibm-table-toolbar-search [expandable]="true"></ibm-table-toolbar-search>
-					<button ibmButton="toolbar-action">
+		<os-table-container>
+			<os-table-header>
+				<h4 osTableHeaderTitle>{{title}}</h4>
+				<p osTableHeaderDescription>{{description}}</p>
+			</os-table-header>
+			<os-table-toolbar>
+				<os-table-toolbar-content>
+					<os-table-toolbar-search [expandable]="true"></os-table-toolbar-search>
+					<button osButton="toolbar-action">
 						<ibm-icon-settings size="16" class="bx--toolbar-action__icon"></ibm-icon-settings>
 					</button>
-					<button ibmButton="primary" size="sm">
+					<button osButton="primary" size="sm">
 						Primary Button<ibm-icon-add size="20" class="bx--btn__icon"></ibm-icon-add>
 					</button>
-				</ibm-table-toolbar-content>
-			</ibm-table-toolbar>
+				</os-table-toolbar-content>
+			</os-table-toolbar>
 
 			<app-table
 				[model]="model"
@@ -312,7 +312,7 @@ storiesOf("Components|Table", module).addDecorator(
 				[sortable]="sortable"
 				[isDataGrid]="isDataGrid">
 			</app-table>
-		</ibm-table-container>
+		</os-table-container>
 	`,
 		props: getProps({
 			description: text("Description", "With toolbar"),
@@ -321,11 +321,11 @@ storiesOf("Components|Table", module).addDecorator(
 	}))
 	.add("With expansion", () => ({
 		template: `
-		<ibm-table-container>
-			<ibm-table-header>
-				<h4 ibmTableHeaderTitle>{{title}}</h4>
-				<p ibmTableHeaderDescription>{{description}}</p>
-			</ibm-table-header>
+		<os-table-container>
+			<os-table-header>
+				<h4 osTableHeaderTitle>{{title}}</h4>
+				<p osTableHeaderDescription>{{description}}</p>
+			</os-table-header>
 			<app-expansion-table
 				[size]="size"
 				[showSelectionColumn]="showSelectionColumn"
@@ -335,7 +335,7 @@ storiesOf("Components|Table", module).addDecorator(
 				[striped]="striped"
 				[isDataGrid]="isDataGrid">
 			</app-expansion-table>
-		</ibm-table-container>
+		</os-table-container>
 		`,
 		props: getProps({
 			description: text("Description", "With expansion")
@@ -343,11 +343,11 @@ storiesOf("Components|Table", module).addDecorator(
 	}))
 	.add("With dynamic content", () => ({
 		template: `
-		<ibm-table-container>
-			<ibm-table-header>
-				<h4 ibmTableHeaderTitle>{{title}}</h4>
-				<p ibmTableHeaderDescription>{{description}}</p>
-			</ibm-table-header>
+		<os-table-container>
+			<os-table-header>
+				<h4 osTableHeaderTitle>{{title}}</h4>
+				<p osTableHeaderDescription>{{description}}</p>
+			</os-table-header>
 			<app-custom-table
 				[size]="size"
 				[showSelectionColumn]="showSelectionColumn"
@@ -357,7 +357,7 @@ storiesOf("Components|Table", module).addDecorator(
 				[striped]="striped"
 				[isDataGrid]="isDataGrid">
 			</app-custom-table>
-		</ibm-table-container>
+		</os-table-container>
 		`,
 		props: getProps({
 			description: text("Description", "With dynamic content")
@@ -365,11 +365,11 @@ storiesOf("Components|Table", module).addDecorator(
 	}))
 	.add("With overflow menu", () => ({
 		template: `
-		<ibm-table-container>
-			<ibm-table-header>
-				<h4 ibmTableHeaderTitle>{{title}}</h4>
-				<p ibmTableHeaderDescription>{{description}}</p>
-			</ibm-table-header>
+		<os-table-container>
+			<os-table-header>
+				<h4 osTableHeaderTitle>{{title}}</h4>
+				<p osTableHeaderDescription>{{description}}</p>
+			</os-table-header>
 			<app-overflow-table
 				[size]="size"
 				[showSelectionColumn]="showSelectionColumn"
@@ -379,7 +379,7 @@ storiesOf("Components|Table", module).addDecorator(
 				[striped]="striped"
 				[isDataGrid]="isDataGrid">
 			</app-overflow-table>
-		</ibm-table-container>
+		</os-table-container>
 		`,
 		props: getProps({
 			description: text("Description", "With overflow menu")
@@ -387,11 +387,11 @@ storiesOf("Components|Table", module).addDecorator(
 	}))
 	.add("With pagination", () => ({
 		template: `
-		<ibm-table-container>
-			<ibm-table-header>
-				<h4 ibmTableHeaderTitle>{{title}}</h4>
-				<p ibmTableHeaderDescription>{{description}}</p>
-			</ibm-table-header>
+		<os-table-container>
+			<os-table-header>
+				<h4 osTableHeaderTitle>{{title}}</h4>
+				<p osTableHeaderDescription>{{description}}</p>
+			</os-table-header>
 			<app-pagination-table
 				[skeleton]="skeleton"
 				[sortable]="sortable"
@@ -401,7 +401,7 @@ storiesOf("Components|Table", module).addDecorator(
 				[skeleton]="skeleton"
 				[model]="model">
 			</app-pagination-table>
-		</ibm-table-container>
+		</os-table-container>
 		`,
 		props: getProps({
 			totalDataLength: number("totalDataLength", 105),
@@ -410,24 +410,24 @@ storiesOf("Components|Table", module).addDecorator(
 	}))
 	.add("From components", () => ({
 		template: `
-			<table ibmTable [sortable]="false" style="width: 650px;">
-				<thead ibmTableHead>
+			<table osTable [sortable]="false" style="width: 650px;">
+				<thead osTableHead>
 					<tr>
 						<th
-							ibmTableHeadCell
+							osTableHeadCell
 							*ngFor="let column of model.header"
 							[column]="column">
 						</th>
 					</tr>
 				</thead>
-				<tbody ibmTableBody>
+				<tbody osTableBody>
 					<tr
 						*ngFor="let row of model.data"
-						ibmTableRow
+						osTableRow
 						[row]="row">
 						<td
 							*ngFor="let item of row; let j = index"
-							ibmTableData
+							osTableData
 							[item]="item"
 							[class]="model.header[j].className"
 							[ngStyle]="model.header[j].style">
@@ -450,6 +450,6 @@ storiesOf("Components|Table", module).addDecorator(
 	}))
 	.add("Documentation", () => ({
 		template: `
-			<ibm-documentation src="documentation/components/Table.html"></ibm-documentation>
+			<os-documentation src="documentation/components/Table.html"></os-documentation>
 		`
 	}));

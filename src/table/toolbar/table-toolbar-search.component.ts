@@ -9,7 +9,7 @@ import {
 import { NG_VALUE_ACCESSOR } from "@angular/forms";
 
 @Component({
-	selector: "ibm-table-toolbar-search",
+	selector: "os-table-toolbar-search",
 	templateUrl: "../../search/search.component.html",
 	providers: [
 		{

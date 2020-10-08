@@ -11,9 +11,9 @@ import { TableRowSize } from "../table.types";
 
 @Component({
 	// tslint:disable-next-line: component-selector
-	selector: "[ibmTableHeadCheckbox]",
+	selector: "[osTableHeadCheckbox]",
 	template: `
-		<ibm-checkbox
+		<os-checkbox
 			*ngIf="!skeleton"
 			inline="true"
 			[size]="(size !== 'sm' ? 'md' : 'sm')"
@@ -22,7 +22,7 @@ import { TableRowSize } from "../table.types";
 			[indeterminate]="indeterminate"
 			(click)="change.emit()"
 			[aria-label]="getAriaLabel() | async">
-		</ibm-checkbox>
+		</os-checkbox>
 	`,
 	styles: [`
         :host { width: 10px; }

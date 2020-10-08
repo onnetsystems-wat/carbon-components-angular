@@ -23,7 +23,7 @@ import { DocumentationModule } from "../documentation-component/documentation.mo
 @Component({
 	selector: "app-file-uploader",
 	template: `
-		<ibm-file-uploader
+		<os-file-uploader
 			[title]="title"
 			[description]="description"
 			[buttonText]="buttonText"
@@ -34,10 +34,10 @@ import { DocumentationModule } from "../documentation-component/documentation.mo
 			[(files)]="files"
 			[size]="size"
 			[disabled]="disabled">
-		</ibm-file-uploader>
+		</os-file-uploader>
 
 		<div [id]="notificationId" style="width: 300px; margin-top: 20px"></div>
-		<button ibmButton *ngIf="files && files.size > 0" (click)="onUpload()">
+		<button osButton *ngIf="files && files.size > 0" (click)="onUpload()">
 			Upload
 		</button>
 	`
@@ -91,7 +91,7 @@ class FileUploaderStory {
 @Component({
 	selector: "app-drop-file-uploader",
 	template: `
-		<ibm-file-uploader
+		<os-file-uploader
 			[title]="title"
 			[description]="description"
 			[buttonText]="buttonText"
@@ -105,10 +105,10 @@ class FileUploaderStory {
 			[dropText]="dropText"
 			(filesChange)="onDropped($event)"
 			[disabled]="disabled">
-		</ibm-file-uploader>
+		</os-file-uploader>
 
 		<div [id]="notificationId" style="width: 300px; margin-top: 20px"></div>
-		<button ibmButton *ngIf="files && files.size > 0" (click)="onUpload()">
+		<button osButton *ngIf="files && files.size > 0" (click)="onUpload()">
 			Upload
 		</button>
 	`
@@ -204,7 +204,7 @@ class DragAndDropStory {
 @Component({
 	selector: "app-ngmodel-file-uploader",
 	template: `
-		<ibm-file-uploader
+		<os-file-uploader
 			[title]="title"
 			[description]="description"
 			[buttonText]="buttonText"
@@ -214,14 +214,14 @@ class DragAndDropStory {
 			[size]="size"
 			[(ngModel)]="model"
 			[disabled]="disabled">
-		</ibm-file-uploader>
+		</os-file-uploader>
 
 		<br><div [id]="notificationId" style="width: 300px"></div>
-		<button ibmButton *ngIf="model && model.size > 0" (click)="onUpload()">
+		<button osButton *ngIf="model && model.size > 0" (click)="onUpload()">
 			Upload
 		</button>
 
-		<button ibmButton (click)="removeFiles()">Remove all</button>
+		<button osButton (click)="removeFiles()">Remove all</button>
 	`
 })
 class NgModelFileUploaderStory {
@@ -374,7 +374,7 @@ storiesOf("Components|File Uploader", module)
 	}))
 	.add("Documentation", () => ({
 		template: `
-			<ibm-documentation src="documentation/components/FileUploader.html"></ibm-documentation>
+			<os-documentation src="documentation/components/FileUploader.html"></os-documentation>
 		`
 	}));
 

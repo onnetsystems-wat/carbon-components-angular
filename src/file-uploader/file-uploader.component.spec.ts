@@ -16,14 +16,14 @@ import { FileItem } from "./file-item.interface";
 
 @Component({
 	template: `
-		<ibm-file-uploader
+		<os-file-uploader
 			title="title"
 			description="description"
 			buttonText="buttonText"
 			accept=".txt"
 			multiple="true"
 			[(ngModel)]="files">
-		</ibm-file-uploader>
+		</os-file-uploader>
 	`
 })
 class FileUploaderTest {
@@ -80,7 +80,7 @@ describe("FileUploader", () => {
 	it("should only accept .txt files", () => {
 		fixture = TestBed.createComponent(FileUploaderTest);
 		fixture.detectChanges();
-		element = fixture.debugElement.query(By.css("ibm-file-uploader"));
+		element = fixture.debugElement.query(By.css("os-file-uploader"));
 		expect(element.nativeElement.querySelector(".bx--file-input").getAttribute("accept")).toEqual(".txt");
 	});
 
@@ -95,7 +95,7 @@ describe("FileUploader", () => {
 			uploaded: false
 		};
 		const testFiles = new Set().add(fileItem);
-		element = fixture.debugElement.query(By.css("ibm-file-uploader"));
+		element = fixture.debugElement.query(By.css("os-file-uploader"));
 
 		element.componentInstance.value = testFiles;
 		fixture.detectChanges();
@@ -119,7 +119,7 @@ describe("FileUploader", () => {
 			invalidText: "Invalid Text"
 		};
 		const testFiles = new Set().add(fileItem);
-		element = fixture.debugElement.query(By.css("ibm-file-uploader"));
+		element = fixture.debugElement.query(By.css("os-file-uploader"));
 
 		element.componentInstance.value = testFiles;
 		fixture.detectChanges();

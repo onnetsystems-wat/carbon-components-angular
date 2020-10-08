@@ -10,29 +10,29 @@ import { CheckmarkFilledModule } from "@carbon/icons-angular";
 
 @Component({
 	template: `
-		<ibm-structured-list
+		<os-structured-list
 			border="true"
 			[condensed]="condensed"
 			nowrap="false"
 			selection="true"
 			[(ngModel)]="valueSelected"
 			(selected)="onSelected()">
-			<ibm-list-header>
-				<ibm-list-column nowrap="true">Column 1</ibm-list-column>
-				<ibm-list-column nowrap="true">Column 2</ibm-list-column>
-				<ibm-list-column>Column 3</ibm-list-column>
-			</ibm-list-header>
-			<ibm-list-row value="row1">
-				<ibm-list-column>Row 1</ibm-list-column>
-				<ibm-list-column nowrap="true">Row One</ibm-list-column>
-				<ibm-list-column>Test</ibm-list-column>
-			</ibm-list-row>
-			<ibm-list-row value="row2">
-				<ibm-list-column>Row 2</ibm-list-column>
-				<ibm-list-column nowrap="true">Row Two</ibm-list-column>
-				<ibm-list-column>Test</ibm-list-column>
-			</ibm-list-row>
-		</ibm-structured-list>
+			<os-list-header>
+				<os-list-column nowrap="true">Column 1</os-list-column>
+				<os-list-column nowrap="true">Column 2</os-list-column>
+				<os-list-column>Column 3</os-list-column>
+			</os-list-header>
+			<os-list-row value="row1">
+				<os-list-column>Row 1</os-list-column>
+				<os-list-column nowrap="true">Row One</os-list-column>
+				<os-list-column>Test</os-list-column>
+			</os-list-row>
+			<os-list-row value="row2">
+				<os-list-column>Row 2</os-list-column>
+				<os-list-column nowrap="true">Row Two</os-list-column>
+				<os-list-column>Test</os-list-column>
+			</os-list-row>
+		</os-structured-list>
 	`
 })
 class StructuredListTest {
@@ -67,7 +67,7 @@ describe("StructuredList", () => {
 	it("should set bx--structured-list--border class", () => {
 		fixture = TestBed.createComponent(StructuredListTest);
 		fixture.detectChanges();
-		element = fixture.debugElement.query(By.css("ibm-structured-list"));
+		element = fixture.debugElement.query(By.css("os-structured-list"));
 		expect(element.nativeElement.querySelector(".bx--structured-list--border")).toBeTruthy();
 	});
 
@@ -75,9 +75,9 @@ describe("StructuredList", () => {
 		fixture = TestBed.createComponent(StructuredListTest);
 		wrapper = fixture.componentInstance;
 		fixture.detectChanges();
-		element = fixture.debugElement.query(By.css("ibm-structured-list"));
+		element = fixture.debugElement.query(By.css("os-structured-list"));
 		spyOn(wrapper, "onSelected");
-		element.nativeElement.querySelector("ibm-list-row").click();
+		element.nativeElement.querySelector("os-list-row").click();
 		fixture.detectChanges();
 		expect(wrapper.valueSelected).toEqual("row1");
 		expect(wrapper.onSelected).toHaveBeenCalled();
@@ -88,7 +88,7 @@ describe("StructuredList", () => {
 		fixture.detectChanges();
 		wrapper = fixture.componentInstance;
 		wrapper.condensed = true;
-		element = fixture.debugElement.query(By.css("ibm-structured-list"));
+		element = fixture.debugElement.query(By.css("os-structured-list"));
 		expect(element.nativeElement.querySelector(".bx--structured-list-content--nowrap")).toBeTruthy();
 	});
 });

@@ -1,8 +1,9 @@
 import { storiesOf, moduleMetadata } from "@storybook/angular";
 import { withKnobs, boolean, number, text } from "@storybook/addon-knobs/angular";
 
-import { BreadcrumbModule, DialogModule } from "../";
+import { BreadcrumbModule } from "./";
 import { BreadcrumbItem } from "../breadcrumb/breadcrumb-item.interface";
+import { DialogModule } from "../dialog";
 import { DocumentationModule } from "../documentation-component/documentation.module";
 
 let breadcrumbItems;
@@ -33,45 +34,45 @@ storiesOf("Components|Breadcrumb", module)
 .addDecorator(withKnobs)
 .add("Basic", () => ({
 	template: `
-	<ibm-breadcrumb [noTrailingSlash]="noTrailingSlash">
-		<ibm-breadcrumb-item href="#1">
+	<os-breadcrumb [noTrailingSlash]="noTrailingSlash">
+		<os-breadcrumb-item href="#1">
 			Breadcrumb 1
-		</ibm-breadcrumb-item>
-		<ibm-breadcrumb-item href="#2">
+		</os-breadcrumb-item>
+		<os-breadcrumb-item href="#2">
 			Breadcrumb 2
-		</ibm-breadcrumb-item>
-		<ibm-breadcrumb-item href="#3">
+		</os-breadcrumb-item>
+		<os-breadcrumb-item href="#3">
 			Breadcrumb 3
-		</ibm-breadcrumb-item>
-	</ibm-breadcrumb>`,
+		</os-breadcrumb-item>
+	</os-breadcrumb>`,
 	props: {
 		noTrailingSlash: boolean("noTrailingSlash", true)
 	}
 }))
 .add("Current page", () => ({
 	template: `
-	<ibm-breadcrumb [noTrailingSlash]="noTrailingSlash">
-		<ibm-breadcrumb-item href="#1">
+	<os-breadcrumb [noTrailingSlash]="noTrailingSlash">
+		<os-breadcrumb-item href="#1">
 			Breadcrumb 1
-		</ibm-breadcrumb-item>
-		<ibm-breadcrumb-item href="#2">
+		</os-breadcrumb-item>
+		<os-breadcrumb-item href="#2">
 			Breadcrumb 2
-		</ibm-breadcrumb-item>
-		<ibm-breadcrumb-item current="true" href="#3">
+		</os-breadcrumb-item>
+		<os-breadcrumb-item current="true" href="#3">
 			Breadcrumb 3
-		</ibm-breadcrumb-item>
-	</ibm-breadcrumb>`,
+		</os-breadcrumb-item>
+	</os-breadcrumb>`,
 	props: {
 		noTrailingSlash: boolean("noTrailingSlash", true)
 	}
 }))
 .add("Model", () => ({
 	template: `
-	<ibm-breadcrumb
+	<os-breadcrumb
 		[noTrailingSlash]="noTrailingSlash"
 		[threshold]="threshold"
 		[items]="createBreadcrumbItems(itemCount, content)">
-	</ibm-breadcrumb>`,
+	</os-breadcrumb>`,
 	props: {
 		noTrailingSlash: boolean("noTrailingSlash", true),
 		itemCount: number("itemCount", 10),
@@ -85,11 +86,11 @@ storiesOf("Components|Breadcrumb", module)
 	<ng-template #breadcrumbTemplate let-item>
 		{{ templateContent }}{{ item.content }}
 	</ng-template>
-	<ibm-breadcrumb
+	<os-breadcrumb
 		[noTrailingSlash]="noTrailingSlash"
 		[threshold]="threshold"
 		[items]="withTemplate(breadcrumbTemplate, createBreadcrumbItems(itemCount, content))">
-	</ibm-breadcrumb>
+	</os-breadcrumb>
 	`,
 	props: {
 		noTrailingSlash: boolean("noTrailingSlash", true),
@@ -103,18 +104,18 @@ storiesOf("Components|Breadcrumb", module)
 }))
 .add("Skeleton", () => ({
 	template: `
-	<ibm-breadcrumb skeleton="true" [noTrailingSlash]="noTrailingSlash">
-		<ibm-breadcrumb-item></ibm-breadcrumb-item>
-		<ibm-breadcrumb-item></ibm-breadcrumb-item>
-		<ibm-breadcrumb-item></ibm-breadcrumb-item>
-		<ibm-breadcrumb-item></ibm-breadcrumb-item>
-	</ibm-breadcrumb>`,
+	<os-breadcrumb skeleton="true" [noTrailingSlash]="noTrailingSlash">
+		<os-breadcrumb-item></os-breadcrumb-item>
+		<os-breadcrumb-item></os-breadcrumb-item>
+		<os-breadcrumb-item></os-breadcrumb-item>
+		<os-breadcrumb-item></os-breadcrumb-item>
+	</os-breadcrumb>`,
 	props: {
 		noTrailingSlash: boolean("noTrailingSlash", true)
 	}
 }))
 .add("Documentation", () => ({
 	template: `
-		<ibm-documentation src="documentation/components/Breadcrumb.html"></ibm-documentation>
+		<os-documentation src="documentation/components/Breadcrumb.html"></os-documentation>
 	`
 }));

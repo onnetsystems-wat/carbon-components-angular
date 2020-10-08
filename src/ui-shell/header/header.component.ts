@@ -20,7 +20,7 @@ import { I18n } from "@onnetsystems-wat/onnet-design-systems/i18n";
  * <example-url>../../iframe.html?id=ui-shell--header</example-url>
  */
 @Component({
-	selector: "ibm-header",
+	selector: "os-header",
 	template: `
 		<header
 			class="bx--header"
@@ -33,7 +33,7 @@ import { I18n } from "@onnetsystems-wat/onnet-design-systems/i18n";
 				tabindex="0">
 				{{ i18n.get("UI_SHELL.SKIP_TO") | async }}
 			</a>
-			<ng-content select="ibm-hamburger"></ng-content>
+			<ng-content select="os-hamburger"></ng-content>
 			<ng-template
 				*ngIf="isTemplate(brand)"
 				[ngTemplateOutlet]="brand">

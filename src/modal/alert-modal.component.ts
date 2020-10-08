@@ -12,11 +12,11 @@ import { BaseModal } from "./base-modal.class";
  * It can show as a passive modal showing only text or show as a transactional modal with
  * multiple buttons for different actions for the user to choose from.
  *
- * Using a modal in your application requires `ibm-placeholder` which would generally be
+ * Using a modal in your application requires `os-placeholder` which would generally be
  * placed near the end of your app component template (app.component.ts or app.component.html) as:
  *
  * ```html
- * <ibm-placeholder></ibm-placeholder>
+ * <os-placeholder></os-placeholder>
  * ```
  *
  * Example of opening the modal:
@@ -26,7 +26,7 @@ import { BaseModal } from "./base-modal.class";
  *  selector: "app-modal-demo",
  *  template: `
  *   <button class="btn--primary" (click)="openModal()">Open modal</button>
- *   <ibm-placeholder></ibm-placeholder>`
+ *   <os-placeholder></os-placeholder>`
  * })
  * export class ModalDemo {
  * 	openModal() {
@@ -46,34 +46,34 @@ import { BaseModal } from "./base-modal.class";
  * ```
  */
 @Component({
-	selector: "ibm-alert-modal",
+	selector: "os-alert-modal",
 	template: `
-		<ibm-modal
+		<os-modal
 			[size]="size"
 			[theme]="type"
 			[ariaLabel]="title"
 			[hasScrollingContent]="hasScrollingContent"
 			[open]="open"
 			(overlaySelected)="dismissModal('overlay')">
-			<ibm-modal-header (closeSelect)="dismissModal('close')">
-				<p ibmModalHeaderLabel class="bx--type-delta">{{label}}</p>
-				<p ibmModalHeaderHeading class="bx--type-beta">{{title}}</p>
-			</ibm-modal-header>
-			<div ibmModalContent #modalContent>
+			<os-modal-header (closeSelect)="dismissModal('close')">
+				<p osModalHeaderLabel class="bx--type-delta">{{label}}</p>
+				<p osModalHeaderHeading class="bx--type-beta">{{title}}</p>
+			</os-modal-header>
+			<div osModalContent #modalContent>
 				<p [innerHTML]="content"></p>
 			</div>
-			<ibm-modal-footer *ngIf="buttons.length > 0">
+			<os-modal-footer *ngIf="buttons.length > 0">
 				<ng-container *ngFor="let button of buttons; let i = index">
 					<button
-						[ibmButton]="button.type"
+						[osButton]="button.type"
 						(click)="buttonClicked(i)"
 						[id]="button.id"
 						[attr.modal-primary-focus]="(button.type.indexOf('primary') !== -1 ? '' : null)">
 						{{button.text}}
 					</button>
 				</ng-container>
-			</ibm-modal-footer>
-		</ibm-modal>
+			</os-modal-footer>
+		</os-modal>
 	`
 })
 export class AlertModal extends BaseModal implements AfterViewInit {

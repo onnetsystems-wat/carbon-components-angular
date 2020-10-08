@@ -1,7 +1,7 @@
 import { Component, HostBinding } from "@angular/core";
 
 @Component({
-	selector: "ibm-table-toolbar-content",
+	selector: "os-table-toolbar-content",
 	template: `<ng-content></ng-content>`
 })
 export class TableToolbarContent {

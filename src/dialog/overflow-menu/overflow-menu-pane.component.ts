@@ -18,7 +18,7 @@ import { ElementService } from "@onnetsystems-wat/onnet-design-systems/utils";
  * Not used directly. See overflow-menu.component and overflow-menu.directive for more
  */
 @Component({
-	selector: "ibm-overflow-menu-pane",
+	selector: "os-overflow-menu-pane",
 	template: `
 		<ul
 			[attr.aria-label]="dialogConfig.menuLabel"

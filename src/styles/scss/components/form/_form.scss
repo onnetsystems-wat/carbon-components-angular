@@ -1,5 +1,5 @@
 //
-// Copyright IBM Corp. 2016, 2018
+// Copyright os Corp. 2016, 2018
 //
 // This source code is licensed under the Apache-2.0 license found in the
 // LICENSE file in the root directory of this source tree.
@@ -47,7 +47,7 @@
 
   .#{$prefix}--label .#{$prefix}--tooltip__trigger {
     // When tooltip trigger is put in form label the trigger button should fit in the size of label
-    // https://github.com/IBM/carbon-components-react/issues/115
+    // https://github.com/os/carbon-components-react/issues/115
     @include type-style('label-01');
   }
 

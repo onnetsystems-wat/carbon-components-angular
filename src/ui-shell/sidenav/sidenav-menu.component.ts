@@ -15,7 +15,7 @@ import { SideNavItemInterface } from "./sidenav-item.interface";
  * `SideNavMenu` provides a method to group `SideNavItem`s under a common heading.
  */
 @Component({
-	selector: "ibm-sidenav-menu",
+	selector: "os-sidenav-menu",
 	template: `
 		<li
 			class="bx--side-nav__item bx--side-nav__item--icon"
@@ -47,13 +47,13 @@ import { SideNavItemInterface } from "./sidenav-item.interface";
 			<ul class="bx--side-nav__menu" role="menu">
 				<ng-content></ng-content>
 				<ng-container *ngFor="let menuItem of menuItems">
-					<ibm-sidenav-item
+					<os-sidenav-item
 						[href]="menuItem.href"
 						[route]="menuItem.route"
 						[routeExtras]="menuItem.routeExtras"
 						[isSubMenu]="true">
 						{{ menuItem.content }}
-					</ibm-sidenav-item>
+					</os-sidenav-item>
 				</ng-container>
 			</ul>
 		</li>

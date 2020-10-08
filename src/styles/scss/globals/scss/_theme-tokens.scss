@@ -1,5 +1,5 @@
 //
-// Copyright IBM Corp. 2016, 2018
+// Copyright os Corp. 2016, 2018
 //
 // This source code is licensed under the Apache-2.0 license found in the
 // LICENSE file in the root directory of this source tree.
@@ -40,12 +40,12 @@ $disabled-background-color: $disabled-01 !default;
 /// @type Color
 /// @access public
 /// @group global-themes
-$focus: $ibm-color__blue-60 !default;
+$focus: $os-color__blue-60 !default;
 
 /// @type Color
 /// @access public
 /// @group global-themes
-$inverse-focus-ui: $ibm-color__white-0 !default;
+$inverse-focus-ui: $os-color__white-0 !default;
 
 // Link
 
@@ -148,7 +148,7 @@ $button-outline-offset: -5px !default;
 /// @access public
 /// @group button
 /// @deprecated
-$button-outline: 1px solid $ibm-color__white-0 !default;
+$button-outline: 1px solid $os-color__white-0 !default;
 
 // Accordion
 
@@ -248,7 +248,7 @@ $data-table-column-hover: $hover-selected-ui !default;
 /// @access public
 /// @group date-picker
 /// @deprecated
-$date-picker-in-range-background-color: $ibm-color__blue-20 !default;
+$date-picker-in-range-background-color: $os-color__blue-20 !default;
 
 // Modal
 
@@ -268,26 +268,26 @@ $modal-footer-background-color: $ui-03 !default;
 /// @type Color
 /// @access public
 /// @group notification
-$notification-info-background-color: $ibm-color__blue-10 !default;
+$notification-info-background-color: $os-color__blue-10 !default;
 
 /// @type Color
 /// @access public
 /// @group notification
-$notification-error-background-color: $ibm-color__red-10 !default;
+$notification-error-background-color: $os-color__red-10 !default;
 
 /// @type Color
 /// @access public
 /// @group notification
 $notification-warning-background-color: mix(
-  $ibm-color__yellow-30,
-  $ibm-color__white-0,
+  $os-color__yellow-30,
+  $os-color__white-0,
   15%
 ) !default;
 
 /// @type Color
 /// @access public
 /// @group notification
-$notification-success-background-color: $ibm-color__green-10 !default;
+$notification-success-background-color: $os-color__green-10 !default;
 
 // Progress Indicator
 

@@ -18,11 +18,11 @@ import { cycleTabs, getFocusElementList } from "@onnetsystems-wat/onnet-design-s
  *
  * [See demo](../../?path=/story/modal--basic)
  *
- * Using a modal in your application requires `ibm-placeholder` which would generally be
+ * Using a modal in your application requires `os-placeholder` which would generally be
  * placed near the end of your app component template (app.component.ts or app.component.html) as:
  *
 ```html
-<ibm-placeholder></ibm-placeholder>
+<os-placeholder></os-placeholder>
 ```
  *
  * A more complete example for `Modal` is given as follows:
@@ -33,8 +33,8 @@ import { cycleTabs, getFocusElementList } from "@onnetsystems-wat/onnet-design-s
 @Component({
 	selector: "app-sample-modal",
 	template: `
-				<ibm-modal size="xl" (overlaySelected)="closeModal()">
-					<ibm-modal-header (closeSelect)="closeModal()">Header text</ibm-modal-header>
+				<os-modal size="xl" (overlaySelected)="closeModal()">
+					<os-modal-header (closeSelect)="closeModal()">Header text</os-modal-header>
 						<section class="modal-body">
 							<h1>Sample modal works.</h1>
 							<button class="btn--icon-link" nPopover="Hello there" title="Popover title" placement="right" appendInline="true">
@@ -42,8 +42,8 @@ import { cycleTabs, getFocusElementList } from "@onnetsystems-wat/onnet-design-s
 							</button>
 							{{modalText}}
 						</section>
-					<ibm-modal-footer><button ibmButton="primary" (click)="closeModal()">Close</button></ibm-modal-footer>
-				</ibm-modal>`,
+					<os-modal-footer><button osButton="primary" (click)="closeModal()">Close</button></os-modal-footer>
+				</os-modal>`,
 	styleUrls: ["./sample-modal.component.scss"]
 })
 export class SampleModal extends BaseModal {
@@ -61,8 +61,8 @@ export class SampleModal extends BaseModal {
 @Component({
 	selector: "app-modal-demo",
 	template: `
-				<button ibmButton="primary" (click)="openModal('drill')">Drill-down modal</button>
-				<ibm-placeholder></ibm-placeholder>`
+				<button osButton="primary" (click)="openModal('drill')">Drill-down modal</button>
+				<os-placeholder></os-placeholder>`
 })
 export class ModalDemo {
 	openModal() {
@@ -74,9 +74,9 @@ export class ModalDemo {
  * <example-url>../../iframe.html?id=modal--basic</example-url>
  */
 @Component({
-	selector: "ibm-modal",
+	selector: "os-modal",
 	template: `
-		<ibm-overlay
+		<os-overlay
 			[theme]="theme"
 			[open]="open"
 			(overlaySelect)="overlaySelected.emit()">
@@ -98,7 +98,7 @@ export class ModalDemo {
 					class="bx--modal-content--overflow-indicator">
 				</div>
 			</div>
-		</ibm-overlay>
+		</os-overlay>
 	`
 })
 export class Modal implements AfterViewInit, OnChanges {

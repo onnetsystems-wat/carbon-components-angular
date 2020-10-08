@@ -13,7 +13,7 @@ import { Router } from "@angular/router";
  * `SideNavItem` can either be a child of `SideNav` or `SideNavMenu`
  */
 @Component({
-	selector: "ibm-sidenav-item",
+	selector: "os-sidenav-item",
 	template: `
 		<li [ngClass]="{
 			'bx--side-nav__item': !isSubMenu,

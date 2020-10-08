@@ -13,23 +13,23 @@ import { OverflowMenu } from "@onnetsystems-wat/onnet-design-systems/dialog";
 @Component({
 	selector: "test-breadcrumb",
 	template: `
-	<ibm-breadcrumb [noTrailingSlash]="noTrailingSlash">
-		<ibm-breadcrumb-item href="#">
+	<os-breadcrumb [noTrailingSlash]="noTrailingSlash">
+		<os-breadcrumb-item href="#">
 			Breadcrumb 1
-		</ibm-breadcrumb-item>
-		<ibm-breadcrumb-item href="#">
+		</os-breadcrumb-item>
+		<os-breadcrumb-item href="#">
 			Breadcrumb 2
-		</ibm-breadcrumb-item>
-		<ibm-breadcrumb-item href="#">
+		</os-breadcrumb-item>
+		<os-breadcrumb-item href="#">
 			Breadcrumb 3
-		</ibm-breadcrumb-item>
-		<ibm-breadcrumb-item href="#">
+		</os-breadcrumb-item>
+		<os-breadcrumb-item href="#">
 			Breadcrumb 4
-		</ibm-breadcrumb-item>
-		<ibm-breadcrumb-item href="#">
+		</os-breadcrumb-item>
+		<os-breadcrumb-item href="#">
 			Breadcrumb 5
-		</ibm-breadcrumb-item>
-	</ibm-breadcrumb>`,
+		</os-breadcrumb-item>
+	</os-breadcrumb>`,
 	entryComponents: [Breadcrumb]
 })
 class TestBreadcrumb {
@@ -39,11 +39,11 @@ class TestBreadcrumb {
 @Component({
 	selector: "test-breadcrumb",
 	template: `
-	<ibm-breadcrumb
+	<os-breadcrumb
 		[noTrailingSlash]="noTrailingSlash"
 		[threshold]="threshold"
 		[items]="items">
-	</ibm-breadcrumb>`,
+	</os-breadcrumb>`,
 	entryComponents: [Breadcrumb]
 })
 class TestBreadcrumbModel {
@@ -116,6 +116,6 @@ describe("Breadcrumb", () => {
 		const breadcrumbItemElements = testFixture.debugElement.queryAll(By.directive(BreadcrumbItemComponent));
 		expect(breadcrumbItemElements).not.toBeNull();
 		expect(breadcrumbItemElements.length).toBe(4); // 4 because one is created for the overflow menu
-		expect(breadcrumbItemElements[1].children[0].name).toEqual("ibm-overflow-menu");
+		expect(breadcrumbItemElements[1].children[0].name).toEqual("os-overflow-menu");
 	});
 });

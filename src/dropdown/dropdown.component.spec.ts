@@ -15,13 +15,13 @@ import { ChevronDownModule, WarningFilledModule } from "@carbon/icons-angular";
 
 @Component({
 	template: `
-	<ibm-dropdown
+	<os-dropdown
 		placeholder="test"
 		class="custom-class"
 		(selected)="onSelect()"
 		[(ngModel)]="model">
-		<ibm-dropdown-list [items]="items"></ibm-dropdown-list>
-	</ibm-dropdown>`
+		<os-dropdown-list [items]="items"></os-dropdown-list>
+	</os-dropdown>`
 })
 class DropdownTest {
 	model = null;
@@ -78,7 +78,7 @@ describe("Dropdown", () => {
 		wrapper = fixture.componentInstance;
 		spyOn(wrapper, "onSelect");
 		fixture.detectChanges();
-		element = fixture.debugElement.query(By.css("ibm-dropdown"));
+		element = fixture.debugElement.query(By.css("os-dropdown"));
 		element.componentInstance.menuIsClosed = false;
 		fixture.detectChanges();
 		element.nativeElement.querySelector(".bx--list-box__menu-item__option").click();
@@ -92,12 +92,12 @@ describe("Dropdown", () => {
 	it("should set the placeholder text to test", () => {
 		fixture = TestBed.createComponent(DropdownTest);
 		fixture.detectChanges();
-		element = fixture.debugElement.query(By.css("ibm-dropdown"));
+		element = fixture.debugElement.query(By.css("os-dropdown"));
 		expect(element.nativeElement.querySelector(".bx--list-box__label").textContent).toEqual("test");
 	});
 
 	it("should keep custom classes on the host el", () => {
-		const el = fixture.debugElement.query(By.css("ibm-dropdown"));
+		const el = fixture.debugElement.query(By.css("os-dropdown"));
 		expect(el.nativeElement.classList.contains("custom-class")).toBe(true);
 	});
 });

@@ -23,7 +23,7 @@ const MINIMUM_OVERFLOW_THRESHOLD = 4;
  * <example-url>../../iframe.html?id=breadcrumb--basic</example-url>
  */
 @Component({
-	selector: "ibm-breadcrumb",
+	selector: "os-breadcrumb",
 	template: `
 	<nav #nav class="bx--breadcrumb"
 		[ngClass]="{
@@ -35,7 +35,7 @@ const MINIMUM_OVERFLOW_THRESHOLD = 4;
 			<ng-content></ng-content>
 		</ng-template>
 		<ng-template [ngIf]="!shouldShowOverflow">
-			<ibm-breadcrumb-item
+			<os-breadcrumb-item
 				*ngFor="let item of items"
 				[href]="item.href"
 				[route]="item.route"
@@ -49,10 +49,10 @@ const MINIMUM_OVERFLOW_THRESHOLD = 4;
 					[ngTemplateOutlet]="item.template"
 					[ngTemplateOutletContext]="{ $implicit: item }">
 				</ng-template>
-			</ibm-breadcrumb-item>
+			</os-breadcrumb-item>
 		</ng-template>
 		<ng-template [ngIf]="shouldShowOverflow">
-			<ibm-breadcrumb-item
+			<os-breadcrumb-item
 				[href]="first?.href"
 				[route]="first?.route"
 				[routeExtras]="first?.routeExtras"
@@ -65,9 +65,9 @@ const MINIMUM_OVERFLOW_THRESHOLD = 4;
 					[ngTemplateOutlet]="first?.template"
 					[ngTemplateOutletContext]="{ $implicit: first }">
 				</ng-template>
-			</ibm-breadcrumb-item>
-			<ibm-breadcrumb-item>
-				<ibm-overflow-menu>
+			</os-breadcrumb-item>
+			<os-breadcrumb-item>
+				<os-overflow-menu>
 					<li class="bx--overflow-menu-options__option"
 						*ngFor="let item of overflowItems">
 						<a class="bx--overflow-menu-options__btn"
@@ -82,9 +82,9 @@ const MINIMUM_OVERFLOW_THRESHOLD = 4;
 							</ng-template>
 						</a>
 					</li>
-				</ibm-overflow-menu>
-			</ibm-breadcrumb-item>
-			<ibm-breadcrumb-item
+				</os-overflow-menu>
+			</os-breadcrumb-item>
+			<os-breadcrumb-item
 				[href]="secondLast?.href"
 				[route]="secondLast?.route"
 				[routeExtras]="secondLast?.routeExtras"
@@ -97,8 +97,8 @@ const MINIMUM_OVERFLOW_THRESHOLD = 4;
 					[ngTemplateOutlet]="secondLast?.template"
 					[ngTemplateOutletContext]="{ $implicit: secondLast }">
 				</ng-template>
-			</ibm-breadcrumb-item>
-			<ibm-breadcrumb-item
+			</os-breadcrumb-item>
+			<os-breadcrumb-item
 				[href]="last?.href"
 				[route]="last?.route"
 				[routeExtras]="last?.routeExtras"
@@ -111,7 +111,7 @@ const MINIMUM_OVERFLOW_THRESHOLD = 4;
 					[ngTemplateOutlet]="last?.template"
 					[ngTemplateOutletContext]="{ $implicit: last }">
 				</ng-template>
-			</ibm-breadcrumb-item>
+			</os-breadcrumb-item>
 		</ng-template>
 	</nav>`
 })

@@ -5,10 +5,10 @@
 	"main": "index.js",
 	"repository": {
 		"type": "git",
-		"url": "git@github.com:IBM/@onnetsystems-wat/onnet-design-systems.git"
+		"url": "git@github.com:os/@onnetsystems-wat/onnet-design-systems.git"
 	},
 	"license": "Apache-2.0",
-	"author": "IBM",
+	"author": "os",
 	"peerDependencies": {
 		"carbon-components": "^10.0.0",
 		"@carbon/icons-angular": "^11.0.0"

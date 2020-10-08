@@ -29,10 +29,10 @@ export class CustomHeaderItem extends TableHeaderItem {
 @Component({
 	selector: "app-custom-table",
 	template: `
-		<ibm-table-toolbar [model]="model">
-			<button ibmButton="primary" (click)="addRow()">Add row</button>
-			<button ibmButton="primary" (click)="addColumn()" style="margin-left: 4px">Add column</button>
-		</ibm-table-toolbar>
+		<os-table-toolbar [model]="model">
+			<button osButton="primary" (click)="addRow()">Add row</button>
+			<button osButton="primary" (click)="addColumn()" style="margin-left: 4px">Add column</button>
+		</os-table-toolbar>
 
 		<ng-template #customTableItemTemplate let-data="data">
 			<a [attr.href]="data.link">{{data.name}} {{data.surname}}</a>
@@ -41,7 +41,7 @@ export class CustomHeaderItem extends TableHeaderItem {
 			<i><a [attr.href]="data.link">{{data.name}}</a></i>
 		</ng-template>
 
-		<ibm-table
+		<os-table
 			style="display: block; width: 650px;"
 			[model]="model"
 			[size]="size"
@@ -53,7 +53,7 @@ export class CustomHeaderItem extends TableHeaderItem {
 			[isDataGrid]="isDataGrid"
 			(rowClick)="onRowClick($event)"
 			(sort)="customSort($event)">
-		</ibm-table>
+		</os-table>
 	`
 })
 export class DynamicTableStory implements OnInit {

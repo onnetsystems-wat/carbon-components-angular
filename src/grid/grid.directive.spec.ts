@@ -4,7 +4,7 @@ import { By } from "@angular/platform-browser";
 import { ColumnDirective, GridDirective, RowDirective } from "./grid.directive";
 
 @Component({
-	selector: "ibm-test-grid",
+	selector: "os-test-grid",
 	template: ""
 })
 class TestGridComponent {}
@@ -24,7 +24,7 @@ describe("GridDirective", () => {
 	it("should render a grid", async(() => {
 		TestBed.overrideComponent(TestGridComponent, {
 			set: {
-				template: `<div ibmGrid></div>`
+				template: `<div osGrid></div>`
 			}
 		});
 
@@ -42,7 +42,7 @@ describe("GridDirective", () => {
 	it("should render a row", async(() => {
 		TestBed.overrideComponent(TestGridComponent, {
 			set: {
-				template: `<div ibmRow></div>`
+				template: `<div osRow></div>`
 			}
 		});
 
@@ -61,7 +61,7 @@ describe("GridDirective", () => {
 		TestBed.overrideComponent(TestGridComponent, {
 			set: {
 				template:
-				`<div ibmCol [offsets]="{'md': 2}" [columnNumbers]="{'lg': 3, 'md': 'nobreak'}" class='custom-class-example'></div>`
+				`<div osCol [offsets]="{'md': 2}" [columnNumbers]="{'lg': 3, 'md': 'nobreak'}" class='custom-class-example'></div>`
 			}
 		});
 

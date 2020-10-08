@@ -1,7 +1,7 @@
 import { Directive, HostBinding, Input } from "@angular/core";
 
 @Directive({
-	selector: "[ibmModalContent]"
+	selector: "[osModalContent]"
 })
 export class ModalContent {
 	@HostBinding("class.bx--modal-content") modalContentClass = true;

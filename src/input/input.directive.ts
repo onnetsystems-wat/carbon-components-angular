@@ -6,13 +6,13 @@ import { Directive, HostBinding, Input } from "@angular/core";
  * Example:
  *
  * ```html
- * <input ibmText/>
+ * <input osText/>
  * ```
  *
  * See the [vanilla carbon docs](http://www.carbondesignsystem.com/components/text-input/code) for more detail.
  */
 @Directive({
-	selector: "[ibmText]"
+	selector: "[osText]"
 })
 export class TextInput {
 	/**

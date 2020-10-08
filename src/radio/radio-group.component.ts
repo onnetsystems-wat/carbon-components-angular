@@ -19,18 +19,18 @@ import { RadioChange } from "./radio-change.class";
  *
  * class: RadioGroup
  *
- * selector: `ibm-radio-group`
+ * selector: `os-radio-group`
  *
  * source: `src/forms/radio.component.ts`
  *
  *
  * Ex:
  * ```html
- * <ibm-radio-group [(ngModel)]="radio">
- * 	<ibm-radio *ngFor="let one of manyRadios" [value]="one">
+ * <os-radio-group [(ngModel)]="radio">
+ * 	<os-radio *ngFor="let one of manyRadios" [value]="one">
  *		Radio {{one}}
- * 	</ibm-radio>
- * </ibm-radio-group>
+ * 	</os-radio>
+ * </os-radio-group>
  *
  * Radio selected: {{radio}}
  * ```
@@ -39,12 +39,12 @@ import { RadioChange } from "./radio-change.class";
  * manyRadios = ["one", "two", "three", "four", "five", "six"];
  * ```
  *
- * Also see: [`Radio`](#ibm-radio)
+ * Also see: [`Radio`](#os-radio)
  *
  * <example-url>../../iframe.html?id=radio--basic</example-url>
  */
 @Component({
-	selector: "ibm-radio-group",
+	selector: "os-radio-group",
 	template: `
 		<div
 			class="bx--radio-button-group"

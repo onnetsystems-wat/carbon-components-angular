@@ -16,7 +16,7 @@ storiesOf("Components|Link", module)
 	.addDecorator(withKnobs)
 	.add("Basic", () => ({
 		template: `
-			<a href="#" ibmLink [disabled]="disabled" [inline]="inline">link</a>
+			<a href="#" osLink [disabled]="disabled" [inline]="inline">link</a>
 		`,
 		props: {
 			disabled: boolean("disabled", false),
@@ -25,6 +25,6 @@ storiesOf("Components|Link", module)
 	}))
 	.add("Documentation", () => ({
 		template: `
-			<ibm-documentation src="documentation/directives/Link.html"></ibm-documentation>
+			<os-documentation src="documentation/directives/Link.html"></os-documentation>
 		`
 	}));

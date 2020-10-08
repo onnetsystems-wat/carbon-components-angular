@@ -1,5 +1,5 @@
 //
-// Copyright IBM Corp. 2016, 2018
+// Copyright os Corp. 2016, 2018
 //
 // This source code is licensed under the Apache-2.0 license found in the
 // LICENSE file in the root directory of this source tree.
@@ -24,8 +24,8 @@
     left: 0;
     z-index: z('dropdown');
     width: mini-units(32);
-    color: $ibm-color__gray-10;
-    background-color: $ibm-color__gray-90;
+    color: $os-color__gray-10;
+    background-color: $os-color__gray-90;
     box-shadow: 0 mini-units(1) mini-units(2) 0 rgba(0, 0, 0, 0.25);
   }
 
@@ -35,7 +35,7 @@
   }
 
   .#{$prefix}--navigation svg {
-    fill: $ibm-color__gray-10;
+    fill: $os-color__gray-10;
   }
 
   //----------------------------------------------------------------------------
@@ -45,7 +45,7 @@
     display: block;
     height: 1px;
     margin: 0 mini-units(2);
-    background-color: $ibm-color__gray-80;
+    background-color: $os-color__gray-80;
     content: '';
   }
 
@@ -59,7 +59,7 @@
   }
 
   .#{$prefix}--navigation-item--active > a.#{$prefix}--navigation-link {
-    color: $ibm-color__white-0;
+    color: $os-color__white-0;
     font-weight: 600;
   }
 
@@ -70,7 +70,7 @@
     left: 0;
     display: block;
     width: 4px;
-    background-color: $ibm-color__blue-60;
+    background-color: $os-color__blue-60;
     content: '';
   }
 
@@ -83,19 +83,19 @@
     width: 100%;
     min-height: mini-units(5);
     padding-left: mini-units(2);
-    color: $ibm-color__gray-10;
+    color: $os-color__gray-10;
     font-weight: 400;
     font-size: rem(14px);
     text-decoration: none;
   }
 
   a.#{$prefix}--navigation-link:hover {
-    color: $ibm-color__white-0;
+    color: $os-color__white-0;
     background-color: #333333;
   }
 
   a.#{$prefix}--navigation-link:focus {
-    outline: rem(3px) solid $ibm-color__blue-60;
+    outline: rem(3px) solid $os-color__blue-60;
     outline-offset: rem(-3px);
   }
 
@@ -122,7 +122,7 @@
   }
 
   .#{$prefix}--navigation__category-toggle:focus {
-    outline: rem(3px) solid $ibm-color__blue-60;
+    outline: rem(3px) solid $os-color__blue-60;
     outline-offset: rem(-3px);
   }
 
@@ -134,7 +134,7 @@
     min-height: mini-units(5);
     padding-right: mini-units(2);
     padding-left: mini-units(2);
-    color: $ibm-color__gray-10;
+    color: $os-color__gray-10;
     font-weight: 400;
     font-size: rem(14px);
   }
@@ -172,13 +172,13 @@
     left: 0;
     display: block;
     width: 4px;
-    background-color: $ibm-color__blue-60;
+    background-color: $os-color__blue-60;
     content: '';
   }
 
   .#{$prefix}--navigation__category-item--active
     > a.#{$prefix}--navigation-link {
-    color: $ibm-color__white-0;
+    color: $os-color__white-0;
     font-weight: 600;
   }
 

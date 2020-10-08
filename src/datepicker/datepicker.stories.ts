@@ -42,16 +42,16 @@ const modalText =
 	selector: "app-date-picker",
 	template: `
 		<form [formGroup]="formGroup">
-			<ibm-date-picker
+			<os-date-picker
 				formControlName="single"
 				label="Date Picker Label"
 				invalidText="Invalid date format"
 				[invalid]="invalidSingle"
 				(valueChange)="valueChange.emit($event)">
-			</ibm-date-picker>
+			</os-date-picker>
 			<code>{{formGroup.controls["single"].value | json}}</code>
 			<br><br>
-			<ibm-date-picker
+			<os-date-picker
 				range="true"
 				formControlName="range"
 				label="Date Picker Label"
@@ -60,7 +60,7 @@ const modalText =
 				[pattern]="pattern"
 				[invalid]="invalidRange"
 				(valueChange)="valueChange.emit($event)">
-			</ibm-date-picker>
+			</os-date-picker>
 			<code>{{formGroup.controls["range"].value | json}}</code>
 		</form>
 	`
@@ -101,19 +101,19 @@ class DatePickerStory {
 @Component({
 	selector: "app-date-picker-modal",
 	template: `
-        <ibm-modal [open]="true">
-            <ibm-modal-header>Header label</ibm-modal-header>
+        <os-modal [open]="true">
+            <os-modal-header>Header label</os-modal-header>
             <section class="bx--modal-content">
                 <h1>Sample modal works.</h1>
                 <p class="bx--modal-content__text">{{modalText}}</p>
-                <ibm-date-picker
+                <os-date-picker
                     label="Date Picker Label"
                     rangeLabel="Date Picker Label"
                     invalidText="Invalid date format">
-                </ibm-date-picker>
+                </os-date-picker>
                 <p class="bx--modal-content__text">{{modalText}}</p>
             </section>
-        </ibm-modal>
+        </os-modal>
     `
 })
 class DatePickerModalStory {
@@ -141,7 +141,7 @@ storiesOf("Components|Date Picker", module)
 	.addDecorator(withKnobs)
 	.add("Simple", () => ({
 		template: `
-		<ibm-date-picker-input
+		<os-date-picker-input
 			[theme]="theme"
 			[label]="label"
 			[placeholder]="placeholder"
@@ -150,7 +150,7 @@ storiesOf("Components|Date Picker", module)
 			[invalid]="invalid"
 			[invalidText]="invalidText"
 			(valueChange)="valueChange($event)">
-		</ibm-date-picker-input>
+		</os-date-picker-input>
 		`,
 		props: {
 			theme: select("Theme", ["dark", "light"], "dark"),
@@ -166,7 +166,7 @@ storiesOf("Components|Date Picker", module)
 	.add("Single", () => ({
 		template: `
 			<p>With initial value</p>
-			<ibm-date-picker
+			<os-date-picker
 				[label]="label"
 				id="initial-value-datepicker"
 				[placeholder]="placeholder"
@@ -179,9 +179,9 @@ storiesOf("Components|Date Picker", module)
 				[invalidText]="invalidText"
 				[dateFormat]="dateFormat"
 				(valueChange)="valueChange($event)">
-			</ibm-date-picker>
+			</os-date-picker>
 			<p style="margin-top: 20px;">Without initial value</p>
-			<ibm-date-picker
+			<os-date-picker
 				[label]="label"
 				[placeholder]="placeholder"
 				[language]="language"
@@ -192,7 +192,7 @@ storiesOf("Components|Date Picker", module)
 				[invalidText]="invalidText"
 				[dateFormat]="dateFormat"
 				(valueChange)="valueChange($event)">
-			</ibm-date-picker>
+			</os-date-picker>
 		`,
 		props: {
 			language: select("Calendar language", ["en", "de", "fi", "ja", "zh", "es", "fr", "it", "ko", "pt"], "en"),
@@ -211,7 +211,7 @@ storiesOf("Components|Date Picker", module)
 	.add("Range", () => ({
 		template: `
 		<p>With initial value</p>
-		<ibm-date-picker
+		<os-date-picker
 			[label]="label"
 			[rangeLabel]="label"
 			[size]="size"
@@ -228,9 +228,9 @@ storiesOf("Components|Date Picker", module)
 			[dateFormat]="dateFormat"
 			[value]="value"
 			(valueChange)="valueChange($event)">
-		</ibm-date-picker>
+		</os-date-picker>
 		<p style="margin-top: 20px;">Without initial value</p>
-		<ibm-date-picker
+		<os-date-picker
 			[label]="label"
 			[rangeLabel]="label"
 			[size]="size"
@@ -243,7 +243,7 @@ storiesOf("Components|Date Picker", module)
 			[invalidText]="invalidText"
 			[dateFormat]="dateFormat"
 			(valueChange)="valueChange($event)">
-		</ibm-date-picker>
+		</os-date-picker>
 		`,
 		props: {
 			language: select("Calendar language", ["en", "de", "fi", "ja", "zh", "es", "fr", "it", "ko", "pt"], "en"),
@@ -272,19 +272,19 @@ storiesOf("Components|Date Picker", module)
 	.add("With ngModel", () => ({
 		template: `
 			<div>
-				<ibm-date-picker
+				<os-date-picker
 					label="Date picker label"
 					[size]="size"
 					[(ngModel)]="single">
-				</ibm-date-picker>
+				</os-date-picker>
 				<button
-					ibmButton
+					osButton
 					(click)="single = null"
 					style="margin-top: 5px">
 					Send null
 				</button>
 				<button
-					ibmButton
+					osButton
 					(click)="single = [date]"
 					style="margin-left: 5px; margin-top: 5px">
 					Send date
@@ -293,21 +293,21 @@ storiesOf("Components|Date Picker", module)
 				<code>{{ single | json }}</code>
 			</div>
 			<div style="margin-top: 15px;">
-				<ibm-date-picker
+				<os-date-picker
 					[size]="size"
 					label="Date picker"
 					rangeLabel="Range label"
 					range="true"
 					[(ngModel)]="range">
-				</ibm-date-picker>
+				</os-date-picker>
 				<button
-					ibmButton
+					osButton
 					(click)="range = null"
 					style="margin-top: 5px">
 					Send null
 				</button>
 				<button
-					ibmButton
+					osButton
 					(click)="range = rangeDates"
 					style="margin-left: 5px; margin-top: 5px">
 					Send date
@@ -327,11 +327,11 @@ storiesOf("Components|Date Picker", module)
 	}))
 	.add("In tabs", () => ({
 		template: `
-			<ibm-tabs>
-				<ibm-tab heading="one">
+			<os-tabs>
+				<os-tab heading="one">
 					Tab Content 1
 					<p>With initial value</p>
-					<ibm-date-picker
+					<os-date-picker
 						[label]="label"
 						[size]="size"
 						[placeholder]="placeholder"
@@ -342,9 +342,9 @@ storiesOf("Components|Date Picker", module)
 						[invalidText]="invalidText"
 						[dateFormat]="dateFormat"
 						(valueChange)="valueChange($event)">
-					</ibm-date-picker>
+					</os-date-picker>
 					<p style="margin-top: 20px;">Without initial value</p>
-					<ibm-date-picker
+					<os-date-picker
 						[label]="label"
 						[size]="size"
 						[placeholder]="placeholder"
@@ -354,11 +354,11 @@ storiesOf("Components|Date Picker", module)
 						[invalidText]="invalidText"
 						[dateFormat]="dateFormat"
 						(valueChange)="valueChange($event)">
-					</ibm-date-picker>
-				</ibm-tab>
-				<ibm-tab heading="two">
+					</os-date-picker>
+				</os-tab>
+				<os-tab heading="two">
 					<p>With initial value</p>
-					<ibm-date-picker
+					<os-date-picker
 						[label]="label"
 						[placeholder]="placeholder"
 						[size]="size"
@@ -369,9 +369,9 @@ storiesOf("Components|Date Picker", module)
 						[invalidText]="invalidText"
 						[dateFormat]="dateFormat"
 						(valueChange)="valueChange($event)">
-					</ibm-date-picker>
+					</os-date-picker>
 					<p style="margin-top: 20px;">Without initial value</p>
-					<ibm-date-picker
+					<os-date-picker
 						[label]="label"
 						[placeholder]="placeholder"
 						[size]="size"
@@ -381,10 +381,10 @@ storiesOf("Components|Date Picker", module)
 						[invalidText]="invalidText"
 						[dateFormat]="dateFormat"
 						(valueChange)="valueChange($event)">
-					</ibm-date-picker>
-				</ibm-tab>
-				<ibm-tab heading="three">Tab Content 3</ibm-tab>
-			</ibm-tabs>
+					</os-date-picker>
+				</os-tab>
+				<os-tab heading="three">Tab Content 3</os-tab>
+			</os-tabs>
 		`,
 		props: {
 			valueChange: action("Date change fired!"),
@@ -407,14 +407,14 @@ storiesOf("Components|Date Picker", module)
 	}))
 	.add("Skeleton", () => ({
 		template: `
-		<ibm-date-picker
+		<os-date-picker
 			range="true"
 			skeleton="true">
-		</ibm-date-picker>
+		</os-date-picker>
 		`
 	}))
 	.add("Documentation", () => ({
 		template: `
-			<ibm-documentation src="documentation/components/DatePicker.html"></ibm-documentation>
+			<os-documentation src="documentation/components/DatePicker.html"></os-documentation>
 		`
 	}));

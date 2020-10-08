@@ -33,7 +33,7 @@ import { I18n } from "@onnetsystems-wat/onnet-design-systems/i18n";
  * <example-url>../../iframe.html?id=date-picker--single</example-url>
  */
 @Component({
-	selector: "ibm-date-picker",
+	selector: "os-date-picker",
 	template: `
 	<div class="bx--form-item">
 		<div
@@ -45,7 +45,7 @@ import { I18n } from "@onnetsystems-wat/onnet-design-systems/i18n";
 				'bx--skeleton' : skeleton
 			}">
 			<div class="bx--date-picker-container">
-				<ibm-date-picker-input
+				<os-date-picker-input
 					#input
 					[label]="label"
 					[placeholder]="placeholder"
@@ -60,11 +60,11 @@ import { I18n } from "@onnetsystems-wat/onnet-design-systems/i18n";
 					[skeleton]="skeleton"
 					(valueChange)="onValueChange($event)"
 					(click)="openCalendar(input)">
-				</ibm-date-picker-input>
+				</os-date-picker-input>
 			</div>
 
 			<div *ngIf="range" class="bx--date-picker-container">
-				<ibm-date-picker-input
+				<os-date-picker-input
 					#rangeInput
 					[label]="rangeLabel"
 					[placeholder]="placeholder"
@@ -79,7 +79,7 @@ import { I18n } from "@onnetsystems-wat/onnet-design-systems/i18n";
 					[skeleton]="skeleton"
 					(valueChange)="onRangeValueChange($event)"
 					(click)="openCalendar(rangeInput)">
-				</ibm-date-picker-input>
+				</os-date-picker-input>
 			</div>
 		</div>
 	</div>

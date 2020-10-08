@@ -13,7 +13,7 @@ storiesOf("Components|Loading", module).addDecorator(
 	.addDecorator(withKnobs)
 	.add("Basic", () => ({
 		template: `
-		<ibm-loading [isActive]="isActive" [size]="size" [overlay]="overlay"></ibm-loading>
+		<os-loading [isActive]="isActive" [size]="size" [overlay]="overlay"></os-loading>
 	`,
 		props: {
 			isActive: boolean("Active", true),
@@ -23,6 +23,6 @@ storiesOf("Components|Loading", module).addDecorator(
 	}))
 	.add("Documentation", () => ({
 		template: `
-			<ibm-documentation src="documentation/components/Loading.html"></ibm-documentation>
+			<os-documentation src="documentation/components/Loading.html"></os-documentation>
 		`
 	}));

@@ -8,7 +8,7 @@ import {
 import { DomSanitizer } from "@angular/platform-browser";
 
 @Component({
-	selector: "ibm-documentation",
+	selector: "os-documentation",
 	template: `
 		<iframe
 			id="docsIframe"
@@ -21,6 +21,7 @@ import { DomSanitizer } from "@angular/platform-browser";
 export class Documentation implements OnInit, OnDestroy {
 	@Input() set src(src: string) {
 		this._src = this.sanitizer.bypassSecurityTrustResourceUrl(src);
+		console.log(this._src);
 	}
 	get src() {
 		return this._src;

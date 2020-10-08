@@ -1,7 +1,7 @@
 import { Component, Input, OnChanges } from "@angular/core";
 
 @Component({
-	selector: "ibm-skeleton-text",
+	selector: "os-skeleton-text",
 	template: `
 		<p
 			*ngFor="let width of lineWidths"

@@ -13,7 +13,7 @@ import { AccordionItem } from "./accordion-item.component";
  * <example-url>../../iframe.html?id=accordion--basic</example-url>
  */
 @Component({
-	selector: "ibm-accordion",
+	selector: "os-accordion",
 	template: `
 		<ul class="bx--accordion">
 			<ng-content></ng-content>

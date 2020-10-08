@@ -10,7 +10,7 @@ import { I18n } from "@onnetsystems-wat/onnet-design-systems/i18n";
  * A toggle for the side navigation
  */
 @Component({
-	selector: "ibm-hamburger",
+	selector: "os-hamburger",
 	template: `
 		<button
 			type="button"

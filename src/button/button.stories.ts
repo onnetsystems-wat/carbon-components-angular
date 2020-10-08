@@ -16,28 +16,28 @@ storiesOf("Components|Button", module)
 	.addDecorator(withKnobs)
 	.add("Basic", () => ({
 		template: `
-			<button [ibmButton]="ibmButton" [size]="size">Button</button>
+			<button [osButton]="osButton" [size]="size">Button</button>
 			&nbsp;
-			<button [ibmButton]="ibmButton" [size]="size" disabled="true">Button</button>
+			<button [osButton]="osButton" [size]="size" disabled="true">Button</button>
 			&nbsp;
-			<button [ibmButton]="ibmButton" [size]="size">
+			<button [osButton]="osButton" [size]="size">
 				With icon<svg class="bx--btn__icon" ibmIconAdd size="20"></svg>
 			</button>
 		`,
 		props: {
-			ibmButton: select("Button kind", ["primary", "secondary", "tertiary", "ghost", "danger", "danger--primary"], "primary"),
+			osButton: select("Button kind", ["primary", "secondary", "tertiary", "ghost", "danger", "danger--primary"], "primary"),
 			size: select("Size of the buttons", ["normal", "sm", "field"], "normal")
 		}
 	}))
 	.add("Skeleton", () => ({
 		template: `
-			<button ibmButton skeleton="true"></button>
+			<button osButton skeleton="true"></button>
 			&nbsp;
-			<button ibmButton skeleton="true" size="sm"></button>
+			<button osButton skeleton="true" size="sm"></button>
 		`
 	}))
 	.add("Documentation", () => ({
 		template: `
-			<ibm-documentation src="documentation/directives/Button.html"></ibm-documentation>
+			<os-documentation src="documentation/directives/Button.html"></os-documentation>
 		`
 	}));

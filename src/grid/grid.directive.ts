@@ -6,7 +6,7 @@ import { Directive, HostBinding, Input, OnInit } from "@angular/core";
  * <example-url>../../iframe.html?id=grid--basic</example-url>
  */
 @Directive({
-	selector: "[ibmGrid]"
+	selector: "[osGrid]"
 })
 export class GridDirective {
 	@HostBinding("class.bx--grid") baseClass = true;
@@ -14,7 +14,7 @@ export class GridDirective {
 }
 
 @Directive({
-	selector: "[ibmRow]"
+	selector: "[osRow]"
 })
 export class RowDirective {
 	@Input() gutter = true;
@@ -35,7 +35,7 @@ export class RowDirective {
 }
 
 @Directive({
-	selector: "[ibmCol]"
+	selector: "[osCol]"
 })
 export class ColumnDirective implements OnInit {
 	@Input() class = "";

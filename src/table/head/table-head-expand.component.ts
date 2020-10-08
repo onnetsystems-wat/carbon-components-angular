@@ -5,7 +5,7 @@ import {
 
 @Component({
 	// tslint:disable-next-line: component-selector
-	selector: "[ibmTableHeadExpand]",
+	selector: "[osTableHeadExpand]",
 	template: `
 		<ng-content></ng-content>
 	`

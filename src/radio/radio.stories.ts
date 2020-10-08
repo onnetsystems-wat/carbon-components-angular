@@ -11,19 +11,19 @@ import { FormGroup, FormBuilder, FormControl, ReactiveFormsModule } from "@angul
 	selector: "app-reactive-forms",
 	template: `
 		<form [formGroup]="formGroup">
-			<ibm-radio-group
+			<os-radio-group
 				aria-label="radiogroup"
 				formControlName="radioGroup">
-				<ibm-radio
+				<os-radio
 					value="radio">
 					zero
-				</ibm-radio>
-				<ibm-radio *ngFor="let radio of manyRadios"
+				</os-radio>
+				<os-radio *ngFor="let radio of manyRadios"
 					[value]="radio.num"
 					[disabled]="radio.disabled">
 					{{radio.num}}
-				</ibm-radio>
-			</ibm-radio-group>
+				</os-radio>
+			</os-radio-group>
 		</form>
 
 		<button (click)="changeSelected()">Set selected to three</button>
@@ -67,21 +67,21 @@ storiesOf("Components|Radio", module).addDecorator(
 		template: `
 		<fieldset class="bx--fieldset">
 			<legend class="bx--label">{{label}}</legend>
-			<ibm-radio-group
+			<os-radio-group
 				aria-label="radiogroup"
 				[(ngModel)]="radio"
 				(change)="onChange($event)">
-				<ibm-radio
+				<os-radio
 					value="radio"
 					[checked]="true">
 					zero
-				</ibm-radio>
-				<ibm-radio *ngFor="let radio of manyRadios"
+				</os-radio>
+				<os-radio *ngFor="let radio of manyRadios"
 					[value]="radio.num"
 					[disabled]="radio.disabled">
 					{{radio.num}}
-				</ibm-radio>
-			</ibm-radio-group>
+				</os-radio>
+			</os-radio-group>
 		</fieldset>
 		`,
 		props: {
@@ -100,23 +100,23 @@ storiesOf("Components|Radio", module).addDecorator(
 		<fieldset class="bx--fieldset">
 			<legend class="bx--label">Radio button label</legend>
 
-			<ibm-radio-group
+			<os-radio-group
 				aria-label="radiogroup"
 				orientation="vertical"
 				[labelPlacement]="labelPlacement"
 				[(ngModel)]="radio"
 				(change)="onChange($event)">
-				<ibm-radio
+				<os-radio
 					value="radio"
 					[checked]="true">
 					zero
-				</ibm-radio>
-				<ibm-radio *ngFor="let radio of manyRadios"
+				</os-radio>
+				<os-radio *ngFor="let radio of manyRadios"
 					[value]="radio.num"
 					[disabled]="radio.disabled">
 					{{radio.num}}
-				</ibm-radio>
-			</ibm-radio-group>
+				</os-radio>
+			</os-radio-group>
 		</fieldset>
 		`,
 		props: {
@@ -135,13 +135,13 @@ storiesOf("Components|Radio", module).addDecorator(
 	}))
 	.add("Skeleton", () => ({
 		template: `
-		<ibm-radio-group skeleton="true">
-			<ibm-radio></ibm-radio>
-		</ibm-radio-group>
+		<os-radio-group skeleton="true">
+			<os-radio></os-radio>
+		</os-radio-group>
 		`
 	}))
 	.add("Documentation", () => ({
 		template: `
-			<ibm-documentation src="documentation/components/RadioGroup.html"></ibm-documentation>
+			<os-documentation src="documentation/components/RadioGroup.html"></os-documentation>
 		`
 	}));

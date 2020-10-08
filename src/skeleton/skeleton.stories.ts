@@ -10,15 +10,15 @@ storiesOf("Components|Skeleton", module).addDecorator(
 )
 	.addDecorator(withKnobs)
 	.add("Skeleton Placeholder", () => ({
-		template: `<ibm-skeleton-placeholder></ibm-skeleton-placeholder>`
+		template: `<os-skeleton-placeholder></os-skeleton-placeholder>`
 	}))
 	.add("Skeleton Text", () => ({
 		template: `
-			<ibm-skeleton-text
+			<os-skeleton-text
 				[lines]="lines"
 				[minLineWidth]="minLineWidth"
 				[maxLineWidth]="maxLineWidth">
-			</ibm-skeleton-text>
+			</os-skeleton-text>
 			`,
 		props: {
 			minLineWidth: number("Min width of line (in px)", 100),

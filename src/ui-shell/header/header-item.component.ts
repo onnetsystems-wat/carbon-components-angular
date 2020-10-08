@@ -12,7 +12,7 @@ import { Router } from "@angular/router";
  * Individual item in the header. May be used a direct child of `HeaderNavigation` or `HeaderMenu`
  */
 @Component({
-	selector: "ibm-header-item",
+	selector: "os-header-item",
 	template: `
 		<li style="height: 100%">
 			<ng-container [ngSwitch]="useRouter">

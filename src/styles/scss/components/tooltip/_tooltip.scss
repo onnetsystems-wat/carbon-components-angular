@@ -1,5 +1,5 @@
 //
-// Copyright IBM Corp. 2016, 2018
+// Copyright os Corp. 2016, 2018
 //
 // This source code is licensed under the Apache-2.0 license found in the
 // LICENSE file in the root directory of this source tree.
@@ -415,7 +415,7 @@
 
     // Tooltips need to be click focusable but not sequentially focusable so the user can click within
     // the tooltip and not have it close. Because the element is not actionable it does not need
-    // to have a visible focus indicator (OK'd by IBMa)
+    // to have a visible focus indicator (OK'd by osa)
     .#{$prefix}--tooltip__content[tabindex='-1']:focus {
       outline: none;
     }

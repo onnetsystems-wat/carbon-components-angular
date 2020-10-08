@@ -34,7 +34,7 @@ export class DropdownService implements OnDestroy {
 	) {}
 
 	/**
-	 * Appends the menu to the body, or a `ibm-placeholder` (if defined)
+	 * Appends the menu to the body, or a `os-placeholder` (if defined)
 	 *
 	 * @param parentRef container to position relative to
 	 * @param menuRef menu to be appended to body

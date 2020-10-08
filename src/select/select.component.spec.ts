@@ -7,9 +7,9 @@ import { Select } from "./select.component";
 
 @Component({
 	template: `
-		<ibm-select (valueChange)="onChange($event)" [(ngModel)]="model">
+		<os-select (valueChange)="onChange($event)" [(ngModel)]="model">
 			<option value="option1"> Option 1 </option>
-		</ibm-select>
+		</os-select>
 		`
 })
 class SelectTest {
@@ -58,33 +58,33 @@ describe("Select", () => {
 	it("should set label to test", () => {
 		fixture = TestBed.overrideComponent(SelectTest, {
 			set: {
-				template: `<ibm-select label="test"></ibm-select>`
+				template: `<os-select label="test"></os-select>`
 			}
 		}).createComponent(SelectTest);
 		fixture.detectChanges();
-		element = fixture.debugElement.query(By.css("ibm-select")).nativeElement;
+		element = fixture.debugElement.query(By.css("os-select")).nativeElement;
 		expect(element.querySelector(".bx--label").textContent).toEqual("test");
 	});
 
 	it("should set helperText to test", () => {
 		fixture = TestBed.overrideComponent(SelectTest, {
 			set: {
-				template: `<ibm-select helperText="test"></ibm-select>`
+				template: `<os-select helperText="test"></os-select>`
 			}
 		}).createComponent(SelectTest);
 		fixture.detectChanges();
-		element = fixture.debugElement.query(By.css("ibm-select")).nativeElement;
+		element = fixture.debugElement.query(By.css("os-select")).nativeElement;
 		expect(element.querySelector(".bx--form__helper-text").textContent).toEqual("test");
 	});
 
 	it("should set display to inline", () => {
 		fixture = TestBed.overrideComponent(SelectTest, {
 			set: {
-				template: `<ibm-select display="inline"></ibm-select>`
+				template: `<os-select display="inline"></os-select>`
 			}
 		}).createComponent(SelectTest);
 		fixture.detectChanges();
-		element = fixture.debugElement.query(By.css("ibm-select")).nativeElement;
+		element = fixture.debugElement.query(By.css("os-select")).nativeElement;
 		expect(element.querySelector(".bx--select--inline")).toBeTruthy();
 	});
 
@@ -92,24 +92,24 @@ describe("Select", () => {
 		fixture = TestBed.overrideComponent(SelectTest, {
 			set: {
 				template: `
-				<ibm-select>
+				<os-select>
 					<option value="option1" disabled> Option 1 </option>
-				</ibm-select>`
+				</os-select>`
 			}
 		}).createComponent(SelectTest);
 		fixture.detectChanges();
-		element = fixture.debugElement.query(By.css("ibm-select")).nativeElement;
+		element = fixture.debugElement.query(By.css("os-select")).nativeElement;
 		expect(element.querySelector("option").disabled).toBe(true);
 	});
 
 	it("should display ibm-icon-warning-filled16 and display invalid text", () => {
 		fixture = TestBed.overrideComponent(SelectTest, {
 			set: {
-				template: `<ibm-select [invalid]=true invalidText="test"></ibm-select>`
+				template: `<os-select [invalid]=true invalidText="test"></os-select>`
 			}
 		}).createComponent(SelectTest);
 		fixture.detectChanges();
-		element = fixture.debugElement.query(By.css("ibm-select")).nativeElement;
+		element = fixture.debugElement.query(By.css("os-select")).nativeElement;
 		expect(element.querySelector(".bx--select__invalid-icon")).toBeTruthy();
 		expect(element.querySelector(".bx--form-requirement").textContent).toEqual("test");
 	});
@@ -117,11 +117,11 @@ describe("Select", () => {
 	it("should set class bx--skeleton", () => {
 		fixture = TestBed.overrideComponent(SelectTest, {
 			set: {
-				template: `<ibm-select [skeleton]=true></ibm-select>`
+				template: `<os-select [skeleton]=true></os-select>`
 			}
 		}).createComponent(SelectTest);
 		fixture.detectChanges();
-		element = fixture.debugElement.query(By.css("ibm-select")).nativeElement;
+		element = fixture.debugElement.query(By.css("os-select")).nativeElement;
 		expect(element.querySelector(".bx--skeleton")).toBeTruthy();
 	});
 });

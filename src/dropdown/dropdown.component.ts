@@ -38,11 +38,11 @@ import { hasScrollableParents } from "@onnetsystems-wat/onnet-design-systems/uti
  * By default the dropdown will try to figure out the best placement for the dropdown list.
  *
  * If it's not contained within any scrolling elements, it will open inline, if it _is_
- * contained within a scrolling container it will try to open in the body, or an `ibm-placeholder`.
+ * contained within a scrolling container it will try to open in the body, or an `os-placeholder`.
  *
  * To control this behavior you can use the `appendInline` input:
  * - `[appendInline]="null"` is the default (auto detection)
- * - `[appendInline]="false"` will always append to the body/`ibm-placeholder`
+ * - `[appendInline]="false"` will always append to the body/`os-placeholder`
  * - `[appendInline]="true"` will always append inline (next to the dropdown button)
  *
  * [See demo](../../?path=/story/dropdown--basic)
@@ -50,7 +50,7 @@ import { hasScrollableParents } from "@onnetsystems-wat/onnet-design-systems/uti
  * <example-url>../../iframe.html?id=dropdown--basic</example-url>
  */
 @Component({
-	selector: "ibm-dropdown",
+	selector: "os-dropdown",
 	template: `
 	<label *ngIf="label" class="bx--label">
 		<ng-container *ngIf="!isTemplate(label)">{{label}}</ng-container>

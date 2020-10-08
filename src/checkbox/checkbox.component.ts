@@ -46,7 +46,7 @@ export class CheckboxChange {
  * <example-url>../../iframe.html?id=checkbox--basic</example-url>
  */
 @Component({
-	selector: "ibm-checkbox",
+	selector: "os-checkbox",
 	template: `
 		<div class="bx--form-item bx--checkbox-wrapper">
 			<input

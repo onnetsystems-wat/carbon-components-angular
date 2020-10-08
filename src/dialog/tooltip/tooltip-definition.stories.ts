@@ -18,12 +18,12 @@ storiesOf("Components|Tooltip Definition", module)
 	.addDecorator(withKnobs)
 	.add("Basic", () => ({
 		template: `
-			<ibm-tooltip-definition
+			<os-tooltip-definition
 				[content]="content"
 				[placement]="placement"
 				[alignment]="alignment">
 				{{triggerText}}
-			</ibm-tooltip-definition>
+			</os-tooltip-definition>
 		`,
 		props: {
 			placement: select("Tooltip direction", ["bottom", "top"], "bottom"),
@@ -34,6 +34,6 @@ storiesOf("Components|Tooltip Definition", module)
 	}))
 	.add("Documentation", () => ({
 		template: `
-			<ibm-documentation src="documentation/components/TooltipDefinition.html"></ibm-documentation>
+			<os-documentation src="documentation/components/TooltipDefinition.html"></os-documentation>
 		`
 	}));

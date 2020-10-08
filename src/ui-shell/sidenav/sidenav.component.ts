@@ -15,26 +15,26 @@ import { NavigationItem } from "../header/header-navigation-items.interface";
  * <example-url>../../iframe.html?id=ui-shell--side-navigation</example-url>
  */
 @Component({
-	selector: "ibm-sidenav",
+	selector: "os-sidenav",
 	template: `
 		<nav class="bx--side-nav__navigation" role="navigation" [attr.aria-label]="ariaLabel">
-			<ng-content select="ibm-sidenav-header"></ng-content>
+			<ng-content select="os-sidenav-header"></ng-content>
 			<ul class="bx--side-nav__items">
 				<div
 					class="bx--side-nav__header-navigation bx--side-nav__header-divider">
 					<ng-container *ngFor="let navigationItem of navigationItems">
-						<ibm-sidenav-item
+						<os-sidenav-item
 							*ngIf="navigationItem.type === 'item'"
 							[href]="navigationItem.href"
 							[route]="navigationItem.route"
 							[routeExtras]="navigationItem.routeExtras">
 							{{ navigationItem.content }}
-						</ibm-sidenav-item>
-						<ibm-sidenav-menu
+						</os-sidenav-item>
+						<os-sidenav-menu
 							*ngIf="navigationItem.type === 'menu'"
 							[title]="navigationItem.title"
 							[menuItems]="navigationItem.menuItems">
-						</ibm-sidenav-menu>
+						</os-sidenav-menu>
 					</ng-container>
 				</div>
 				<ng-content></ng-content>

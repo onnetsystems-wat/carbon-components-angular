@@ -10,7 +10,7 @@ import { TableItem } from "./table-item.class";
 
 @Component({
 	template: `
-		<ibm-table
+		<os-table
 			[model]="tableModel"
 			(sort)="simpleSort()"
 			(selectRow)="onChange()"
@@ -18,7 +18,7 @@ import { TableItem } from "./table-item.class";
 			size="sh"
 			title="title"
 			[showSelectionColumn]="showSelectionColumn">
-		</ibm-table>`
+		</os-table>`
 })
 class TableTest implements OnInit {
 	tableModel = new TableModel();
@@ -48,7 +48,7 @@ describe("Table", () => {
 		});
 
 		fixture = TestBed.createComponent(TableTest);
-		tableInstance = fixture.debugElement.query(By.css("ibm-table"));
+		tableInstance = fixture.debugElement.query(By.css("os-table"));
 		fixture.detectChanges();
 	});
 
@@ -115,12 +115,12 @@ describe("Table", () => {
 	});
 
 	it("should not show checkboxes when showSelectionColumn is false", () => {
-		expect(tableInstance.nativeElement.querySelector("ibm-checkbox")).toBeTruthy();
+		expect(tableInstance.nativeElement.querySelector("os-checkbox")).toBeTruthy();
 
 		fixture.componentInstance.showSelectionColumn = false;
 		fixture.detectChanges();
 
-		expect(tableInstance.nativeElement.querySelector("ibm-checkbox")).not.toBeTruthy();
+		expect(tableInstance.nativeElement.querySelector("os-checkbox")).not.toBeTruthy();
 	});
 
 	it("should set title to 'title", () => {

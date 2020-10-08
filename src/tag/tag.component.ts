@@ -17,7 +17,7 @@ export type TagType = "red" | "magenta" | "purple" | "blue" | "cyan" | "teal" | 
  * <example-url>../../iframe.html?id=tag--basic</example-url>
  */
 @Component({
-	selector: "ibm-tag",
+	selector: "os-tag",
 	template: `<ng-content></ng-content>`
 })
 export class Tag {

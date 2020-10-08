@@ -16,14 +16,14 @@ storiesOf("Components|Slider", module).addDecorator(moduleMetadata({
 }))
 .addDecorator(withKnobs)
 .add("Basic", () => ({
-	template: `<ibm-slider [disabled]="disabled" aria-Label="Label for slider value"></ibm-slider>`,
+	template: `<os-slider [disabled]="disabled" aria-Label="Label for slider value"></os-slider>`,
 	props: {
 		disabled: boolean("disabled", false)
 	}
 }))
 .add("Advanced", () => ({
 	template: `
-		<ibm-slider
+		<os-slider
 			[label]="label"
 			[min]="min"
 			[max]="max"
@@ -36,7 +36,7 @@ storiesOf("Components|Slider", module).addDecorator(moduleMetadata({
 			<span minLabel>{{minLabel}}</span>
 			<span maxLabel>{{maxLabel}}</span>
 			<input [ngClass]="{'bx--text-input--light': theme === 'light'}"/>
-		</ibm-slider>
+		</os-slider>
 	`,
 	props: {
 		min: number("min", 0),
@@ -54,7 +54,7 @@ storiesOf("Components|Slider", module).addDecorator(moduleMetadata({
 }))
 .add("With NgModel", () => ({
 	template: `
-		<ibm-slider [(ngModel)]="model" [disabled]="disabled" aria-Label="Label for slider value"></ibm-slider>
+		<os-slider [(ngModel)]="model" [disabled]="disabled" aria-Label="Label for slider value"></os-slider>
 		<br>
 		<span>model: {{model}}</span>
 	`,
@@ -65,11 +65,11 @@ storiesOf("Components|Slider", module).addDecorator(moduleMetadata({
 }))
 .add("Skeleton", () => ({
 	template: `
-		<ibm-slider skeleton="true"></ibm-slider>
+		<os-slider skeleton="true"></os-slider>
 	`
 }))
 .add("Documentation", () => ({
 	template: `
-		<ibm-documentation src="documentation/components/Slider.html"></ibm-documentation>
+		<os-documentation src="documentation/components/Slider.html"></os-documentation>
 	`
 }));

@@ -13,7 +13,7 @@ export interface ExpandableTileTranslations {
 }
 
 @Component({
-	selector: "ibm-expandable-tile",
+	selector: "os-expandable-tile",
 	template: `
 		<button
 			class="bx--tile bx--tile--expandable"

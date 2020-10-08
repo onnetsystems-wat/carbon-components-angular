@@ -14,8 +14,8 @@ import { DocumentationModule } from "../documentation-component/documentation.mo
 @Component({
 	selector: "app-skeleton-progress-indicator",
 	template: `
-		<ibm-progress-indicator [steps]="skeletonSteps" [orientation]="orientation" skeleton="true">
-		</ibm-progress-indicator>
+		<os-progress-indicator [steps]="skeletonSteps" [orientation]="orientation" skeleton="true">
+		</os-progress-indicator>
 	`
 })
 class SkeletonStory implements OnInit {
@@ -43,8 +43,8 @@ storiesOf("Components|Progress Indicator", module)
 	.add("Basic", () => ({
 		template: `
 		<div style="display: flex;">
-			<ibm-progress-indicator [steps]="steps" [current]="current" (stepSelected)="stepSelected($event)"></ibm-progress-indicator>
-			<ibm-placeholder></ibm-placeholder>
+			<os-progress-indicator [steps]="steps" [current]="current" (stepSelected)="stepSelected($event)"></os-progress-indicator>
+			<os-placeholder></os-placeholder>
 		</div>
 		`,
 		props: {
@@ -87,8 +87,8 @@ storiesOf("Components|Progress Indicator", module)
 	}))
 	.add("Vertical", () => ({
 		template: `
-		<ibm-progress-indicator orientation="vertical" [steps]="steps" [current]="current" (stepSelected)="stepSelected($event)">
-		</ibm-progress-indicator>
+		<os-progress-indicator orientation="vertical" [steps]="steps" [current]="current" (stepSelected)="stepSelected($event)">
+		</os-progress-indicator>
 		`,
 		props: {
 			steps : [
@@ -127,6 +127,6 @@ storiesOf("Components|Progress Indicator", module)
 	}))
 	.add("Documentation", () => ({
 		template: `
-			<ibm-documentation src="documentation/components/ProgressIndicator.html"></ibm-documentation>
+			<os-documentation src="documentation/components/ProgressIndicator.html"></os-documentation>
 		`
 	}));

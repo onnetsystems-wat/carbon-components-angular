@@ -27,7 +27,7 @@ import { ElementService } from "@onnetsystems-wat/onnet-design-systems/utils";
  * Used to implement a popover or tooltip.
  */
 @Component({
-	selector: "ibm-dialog",
+	selector: "os-dialog",
 	template: ""
 })
 export class Dialog implements OnInit, AfterViewInit, OnDestroy {

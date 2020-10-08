@@ -21,12 +21,12 @@ import {
 	selector: "app-reactive-form",
 	template: `
 		<form [formGroup]="formGroup">
-			<ibm-select formControlName="selecterino">
+			<os-select formControlName="selecterino">
 				<option value="default" disabled selected hidden>Choose an option</option>
 				<option value="option1">Option 1</option>
 				<option value="option2">Option 2</option>
 				<option value="option3">Option 3</option>
-			</ibm-select>
+			</os-select>
 		</form>
 
 		<button (click)="clearSelection()">Clear selection</button>
@@ -63,7 +63,7 @@ storiesOf("Components|Select", module).addDecorator(
 	.addDecorator(withKnobs)
 	.add("Basic", () => ({
 		template: `
-			<ibm-select
+			<os-select
 				[disabled]="disabled"
 				[size]="size"
 				[invalid]="invalid"
@@ -82,7 +82,7 @@ storiesOf("Components|Select", module).addDecorator(
 					<option value="option1">Option 1</option>
 					<option value="option2">Option 2</option>
 				</optgroup>
-			</ibm-select>
+			</os-select>
 	`,
 		props: {
 			disabled: boolean("Disabled", false),
@@ -98,12 +98,12 @@ storiesOf("Components|Select", module).addDecorator(
 	.add("With ngModel", () => ({
 		template: `
 			<div style="width: 165px">
-				<ibm-select [(ngModel)]="model" [size]="size">
+				<os-select [(ngModel)]="model" [size]="size">
 					<option value="default" disabled selected hidden>Choose an option</option>
 					<option value="option1">Option 1</option>
 					<option value="option2">Option 2</option>
 					<option value="option3">Option 3</option>
-				</ibm-select>
+				</os-select>
 				<br>
 				<span>Selected: {{ model }}</span>
 			</div>
@@ -119,12 +119,12 @@ storiesOf("Components|Select", module).addDecorator(
 	.add("Skeleton", () => ({
 		template: `
 		<div style="width: 300px">
-			<ibm-select skeleton="true"></ibm-select>
+			<os-select skeleton="true"></os-select>
 		</div>
 		`
 	}))
 	.add("Documentation", () => ({
 		template: `
-			<ibm-documentation src="documentation/components/Select.html"></ibm-documentation>
+			<os-documentation src="documentation/components/Select.html"></os-documentation>
 		`
 	}));

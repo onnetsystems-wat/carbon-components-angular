@@ -21,7 +21,7 @@ import { of, isObservable, Subject } from "rxjs";
  * <example-url>../../iframe.html?id=notification--basic</example-url>
  */
 @Component({
-	selector: "ibm-notification",
+	selector: "os-notification",
 	template: `
 		<div class="bx--inline-notification__details">
 			<svg
@@ -49,11 +49,11 @@ import { of, isObservable, Subject } from "rxjs";
 				class="bx--inline-notification__icon">
 			</svg>
 			<div class="bx--inline-notification__text-wrapper">
-				<p *ngIf="!notificationObj.template" ibmNotificationTitle [innerHTML]="notificationObj.title"></p>
-				<div *ngIf="!notificationObj.template" ibmNotificationSubtitle>
+				<p *ngIf="!notificationObj.template" osNotificationTitle [innerHTML]="notificationObj.title"></p>
+				<div *ngIf="!notificationObj.template" osNotificationSubtitle>
 					<span [innerHTML]="notificationObj.message"></span>
 					<ng-container *ngFor="let link of notificationObj.links">
-						<a ibmLink [href]="link.href"> {{link.text}}</a>
+						<a osLink [href]="link.href"> {{link.text}}</a>
 					</ng-container>
 				</div>
 				<ng-container *ngTemplateOutlet="notificationObj.template; context: { $implicit: notificationObj}"></ng-container>
@@ -62,7 +62,7 @@ import { of, isObservable, Subject } from "rxjs";
 		<div *ngFor="let action of notificationObj.actions">
 			<button
 				(click)="onClick(action, $event)"
-				ibmButton="ghost"
+				osButton="ghost"
 				size="sm"
 				class="bx--inline-notification__action-button"
 				type="button">

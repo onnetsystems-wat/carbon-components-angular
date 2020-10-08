@@ -25,7 +25,7 @@ export enum InlineLoadingState {
  * <example-url>../../iframe.html?id=inline-loading--basic</example-url>
  */
 @Component({
-	selector: "ibm-inline-loading",
+	selector: "os-inline-loading",
 	template: `
 		<div *ngIf="state !== InlineLoadingState.Hidden"
 			class="bx--inline-loading__animation">

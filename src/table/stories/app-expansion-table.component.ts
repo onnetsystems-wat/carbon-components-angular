@@ -35,7 +35,7 @@ class CustomHeaderItem extends TableHeaderItem {
 			<i><a [attr.href]="data.link">{{data.name}}</a></i>
 		</ng-template>
 
-		<ibm-table
+		<os-table
 			style="display: block; width: 650px;"
 			[model]="model"
 			[size]="size"
@@ -47,7 +47,7 @@ class CustomHeaderItem extends TableHeaderItem {
 			(sort)="customSort($event)"
 			(rowClick)="onRowClick($event)"
 			[isDataGrid]="isDataGrid">
-		</ibm-table>
+		</os-table>
 	`
 })
 export class ExpansionTableStory implements OnInit {

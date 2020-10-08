@@ -7,7 +7,7 @@
       "root": "src",
       "sourceRoot": "src",
       "projectType": "library",
-      "prefix": "ibm",
+      "prefix": "os",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
@@ -72,11 +72,11 @@
   "defaultProject": "@onnetsystems-wat/onnet-design-systems",
   "schematics": {
     "@schematics/angular:component": {
-      "prefix": "ibm",
+      "prefix": "os",
       "style": "css"
     },
     "@schematics/angular:directive": {
-      "prefix": "ibm"
+      "prefix": "os"
     }
   },
   "cli": {

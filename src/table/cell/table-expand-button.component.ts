@@ -10,7 +10,7 @@ import { Observable } from "rxjs";
 
 @Component({
 	// tslint:disable-next-line: component-selector
-	selector: "[ibmTableExpandButton]",
+	selector: "[osTableExpandButton]",
 	template: `
 		<button
 			*ngIf="expandable"

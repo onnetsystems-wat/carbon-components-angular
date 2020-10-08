@@ -17,22 +17,22 @@ storiesOf("Components|Toggle", module).addDecorator(
 	.addDecorator(withKnobs)
 	.add("Basic", () => ({
 		template: `
-			<ibm-toggle
+			<os-toggle
 				[label]="label"
 				[onText]="onText"
 				[offText]="offText"
 				[disabled]="disabled"
 				[checked]="checked"
 				[size]="size">
-			</ibm-toggle>
-			<ibm-toggle
+			</os-toggle>
+			<os-toggle
 				[label]="label"
 				[onText]="altOnText"
 				[offText]="altOffText"
 				[disabled]="disabled"
 				[checked]="checked"
 				[size]="size">
-			</ibm-toggle>
+			</os-toggle>
 		`,
 		props: {
 			disabled: boolean("Disabled", false),
@@ -47,13 +47,13 @@ storiesOf("Components|Toggle", module).addDecorator(
 	}))
 	.add("Skeleton", () => ({
 		template: `
-			<ibm-toggle skeleton="true"></ibm-toggle>
+			<os-toggle skeleton="true"></os-toggle>
 			&nbsp;
-			<ibm-toggle skeleton="true" size="sm"></ibm-toggle>
+			<os-toggle skeleton="true" size="sm"></os-toggle>
 		`
 	}))
 	.add("Documentation", () => ({
 		template: `
-			<ibm-documentation src="documentation/components/Toggle.html"></ibm-documentation>
+			<os-documentation src="documentation/components/Toggle.html"></os-documentation>
 		`
 	}));

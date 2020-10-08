@@ -24,23 +24,23 @@ import { ButtonModule } from "../forms";
 @Component({
 	selector: "app-sample-modal",
 	template: `
-		<ibm-modal
+		<os-modal
 			[size]="size"
 			[open]="open"
 			(overlaySelected)="closeModal()">
-			<ibm-modal-header (closeSelect)="closeModal()">
-				<h2 ibmModalHeaderLabel>Label</h2>
-				<h3 ibmModalHeaderHeading>Modal</h3>
-			</ibm-modal-header>
-			<section ibmModalContent>
+			<os-modal-header (closeSelect)="closeModal()">
+				<h2 osModalHeaderLabel>Label</h2>
+				<h3 osModalHeaderHeading>Modal</h3>
+			</os-modal-header>
+			<section osModalContent>
 				<h1>Sample modal works.</h1>
-				<p ibmModalContentText>{{modalText}}</p>
+				<p osModalContentText>{{modalText}}</p>
 			</section>
-			<ibm-modal-footer>
+			<os-modal-footer>
 				<button class="bx--btn bx--btn--secondary" (click)="showSecondaryModal()">Show secondary modal</button>
 				<button class="bx--btn bx--btn--primary" modal-primary-focus (click)="closeModal()">Close</button>
-			</ibm-modal-footer>
-		</ibm-modal>
+			</os-modal-footer>
+		</os-modal>
 	`
 })
 class SampleModal extends BaseModal {
@@ -71,34 +71,34 @@ class SampleModal extends BaseModal {
 @Component({
 	selector: "app-form-modal",
 	template: `
-		<ibm-modal
+		<os-modal
 			size="lg"
 			open="true"
 			(overlaySelected)="closeModal()">
-			<ibm-modal-header (closeSelect)="closeModal()">
-				<h2 ibmModalHeaderLabel>Label</h2>
-				<h3 ibmModalHeaderHeading>Modal</h3>
-			</ibm-modal-header>
-			<section ibmModalContent hasForm="true">
-				<h1 ibmModalContentText class="bx--modal-content__regular-content modal-text">
+			<os-modal-header (closeSelect)="closeModal()">
+				<h2 osModalHeaderLabel>Label</h2>
+				<h3 osModalHeaderHeading>Modal</h3>
+			</os-modal-header>
+			<section osModalContent hasForm="true">
+				<h1 osModalContentText class="bx--modal-content__regular-content modal-text">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis finibus erat vel aliquam sodales.
 					Phasellus porta velit vel libero pulvinar, sit amet semper purus volutpat.
 				</h1>
 				<div class="bx--text-input__field-wrapper">
-					<ibm-label helperText="Helper text">
+					<os-label helperText="Helper text">
 						{{label}}
 						<input
-							ibmText
+							osText
 							placeholder="Placeholder"
 							[autocomplete]="false">
-					</ibm-label>
+					</os-label>
 				</div>
 			</section>
-			<ibm-modal-footer>
+			<os-modal-footer>
 				<button class="bx--btn bx--btn--secondary" (click)="closeModal()">Show secondary modal</button>
 				<button class="bx--btn bx--btn--primary" modal-primary-focus (click)="closeModal()">Close</button>
-			</ibm-modal-footer>
-		</ibm-modal>
+			</os-modal-footer>
+		</os-modal>
 	`,
 	styles: [`
 		.modal-text {
@@ -136,25 +136,25 @@ class ModalStory {
 @Component({
 	selector: "app-input-modal",
 	template: `
-		<ibm-modal
+		<os-modal
 			[size]="size"
 			[open]="open"
 			(overlaySelected)="closeModal()">
-			<ibm-modal-header (closeSelect)="closeModal()">Edit account name</ibm-modal-header>
+			<os-modal-header (closeSelect)="closeModal()">Edit account name</os-modal-header>
 			<section class="bx--modal-content">
-				<ibm-label>
+				<os-label>
 					Account name
 					<input
-						ibmText
+						osText
 						[value]="inputValue"
 						(change)="onChange($event)">
-				</ibm-label>
+				</os-label>
 			</section>
-			<ibm-modal-footer>
+			<os-modal-footer>
 				<button class="bx--btn bx--btn--secondary" (click)="closeModal()">Cancel</button>
 				<button class="bx--btn bx--btn--primary" modal-primary-focus (click)="closeModal()">Save</button>
-			</ibm-modal-footer>
-		</ibm-modal>
+			</os-modal-footer>
+		</os-modal>
 	`
 })
 class InputModal extends BaseModal {
@@ -269,7 +269,7 @@ storiesOf("Components|Modal", module)
 	.add("Basic", () => ({
 		template: `
 		<app-modal-story [modalText]="modalText" [size]="size"></app-modal-story>
-		<ibm-placeholder></ibm-placeholder>
+		<os-placeholder></os-placeholder>
 		`,
 		props: getOptions({
 			modalText: text("modalText", "Hello, World!")
@@ -288,7 +288,7 @@ storiesOf("Components|Modal", module)
 			[size]="size"
 			[buttons]="buttons">
 		</app-alert-modal-story>
-		<ibm-placeholder></ibm-placeholder>
+		<os-placeholder></os-placeholder>
 		`,
 		props: getOptions({
 			modalType: select("modalType", ["default", "danger"], "default"),
@@ -314,7 +314,7 @@ storiesOf("Components|Modal", module)
 			[size]="size"
 			[modalContent]="modalContent">
 		</app-alert-modal-story>
-		<ibm-placeholder></ibm-placeholder>
+		<os-placeholder></os-placeholder>
 		`,
 		props: getOptions({
 			modalType: select("modalType", ["default", "danger"], "default"),
@@ -330,7 +330,7 @@ storiesOf("Components|Modal", module)
 				[modalText]="modalText"
 				[size]="size">
 			</app-data-passing-modal>
-			<ibm-placeholder></ibm-placeholder>
+			<os-placeholder></os-placeholder>
 		`,
 		props: {
 			modalText: text("modalText", "Hello, World!"),
@@ -339,26 +339,26 @@ storiesOf("Components|Modal", module)
 	}))
 	.add("Simple modal", () => ({
 		template: `
-			<button #trigger ibmButton="primary" (click)="open = true">Open</button>
-			<ibm-modal [open]="open" [trigger]="trigger" (overlaySelected)="open = false">
-				<ibm-modal-header (closeSelect)="open = false">
+			<button #trigger osButton="primary" (click)="open = true">Open</button>
+			<os-modal [open]="open" [trigger]="trigger" (overlaySelected)="open = false">
+				<os-modal-header (closeSelect)="open = false">
 					<p class="bx--modal-header__label bx--type-delta">No service required</p>
 					<p class="bx--modal-header__heading bx--type-beta">A very simple modal</p>
-				</ibm-modal-header>
+				</os-modal-header>
 				<div class="bx--modal-content">
 					<p>hello world</p>
 				</div>
-				<ibm-modal-footer>
+				<os-modal-footer>
 					<ng-container>
 						<button
-							ibmButton="primary"
+							osButton="primary"
 							(click)="open = false"
 							[attr.modal-primary-focus]="true">
 							Okay
 						</button>
 					</ng-container>
-				</ibm-modal-footer>
-			</ibm-modal>
+				</os-modal-footer>
+			</os-modal>
 		`,
 		props: {
 			open: false
@@ -366,6 +366,6 @@ storiesOf("Components|Modal", module)
 	}))
 	.add("Documentation", () => ({
 		template: `
-			<ibm-documentation src="documentation/components/Modal.html"></ibm-documentation>
+			<os-documentation src="documentation/components/Modal.html"></os-documentation>
 		`
 	}));

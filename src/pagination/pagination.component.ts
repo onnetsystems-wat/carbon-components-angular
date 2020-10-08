@@ -26,7 +26,7 @@ export interface PaginationTranslations {
  * [See demo](../../?path=/story/pagination--basic)
  *
  * ```html
- * <ibm-pagination [model]="model" (selectPage)="selectPage($event)"></ibm-pagination>
+ * <os-pagination [model]="model" (selectPage)="selectPage($event)"></os-pagination>
  * ```
  *
  * In your `selectPage()` method set the `model.currentPage` to selected page, _after_
@@ -45,7 +45,7 @@ export interface PaginationTranslations {
  * <example-url>../../iframe.html?id=pagination--basic</example-url>
  */
 @Component({
-	selector: "ibm-pagination",
+	selector: "os-pagination",
 	template: `
 	<div
 		class="bx--pagination"

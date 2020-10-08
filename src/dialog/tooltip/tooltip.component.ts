@@ -15,7 +15,7 @@ import { ElementService } from "@onnetsystems-wat/onnet-design-systems/utils";
  * Extend the `Dialog` component to create a tooltip for exposing content.
  */
 @Component({
-	selector: "ibm-tooltip",
+	selector: "os-tooltip",
 	template: `
 		<div
 			#dialog

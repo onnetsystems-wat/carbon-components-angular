@@ -1,5 +1,5 @@
 //
-// Copyright IBM Corp. 2016, 2018
+// Copyright os Corp. 2016, 2018
 //
 // This source code is licensed under the Apache-2.0 license found in the
 // LICENSE file in the root directory of this source tree.
@@ -14,7 +14,7 @@
     @include carbon--font-face-mono();
     @include carbon--font-face-sans();
     @if not variable-exists('css--plex') or $css--plex == false {
-      @warn 'Usage of Helvetica font in `carbon-components` has been removed. IBM Plex will be emitted instead';
+      @warn 'Usage of Helvetica font in `carbon-components` has been removed. os Plex will be emitted instead';
     }
   }
 }

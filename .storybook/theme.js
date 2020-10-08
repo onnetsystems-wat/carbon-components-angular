@@ -34,6 +34,6 @@ export const CarbonG100 = create({
 	inputTextColor: text01,
 	inputBorderRadius: 0,
 
-	brandTitle: "carbon components angular",
-	brandUrl: "https://github.com/IBM/@onnetsystems-wat/onnet-design-systems",
+	brandTitle: "Onnet Design Systems",
+	brandUrl: "https://github.com/@onnetsystems-wat/onnet-design-systems",
 });

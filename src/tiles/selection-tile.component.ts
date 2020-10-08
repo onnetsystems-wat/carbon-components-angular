@@ -11,7 +11,7 @@ import { NG_VALUE_ACCESSOR } from "@angular/forms";
 import { I18n } from "@onnetsystems-wat/onnet-design-systems/i18n";
 
 @Component({
-	selector: "ibm-selection-tile",
+	selector: "os-selection-tile",
 	template: `
 		<label
 			class="bx--tile bx--tile--selectable"

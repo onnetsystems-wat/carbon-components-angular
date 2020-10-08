@@ -13,16 +13,16 @@ import { Router } from "@angular/router";
  * ## Basic usage
  *
  * ```html
- * <ibm-clickable-tile>
+ * <os-clickable-tile>
  * 		tile content
- * </ibm-clickable-tile>
+ * </os-clickable-tile>
  * ```
  */
 @Component({
-	selector: "ibm-clickable-tile",
+	selector: "os-clickable-tile",
 	template: `
 	<a
-		ibmLink
+		osLink
 		class="bx--tile bx--tile--clickable"
 		tabindex="0"
 		(click)="navigate($event)"
@@ -34,12 +34,12 @@ import { Router } from "@angular/router";
 })
 export class ClickableTile {
 	/**
-	 * Sets the `href` attribute on the `ibm-clickable-tile` element.
+	 * Sets the `href` attribute on the `os-clickable-tile` element.
 	 */
 	@Input() href = "#";
 
 	/**
-	 * Sets the `target` attribute on the `ibm-clickable-tile` element.
+	 * Sets the `target` attribute on the `os-clickable-tile` element.
 	 */
 	@Input() target: string;
 

@@ -6,13 +6,13 @@ import { Directive, HostBinding, Input } from "@angular/core";
  * Example:
  *
  * ```html
- * <textarea ibmTextArea></textarea>
+ * <textarea osTextArea></textarea>
  * ```
  *
  * See the [vanilla carbon docs](http://www.carbondesignsystem.com/components/text-input/code) for more detail.
  */
 @Directive({
-	selector: "[ibmTextArea]"
+	selector: "[osTextArea]"
 })
 export class TextArea {
 	/**

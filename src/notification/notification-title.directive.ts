@@ -1,7 +1,7 @@
 import { Directive, HostBinding } from "@angular/core";
 
 @Directive({
-	selector: "[ibmNotificationTitle]"
+	selector: "[osNotificationTitle]"
 })
 export class NotificationTitle {
 	@HostBinding("class.bx--inline-notification__title") baseClass = true;

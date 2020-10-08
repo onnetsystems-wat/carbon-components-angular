@@ -12,11 +12,11 @@ import { PlaceholderModule } from "../../placeholder/index";
 	selector: "test-component",
 	template: `
 		<button
-			ibmTooltip="Hello There"
+			osTooltip="Hello There"
 			placement="bottom"
 			(onOpen)="onOpen()">
 		</button>
-		<ibm-placeholder></ibm-placeholder>
+		<os-placeholder></os-placeholder>
 	`
 })
 class TooltipTest {
@@ -27,8 +27,8 @@ class TooltipTest {
 	selector: "test-template-component",
 	template: `
 		<ng-template #customPopover>custom template</ng-template>
-		<button [ibmTooltip]="customPopover">Pop over right</button>
-		<ibm-placeholder></ibm-placeholder>
+		<button [osTooltip]="customPopover">Pop over right</button>
+		<os-placeholder></os-placeholder>
 	`
 })
 class TooltipTemplateTest { }
@@ -64,8 +64,8 @@ describe("Tooltip directive", () => {
 		const fixture = TestBed.overrideComponent(TooltipTest, {
 			set: {
 				template: `
-					<button ibmTooltip="Hello There" placement="top"></button>
-					<ibm-placeholder></ibm-placeholder>
+					<button osTooltip="Hello There" placement="top"></button>
+					<os-placeholder></os-placeholder>
 				`
 			}
 		}).createComponent(TooltipTest);
@@ -101,6 +101,6 @@ describe("Tooltip directive", () => {
 
 		const directiveEl = fixture.debugElement.query(By.directive(TooltipDirective));
 		const directiveInstance = directiveEl.injector.get(TooltipDirective);
-		expect(directiveInstance.ibmTooltip instanceof TemplateRef).toBe(true);
+		expect(directiveInstance.osTooltip instanceof TemplateRef).toBe(true);
 	});
 });

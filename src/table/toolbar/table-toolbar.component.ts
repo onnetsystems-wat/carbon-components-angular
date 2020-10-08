@@ -13,37 +13,37 @@ import { I18n, Overridable } from "@onnetsystems-wat/onnet-design-systems/i18n";
  * ## Basic usage
  *
  * ```html
- * <ibm-table-toolbar [model]="model">
- *		<ibm-table-toolbar-actions>
- *			<button ibmButton="primary">
+ * <os-table-toolbar [model]="model">
+ *		<os-table-toolbar-actions>
+ *			<button osButton="primary">
  *				Delete
  *				<ibm-icon-delete size="16" class="bx--btn__icon"></ibm-icon-delete>
  *			</button>
- *			<button ibmButton="primary">
+ *			<button osButton="primary">
  *				Save
  *				<ibm-icon-save size="16" class="bx--btn__icon"></ibm-icon-save>
  *			</button>
- *			<button ibmButton="primary">
+ *			<button osButton="primary">
  *				Download
  *				<ibm-icon-download size="16" class="bx--btn__icon"></ibm-icon-download>
  *			</button>
- *		</ibm-table-toolbar-actions>
- *			<ibm-table-toolbar-content>
- *			<ibm-table-toolbar-search [expandable]="true"></ibm-table-toolbar-search>
- *			<button ibmButton="toolbar-action">
+ *		</os-table-toolbar-actions>
+ *			<os-table-toolbar-content>
+ *			<os-table-toolbar-search [expandable]="true"></os-table-toolbar-search>
+ *			<button osButton="toolbar-action">
  *				<ibm-icon-settings size="16" class="bx--toolbar-action__icon"></ibm-icon-settings>
  *			</button>
- *			<button ibmButton="primary" size="sm">
+ *			<button osButton="primary" size="sm">
  *				Primary Button
  *				<ibm-icon-add size="20" class="bx--btn__icon"></ibm-icon-add>
  *			</button>
- *		</ibm-table-toolbar-content>
- *	</ibm-table-toolbar>
+ *		</os-table-toolbar-content>
+ *	</os-table-toolbar>
  * ```
  *
  */
 @Component({
-	selector: "ibm-table-toolbar",
+	selector: "os-table-toolbar",
 	template: `
 	<section class="bx--table-toolbar">
 		<div
@@ -54,9 +54,9 @@ import { I18n, Overridable } from "@onnetsystems-wat/onnet-design-systems/i18n";
 			}"
 			[attr.aria-label]="actionBarLabel.subject | async">
 			<div class="bx--action-list">
-				<ng-content select="ibm-table-toolbar-actions"></ng-content>
+				<ng-content select="os-table-toolbar-actions"></ng-content>
 				<button
-					ibmButton="primary"
+					osButton="primary"
 					class="bx--batch-summary__cancel"
 					[tabindex]="selected ? 0 : -1"
 					(click)="onCancel()">

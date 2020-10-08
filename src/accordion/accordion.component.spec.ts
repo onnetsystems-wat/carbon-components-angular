@@ -8,13 +8,13 @@ import { Accordion } from "./accordion.component";
 
 @Component({
 	template: `
-	<ibm-accordion>
-		<ibm-accordion-item
+	<os-accordion>
+		<os-accordion-item
 		[title]="title"
 		[skeleton]="skeleton">
 			test-content
-		</ibm-accordion-item>
-	<ibm-accordion>`
+		</os-accordion-item>
+	<os-accordion>`
 })
 class AccordionTest {
 	title = "Section 1";
@@ -66,15 +66,15 @@ describe("Accordion", () => {
 		fixture = TestBed.createComponent(AccordionTest);
 		wrapper = fixture.componentInstance;
 		fixture.detectChanges();
-		debugElement = fixture.debugElement.query(By.css("ibm-accordion .bx--accordion__content"));
+		debugElement = fixture.debugElement.query(By.css("os-accordion .bx--accordion__content"));
 		expect(debugElement.nativeElement.textContent).toContain("test-content");
 	});
 
-	it("should set ibm-accordion item title to 'Section 1'", () => {
+	it("should set os-accordion item title to 'Section 1'", () => {
 		fixture = TestBed.createComponent(AccordionTest);
 		wrapper = fixture.componentInstance;
 		fixture.detectChanges();
-		debugElement = fixture.debugElement.query(By.css("ibm-accordion .bx--accordion__title"));
+		debugElement = fixture.debugElement.query(By.css("os-accordion .bx--accordion__title"));
 		expect(debugElement.nativeElement.textContent).toContain("Section 1");
 	});
 });

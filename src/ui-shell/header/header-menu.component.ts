@@ -11,7 +11,7 @@ import { HeaderItemInterface } from "./header-navigation-items.interface";
  * Dropdown menu container for navigation items.
  */
 @Component({
-	selector: "ibm-header-menu",
+	selector: "os-header-menu",
 	template: `
 		<li
 			class="bx--header__submenu"
@@ -31,12 +31,12 @@ import { HeaderItemInterface } from "./header-navigation-items.interface";
 			<ul class="bx--header__menu" role="menu" [attr.aria-label]="title">
 				<ng-content></ng-content>
 				<ng-container *ngFor="let headerItem of headerItems">
-					<ibm-header-item
+					<os-header-item
 						[href]="headerItem.href"
 						[route]="headerItem.route"
 						[routeExtras]="headerItem.routeExtras">
 						{{ headerItem.content }}
-					</ibm-header-item>
+					</os-header-item>
 				</ng-container>
 			</ul>
 		</li>

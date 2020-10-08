@@ -19,20 +19,20 @@ storiesOf("Components|Time Picker Select", module)
 		template: `
 		<div class="bx--form-item">
 			<div class="bx--time-picker">
-				<ibm-timepicker-select>
+				<os-timepicker-select>
 					<option selected value="AM">AM</option>
 					<option value="PM">PM</option>
-				</ibm-timepicker-select>
-				<ibm-timepicker-select>
+				</os-timepicker-select>
+				<os-timepicker-select>
 					<option selected value="Time Zone 1">Time Zone 1</option>
 					<option value="Time Zone 2">Time Zone 2</option>
-				</ibm-timepicker-select>
+				</os-timepicker-select>
 			</div>
 		</div>
 		`
 	}))
 	.add("Documentation", () => ({
 		template: `
-			<ibm-documentation src="documentation/components/TimePickerSelect.html"></ibm-documentation>
+			<os-documentation src="documentation/components/TimePickerSelect.html"></os-documentation>
 		`
 	}));

@@ -9,38 +9,38 @@ import { UIShellModule } from "../../ui-shell/index";
 @Component({
 	selector: "app-sample-multi-selection",
 	template: `
-	<div ibmGrid>
-		<div ibmRow class="header">
-			<ibm-header name="Patterns">
-				<ibm-hamburger></ibm-hamburger>
-			</ibm-header>
+	<div osGrid>
+		<div osRow class="header">
+			<os-header name="Patterns">
+				<os-hamburger></os-hamburger>
+			</os-header>
 		</div>
-		<div ibmRow>
-			<div ibmCol [columnNumbers]="{'lg': 3, 'md': 3, 'sm': 3}">
-				<label ibmText class="dropdown-label">
+		<div osRow>
+			<div osCol [columnNumbers]="{'lg': 3, 'md': 3, 'sm': 3}">
+				<label osText class="dropdown-label">
 					Filter by:
-					<ibm-dropdown
+					<os-dropdown
 						class="filter-dropdown"
 						type="multi"
 						placeholder="Type"
 						inline="true"
 						(selected)="onSelected($event)">
-						<ibm-dropdown-list [items]="items"></ibm-dropdown-list>
-					</ibm-dropdown>
+						<os-dropdown-list [items]="items"></os-dropdown-list>
+					</os-dropdown>
 				</label>
 			</div>
 		</div>
-		<div ibmRow>
-			<div ibmCol [columnNumbers]="{'lg': 12, 'md': 12, 'sm': 12}">
-				<ibm-table-container>
-					<ibm-table
+		<div osRow>
+			<div osCol [columnNumbers]="{'lg': 12, 'md': 12, 'sm': 12}">
+				<os-table-container>
+					<os-table
 						class="data-table"
 						[model]="model"
 						size="lg"
 						[showSelectionColumn]="false">
 						<ng-content></ng-content>
-					</ibm-table>
-				</ibm-table-container>
+					</os-table>
+				</os-table-container>
 			<div>
 		</div>
 	</div>

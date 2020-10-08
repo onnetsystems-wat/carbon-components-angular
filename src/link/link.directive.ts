@@ -12,7 +12,7 @@ import {
  * Example:
  *
  * ```hmtl
- * <a href="#" ibmLink>A link</a>
+ * <a href="#" osLink>A link</a>
  * ```
  *
  * See the [vanilla carbon docs](http://www.carbondesignsystem.com/components/link/code) for more detail.
@@ -20,7 +20,7 @@ import {
  * <example-url>../../iframe.html?id=link--basic</example-url>
  */
 @Directive({
-	selector: "[ibmLink]"
+	selector: "[osLink]"
 })
 
 

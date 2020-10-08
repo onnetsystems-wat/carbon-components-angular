@@ -28,9 +28,9 @@ let nextId = 0;
 * Tab with string header:
 *
 * ```html
-* <ibm-tab heading='tab1'>
+* <os-tab heading='tab1'>
 * 	tab 1 content
-* </ibm-tab>
+* </os-tab>
 * ```
 *
 * Tab with custom header:
@@ -44,21 +44,21 @@ let nextId = 0;
 * 	</ibm-icon>
 * 	Hello Tab 1
 * </ng-template>
-* <ibm-tabs>
-* 	<ibm-tab [heading]="tabHeading">
+* <os-tabs>
+* 	<os-tab [heading]="tabHeading">
 * 		Tab 1 content <ibm-icon icon="alert" size="lg"></ibm-icon>
-* 	</ibm-tab>
-* 	<ibm-tab heading='Tab2'>
+* 	</os-tab>
+* 	<os-tab heading='Tab2'>
 * 		Tab 2 content
-* 	</ibm-tab>
-* 	<ibm-tab heading='Tab3'>
+* 	</os-tab>
+* 	<os-tab heading='Tab3'>
 * 		Tab 3 content
-* 	</ibm-tab>
-* </ibm-tabs>
+* 	</os-tab>
+* </os-tabs>
 * ```
 */
 @Component({
-	selector: "ibm-tab",
+	selector: "os-tab",
 	template: `
 		<div
 			[attr.tabindex]="tabIndex"

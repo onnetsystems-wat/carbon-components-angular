@@ -19,29 +19,29 @@ import { EventService } from "@onnetsystems-wat/onnet-design-systems/utils";
  *
  * The simplest possible slider usage looks something like:
  * ```html
- * <ibm-slider></ibm-slider>
+ * <os-slider></os-slider>
  * ```
  *
  * That will render a slider without labels or alternative value input. Labels can be provided by
- * elements with `[minLabel]` and `[maxLabel]` attributes, and an `input` (may use the `ibmInput` directive) can be supplied
+ * elements with `[minLabel]` and `[maxLabel]` attributes, and an `input` (may use the `osInput` directive) can be supplied
  * for use as an alternative value field.
  *
  * ex:
  * ```html
  * <!-- full example -->
- * <ibm-slider>
+ * <os-slider>
  *		<span minLabel>0GB</span>
  *		<span maxLabel>100GB</span>
  *		<input/>
- *	</ibm-slider>
+ *	</os-slider>
  * <!-- with just an input -->
- * <ibm-slider>
+ * <os-slider>
  *		<input/>
- *	</ibm-slider>
+ *	</os-slider>
  * <!-- with just one label -->
- * <ibm-slider>
+ * <os-slider>
  *		<span maxLabel>Maximum</span>
- *	</ibm-slider>
+ *	</os-slider>
  * ```
  *
  * Slider supports `NgModel` by default, as well as two way binding to the `value` input.
@@ -49,7 +49,7 @@ import { EventService } from "@onnetsystems-wat/onnet-design-systems/utils";
  * <example-url>../../iframe.html?id=slider--advanced</example-url>
  */
 @Component({
-	selector: "ibm-slider",
+	selector: "os-slider",
 	template: `
 		<ng-container *ngIf="!skeleton; else skeletonTemplate">
 			<label *ngIf="label" for="slider" class="bx--label">
@@ -292,7 +292,7 @@ export class Slider implements AfterViewInit, ControlValueAccessor {
 	/** Converts a given px value to a "real" value in our range */
 	convertToValue(pxAmount) {
 		// basic concept borrowed from carbon-components
-		// ref: https://github.com/IBM/carbon-components/blob/43bf3abdc2f8bdaa38aa84e0f733adde1e1e8894/src/components/slider/slider.js#L147-L151
+		// ref: https://github.com/os/carbon-components/blob/43bf3abdc2f8bdaa38aa84e0f733adde1e1e8894/src/components/slider/slider.js#L147-L151
 		const range = this.max - this.min;
 		const trackWidth = this.track.nativeElement.getBoundingClientRect().width;
 		const unrounded = pxAmount / trackWidth;

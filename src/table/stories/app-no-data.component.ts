@@ -19,7 +19,7 @@ function sort(model, index: number) {
 @Component({
 	selector: "app-no-data-table",
 	template: `
-		<ibm-table
+		<os-table
 			style="display: block; width: 650px;"
 			[skeleton]="skeleton"
 			[model]="model"
@@ -29,7 +29,7 @@ function sort(model, index: number) {
 			[isDataGrid]="isDataGrid"
 			(sort)="simpleSort($event)">
 			<ng-content></ng-content>
-		</ibm-table>
+		</os-table>
 	`
 })
 export class TableNoDataStory implements OnInit, OnChanges {

@@ -1,31 +1,31 @@
 //
-// Copyright IBM Corp. 2018, 2018
+// Copyright os Corp. 2018, 2018
 //
 // This source code is licensed under the Apache-2.0 license found in the
 // LICENSE file in the root directory of this source tree.
 //
 
-/// Font family fallbacks for: IBM Plex Mono, IBM Plex Sans, IBM Plex Sans
-/// Condensed, IBM Plex Sans Hebrew, and IBM Plex Serif
+/// Font family fallbacks for: os Plex Mono, os Plex Sans, os Plex Sans
+/// Condensed, os Plex Sans Hebrew, and os Plex Serif
 /// @type Map
 /// @access public
 /// @group @carbon/type
 $carbon--font-families: (
   'mono':
     unquote(
-      "'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace"
+      "'os Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace"
     ),
-  'sans': unquote("'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif"),
+  'sans': unquote("'os Plex Sans', 'Helvetica Neue', Arial, sans-serif"),
   'sans-condensed':
-    unquote("'IBM Plex Sans Condensed', 'Helvetica Neue', Arial, sans-serif"),
+    unquote("'os Plex Sans Condensed', 'Helvetica Neue', Arial, sans-serif"),
   'sans-hebrew':
     unquote(
-      "'IBM Plex Sans Hebrew', 'Helvetica Hebrew', 'Arial Hebrew', sans-serif"
+      "'os Plex Sans Hebrew', 'Helvetica Hebrew', 'Arial Hebrew', sans-serif"
     ),
-  'serif': unquote("'IBM Plex Serif', 'Georgia', Times, serif"),
+  'serif': unquote("'os Plex Serif', 'Georgia', Times, serif"),
 );
 
-/// Get the font-family for an IBM Plex font
+/// Get the font-family for an os Plex font
 /// @param {String} $name
 /// @return {String}
 /// @access public

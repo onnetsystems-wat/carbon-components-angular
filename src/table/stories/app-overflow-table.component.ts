@@ -13,20 +13,20 @@ import { TableHeaderItem } from "../table-header-item.class";
 	selector: "app-overflow-table",
 	template: `
 		<ng-template #overflowMenuItemTemplate let-data="data">
-			<ibm-overflow-menu>
-				<ibm-overflow-menu-option>
+			<os-overflow-menu>
+				<os-overflow-menu-option>
 					First Option
-				</ibm-overflow-menu-option>
-				<ibm-overflow-menu-option>
+				</os-overflow-menu-option>
+				<os-overflow-menu-option>
 					Second Option
-				</ibm-overflow-menu-option>
-				<ibm-overflow-menu-option>
+				</os-overflow-menu-option>
+				<os-overflow-menu-option>
 					Third Option
-				</ibm-overflow-menu-option>
-			</ibm-overflow-menu>
+				</os-overflow-menu-option>
+			</os-overflow-menu>
 		</ng-template>
 
-		<ibm-table
+		<os-table
 			style="display: block; width: 650px;"
 			[model]="model"
 			[size]="size"
@@ -37,7 +37,7 @@ import { TableHeaderItem } from "../table-header-item.class";
 			[isDataGrid]="isDataGrid"
 			(rowClick)="onRowClick($event)"
 			[striped]="striped">
-		</ibm-table>
+		</os-table>
 	`
 })
 export class OverflowTableStory implements OnInit {

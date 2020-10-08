@@ -14,6 +14,6 @@ cp -r ./src/styles ./dist/styles
 gulp buildMeta
 
 # generate ALL the documentation
-mkdir dist/docs
-npm run build-storybook
+# mkdir dist/docs
+# npm run build-storybook
 # npm run docs:build && mv documentation dist/docs/

@@ -20,58 +20,58 @@ import {
 @Component({
 	selector: "app-sample-large-loading",
 	template: `
-	<div ibmGrid>
-		<div ibmRow class="header">
-			<ibm-header name="Patterns">
-				<ibm-hamburger></ibm-hamburger>
-			</ibm-header>
+	<div osGrid>
+		<div osRow class="header">
+			<os-header name="Patterns">
+				<os-hamburger></os-hamburger>
+			</os-header>
 		</div>
-		<div ibmRow class="progress-indicator-wrapper">
-			<ibm-progress-indicator [steps]="steps"></ibm-progress-indicator>
+		<div osRow class="progress-indicator-wrapper">
+			<os-progress-indicator [steps]="steps"></os-progress-indicator>
 		</div>
-		<div ibmRow class="form">
+		<div osRow class="form">
 			<form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
 				<div class="bx--form-item">
-					<ibm-label
+					<os-label
 						helperText="Optional helper text here; if message is more than one line text should wrap (~100 character count maximum)"
 						[invalid]="isInvalid('input')"
 						invalidText="Please enter a response">
 						Text input label
 						<input
-							ibmText
+							osText
 							formControlName="input"
 							placeholder="Optional placeholder text">
-					</ibm-label>
+					</os-label>
 				</div>
 				<div class="bx--form-item">
-					<ibm-label
+					<os-label
 						helperText="Optional helper text here; if message is more than one line text should wrap (~100 character count maximum)"
 						[invalid]="isInvalid('textArea')"
 						invalidText="Please enter a response">
 						Text input label
 						<textarea
-							ibmTextArea
+							osTextArea
 							formControlName="textArea"
 							placeholder="Optional placeholder text">
 						</textarea>
-					</ibm-label>
+					</os-label>
 				</div>
 				<div class="bx--form-item">
 					<div class="dropdown-wrapper">
-						<ibm-dropdown
+						<os-dropdown
 							label="Choose one option"
 							[invalid]="isInvalid('dropdown')"
 							invalidText="Please choose an option"
 							placeholder="Select an option"
 							formControlName="dropdown">
-							<ibm-dropdown-list [items]="items"></ibm-dropdown-list>
-						</ibm-dropdown>
+							<os-dropdown-list [items]="items"></os-dropdown-list>
+						</os-dropdown>
 					</div>
 				</div>
 				<div class="bx--form-item">
 					<button
 						class="form-button"
-						ibmButton
+						osButton
 						type="submit">
 						Show Loading
 					</button>
@@ -79,12 +79,12 @@ import {
 			</form>
 		</div>
 	</div>
-	<ibm-loading
+	<os-loading
 		*ngIf="isLoading"
 		[isActive]="isLoading"
 		size="normal"
 		[overlay]="overlay">
-	</ibm-loading>
+	</os-loading>
 	`,
 	styles: [`
 		.header {

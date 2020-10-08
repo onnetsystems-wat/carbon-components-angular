@@ -18,7 +18,7 @@ We promise to extend courtesy and respect to everyone involved in this project, 
 
 If any member of the community violates this Code of Conduct, the maintainers of Carbon may take action, including removing issues, comments, and PRs or blocking accounts, as deemed appropriate.
 
-If you are subjected to or witness unacceptable behavior, or have any other concerns, please communicate with us directly via carbon@us.ibm.com.
+If you are subjected to or witness unacceptable behavior, or have any other concerns, please communicate with us directly via carbon@us.os.com.
 
 ### Slack
 1. Please, no `@here` or `@channel` unless it is a bug that is **breaking production code.** We have communities in many different time zones, and we would hate to disrupt someone not at the office.

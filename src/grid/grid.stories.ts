@@ -14,16 +14,16 @@ storiesOf("Components|Grid", module)
 	.addDecorator(withKnobs)
 	.add("Basic", () => ({
 		template: `
-        	<div ibmGrid [condensed]="gridCondensed">
+        	<div osGrid [condensed]="gridCondensed">
 				<div
-					ibmRow
+					osRow
 					[gutter]="gutter"
 					[leftGutter]="leftGutter"
 					[rightGutter]="rightGutter"
 					[condensed]="rowCondensed">
-              		<div ibmCol class="custom-class-example" [columnNumbers]="{'md': 2, 'sm': 12}">First Column</div>
-					<div ibmCol class="custom-class-example" [columnNumbers]="{'md': 2, 'sm': 12}">Second column</div>
-					<div ibmCol class="custom-class-example" [columnNumbers]="{'md': 2, 'sm': 12}">Third Column</div>
+              		<div osCol class="custom-class-example" [columnNumbers]="{'md': 2, 'sm': 12}">First Column</div>
+					<div osCol class="custom-class-example" [columnNumbers]="{'md': 2, 'sm': 12}">Second column</div>
+					<div osCol class="custom-class-example" [columnNumbers]="{'md': 2, 'sm': 12}">Third Column</div>
             	</div>
          	</div>
 		`,
@@ -37,6 +37,6 @@ storiesOf("Components|Grid", module)
 	}))
 	.add("Documentation", () => ({
 		template: `
-			<ibm-documentation src="documentation/directives/GridDirective.html"></ibm-documentation>
+			<os-documentation src="documentation/directives/GridDirective.html"></os-documentation>
 		`
 	}));

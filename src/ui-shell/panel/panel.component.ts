@@ -5,7 +5,7 @@ import { Component, Input } from "@angular/core";
  * `Panel`s are generally activated by and linked to a `HeaderAction` component.
  */
 @Component({
-	selector: "ibm-panel",
+	selector: "os-panel",
 	template: `
 		<div
 			class="bx--panel--overlay"

@@ -10,51 +10,51 @@ storiesOf("Components|List", module).addDecorator(
 	.add("Basic", () => ({
 		template: `
 			<p>Ordered List</p>
-			<ol ibmList>
-				<li ibmListItem>One</li>
-				<li ibmListItem>Two</li>
-				<li ibmListItem>Three</li>
+			<ol osList>
+				<li osListItem>One</li>
+				<li osListItem>Two</li>
+				<li osListItem>Three</li>
 			</ol>
 			<p>Unordered List</p>
-			<ul ibmList>
-				<li ibmListItem>One</li>
-				<li ibmListItem>Two</li>
-				<li ibmListItem>Three</li>
+			<ul osList>
+				<li osListItem>One</li>
+				<li osListItem>Two</li>
+				<li osListItem>Three</li>
 			</ul>
 		`
 	}))
 	.add("With nesting", () => ({
 		template: `
 			<p>Ordered List</p>
-			<ol ibmList>
-				<li ibmListItem>
+			<ol osList>
+				<li osListItem>
 					One
-					<ol ibmList>
-						<li ibmListItem>Nested one</li>
-						<li ibmListItem>Nested two</li>
-						<li ibmListItem>Nested three</li>
+					<ol osList>
+						<li osListItem>Nested one</li>
+						<li osListItem>Nested two</li>
+						<li osListItem>Nested three</li>
 					</ol>
 				</li>
-				<li ibmListItem>Two</li>
-				<li ibmListItem>Three</li>
+				<li osListItem>Two</li>
+				<li osListItem>Three</li>
 			</ol>
 			<p>Unordered List</p>
-			<ul ibmList>
-				<li ibmListItem>
+			<ul osList>
+				<li osListItem>
 					One
-					<ul ibmList>
-						<li ibmListItem>Nested one</li>
-						<li ibmListItem>Nested two</li>
-						<li ibmListItem>Nested three</li>
+					<ul osList>
+						<li osListItem>Nested one</li>
+						<li osListItem>Nested two</li>
+						<li osListItem>Nested three</li>
 					</ul>
 				</li>
-				<li ibmListItem>Two</li>
-				<li ibmListItem>Three</li>
+				<li osListItem>Two</li>
+				<li osListItem>Three</li>
 			</ul>
 		`
 	}))
 	.add("Documentation", () => ({
 		template: `
-			<ibm-documentation src="documentation/directives/List.html"></ibm-documentation>
+			<os-documentation src="documentation/directives/List.html"></os-documentation>
 		`
 	}));

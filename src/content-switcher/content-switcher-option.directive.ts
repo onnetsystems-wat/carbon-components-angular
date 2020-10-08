@@ -8,7 +8,7 @@ import {
 } from "@angular/core";
 
 @Directive({
-	selector: "[ibmContentOption]"
+	selector: "[osContentOption]"
 })
 export class ContentSwitcherOption {
 	/**

@@ -12,7 +12,7 @@ import { Directive, ElementRef, HostBinding } from "@angular/core";
  * <example-url>../../iframe.html?id=list--basic</example-url>
  */
 @Directive({
-	selector: "[ibmList]"
+	selector: "[osList]"
 })
 export class List {
 	@HostBinding("class.bx--list--ordered") get ordered() {

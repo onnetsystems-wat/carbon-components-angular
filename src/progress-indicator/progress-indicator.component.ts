@@ -13,7 +13,7 @@ import { Step } from "./progress-indicator-step.interface";
  * <example-url>../../iframe.html?id=progress-indicator--basic</example-url>
  */
 @Component({
-	selector: "ibm-progress-indicator",
+	selector: "os-progress-indicator",
 	template: `
 	<ul
 		data-progress
@@ -41,7 +41,7 @@ import { Step } from "./progress-indicator-step.interface";
 				<p
 					class="bx--progress-label"
 					*ngIf="step.tooltip"
-					[ibmTooltip]="step.tooltip.content"
+					[osTooltip]="step.tooltip.content"
 					[trigger]="step.tooltip.trigger"
 					[placement]="step.tooltip.placement"
 					[title]="step.tooltip.title"

@@ -16,8 +16,8 @@ import { Subject } from "rxjs";
 import { takeUntil } from "rxjs/operators";
 
 @Component({
-	selector: "ibm-tile-group",
-	template: `<ng-content select="ibm-selection-tile"></ng-content>`,
+	selector: "os-tile-group",
+	template: `<ng-content select="os-selection-tile"></ng-content>`,
 	providers: [
 		{
 			provide: NG_VALUE_ACCESSOR,

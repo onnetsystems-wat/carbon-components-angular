@@ -10,7 +10,7 @@ import {
 import { NG_VALUE_ACCESSOR } from "@angular/forms";
 
 @Component({
-	selector: "ibm-date-picker-input",
+	selector: "os-date-picker-input",
 	template: `
 	<div class="bx--form-item">
 		<div class="bx--date-picker"

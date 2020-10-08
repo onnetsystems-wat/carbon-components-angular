@@ -19,7 +19,7 @@ storiesOf("Components|CodeSnippet", module).addDecorator(
 )
 	.addDecorator(withKnobs)
 	.add("Basic", () => ({
-		template: \`<ibm-code-snippet>code</ibm-code-snippet>\`,
+		template: \`<os-code-snippet>code</os-code-snippet>\`,
 		props: { // there's more
 			// disabled: boolean("disabled", false)
 		}
@@ -40,8 +40,8 @@ storiesOf("Components|Code Snippet", module).addDecorator(
 @Component({
 	selector: "app-dynamic-code-snippet",
 	template: `
-		<button ibmButton (click)="openCodeSnippet()">Show Code Snippet</button>
-		<ibm-code-snippet *ngIf="shouldShow" display="multi">{{displayedCode}}</ibm-code-snippet>
+		<button osButton (click)="openCodeSnippet()">Show Code Snippet</button>
+		<os-code-snippet *ngIf="shouldShow" display="multi">{{displayedCode}}</os-code-snippet>
 	`
 })
 export class DynamicCodeSnippet {
@@ -64,7 +64,7 @@ storiesOf("Components|Code Snippet", module).addDecorator(
 )
 	.addDecorator(withKnobs)
 	.add("Basic", () => ({
-		template: `<ibm-code-snippet display="single">{{code}}</ibm-code-snippet>`,
+		template: `<os-code-snippet display="single">{{code}}</os-code-snippet>`,
 		props: {
 			code
 		}
@@ -72,10 +72,10 @@ storiesOf("Components|Code Snippet", module).addDecorator(
 	.add("Multi", () => ({
 		template: `
 			<h2>With a lot of code</h2>
-			<ibm-code-snippet display="multi">{{code}}</ibm-code-snippet>
+			<os-code-snippet display="multi">{{code}}</os-code-snippet>
 
 			<h2 style="margin-top: 60px">With less code</h2>
-			<ibm-code-snippet display="multi">{{lessCode}}</ibm-code-snippet>
+			<os-code-snippet display="multi">{{lessCode}}</os-code-snippet>
 		`,
 		props: {
 			code,
@@ -83,7 +83,7 @@ storiesOf("Components|Code Snippet", module).addDecorator(
 		}
 	}))
 	.add("Inline", () => ({
-		template: `Here is some <ibm-code-snippet display="inline" [theme]="theme">{{inlineCode}}</ibm-code-snippet> for you.`,
+		template: `Here is some <os-code-snippet display="inline" [theme]="theme">{{inlineCode}}</os-code-snippet> for you.`,
 		props: {
 			inlineCode,
 			theme: select("Theme", ["dark", "light"], "dark")
@@ -92,9 +92,9 @@ storiesOf("Components|Code Snippet", module).addDecorator(
 	.add("Skeleton", () => ({
 		template: `
 			<div style="width: 800px">
-				<ibm-code-snippet display="single" skeleton="true"></ibm-code-snippet>
+				<os-code-snippet display="single" skeleton="true"></os-code-snippet>
 				<br>
-				<ibm-code-snippet display="multi" skeleton="true"></ibm-code-snippet>
+				<os-code-snippet display="multi" skeleton="true"></os-code-snippet>
 			</div>
 		`
 	}))
@@ -106,6 +106,6 @@ storiesOf("Components|Code Snippet", module).addDecorator(
 	}))
 	.add("Documentation", () => ({
 		template: `
-			<ibm-documentation src="documentation/components/CodeSnippet.html"></ibm-documentation>
+			<os-documentation src="documentation/components/CodeSnippet.html"></os-documentation>
 		`
 	}));

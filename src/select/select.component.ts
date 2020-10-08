@@ -9,25 +9,25 @@ import {
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from "@angular/forms";
 
 /**
- * `ibm-select` provides a styled `select` component.
+ * `os-select` provides a styled `select` component.
  *
  * [See demo](../../?path=/story/select--basic)
  *
  * Example:
  *
  * ```
- * <ibm-select [(ngModel)]="model">
+ * <os-select [(ngModel)]="model">
  * 	<option value="default" disabled selected hidden>Choose an option</option>
  * 	<option value="option1">Option 1</option>
  *	<option value="option2">Option 2</option>
  * 	<option value="option3">Option 3</option>
- * </ibm-select>
+ * </os-select>
  *	```
  *
  * <example-url>../../iframe.html?id=select--basic</example-url>
  */
 @Component({
-	selector: "ibm-select",
+	selector: "os-select",
 	template: `
 		<div class="bx--form-item">
 			<div

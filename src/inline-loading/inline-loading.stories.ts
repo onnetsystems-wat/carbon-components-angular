@@ -10,14 +10,14 @@ import { Component, OnInit, Input } from "@angular/core";
 @Component({
 	selector: "app-inline-loading",
 	template: `
-		<ibm-inline-loading
+		<os-inline-loading
 			[state]="state"
 			[loadingText]="loadingText"
 			[successText]="successText"
 			[errorText]="errorText"
 			(onSuccess)="onSuccess($event)">
-		</ibm-inline-loading>
-		<button ibmButton (click)="toggleState()">Toggle state</button>
+		</os-inline-loading>
+		<button osButton (click)="toggleState()">Toggle state</button>
 		<p>State: {{ state }}</p>
 	`
 })
@@ -64,6 +64,6 @@ storiesOf("Components|Inline Loading", module)
 	}))
 	.add("Documentation", () => ({
 		template: `
-			<ibm-documentation src="documentation/components/InlineLoading.html"></ibm-documentation>
+			<os-documentation src="documentation/components/InlineLoading.html"></os-documentation>
 		`
 	}));

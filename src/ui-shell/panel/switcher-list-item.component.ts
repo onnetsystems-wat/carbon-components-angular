@@ -13,7 +13,7 @@ import { Router } from "@angular/router";
  * Represents an item in a switcher list.
  */
 @Component({
-	selector: "ibm-switcher-list-item",
+	selector: "os-switcher-list-item",
 	template: `
 		<a
 			class="bx--switcher__item-link"

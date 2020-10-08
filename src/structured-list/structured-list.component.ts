@@ -20,41 +20,41 @@ import { NG_VALUE_ACCESSOR, ControlValueAccessor } from "@angular/forms";
  *
  * A basic structued list looks something like:
  * ```html
- *	<ibm-structured-list>
- *		<ibm-list-header>
- *			<ibm-list-column nowrap="true">Column 1</ibm-list-column>
- *			<ibm-list-column nowrap="true">Column 2</ibm-list-column>
- *			<ibm-list-column>Column 3</ibm-list-column>
- *		</ibm-list-header>
- *		<ibm-list-row>
- *			<ibm-list-column>Row 1</ibm-list-column>
- *			<ibm-list-column nowrap="true">Row One</ibm-list-column>
- *			<ibm-list-column>
+ *	<os-structured-list>
+ *		<os-list-header>
+ *			<os-list-column nowrap="true">Column 1</os-list-column>
+ *			<os-list-column nowrap="true">Column 2</os-list-column>
+ *			<os-list-column>Column 3</os-list-column>
+ *		</os-list-header>
+ *		<os-list-row>
+ *			<os-list-column>Row 1</os-list-column>
+ *			<os-list-column nowrap="true">Row One</os-list-column>
+ *			<os-list-column>
  *				Lorem ipsum dolor sit amet,
  *				consectetur adipiscing elit. Nunc dui magna,
  *				finibus id tortor sed, aliquet bibendum augue.
  *				Aenean posuere sem vel euismod dignissim. Nulla ut cursus dolor.
  *				Pellentesque vulputate nisl a porttitor interdum.
- *			</ibm-list-column>
- *		</ibm-list-row>
- *		<ibm-list-row>
- *			<ibm-list-column>Row 2</ibm-list-column>
- *			<ibm-list-column nowrap="true">Row Two</ibm-list-column>
- *			<ibm-list-column>
+ *			</os-list-column>
+ *		</os-list-row>
+ *		<os-list-row>
+ *			<os-list-column>Row 2</os-list-column>
+ *			<os-list-column nowrap="true">Row Two</os-list-column>
+ *			<os-list-column>
  *				Lorem ipsum dolor sit amet,
  *				consectetur adipiscing elit. Nunc dui magna,
  *				finibus id tortor sed, aliquet bibendum augue.
  *				Aenean posuere sem vel euismod dignissim. Nulla ut cursus dolor.
  *				Pellentesque vulputate nisl a porttitor interdum.
- *			</ibm-list-column>
- *		</ibm-list-row>
- *	</ibm-structured-list>
+ *			</os-list-column>
+ *		</os-list-row>
+ *	</os-structured-list>
  * ```
  *
  * <example-url>../../iframe.html?id=structured-list--basic</example-url>
  */
 @Component({
-	selector: "ibm-structured-list",
+	selector: "os-structured-list",
 	template: `
 		<section
 			class="bx--structured-list"
@@ -65,7 +65,7 @@ import { NG_VALUE_ACCESSOR, ControlValueAccessor } from "@angular/forms";
 				'bx--structured-list-content--nowrap': nowrap,
 				'bx--skeleton': skeleton
 			}">
-			<ng-content select="ibm-list-header"></ng-content>
+			<ng-content select="os-list-header"></ng-content>
 			<div class="bx--structured-list-tbody">
 				<ng-content></ng-content>
 			</div>

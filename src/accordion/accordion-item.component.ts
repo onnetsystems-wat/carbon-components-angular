@@ -8,7 +8,7 @@ import {
 } from "@angular/core";
 
 @Component({
-	selector: "ibm-accordion-item",
+	selector: "os-accordion-item",
 	template: `
 		<button
 			type="button"

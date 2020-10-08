@@ -19,39 +19,39 @@ import { Subject } from "rxjs";
 @Component({
 	selector: "app-notification-action-story",
 	template: `
-		<ibm-notification [notificationObj]="{
+		<os-notification [notificationObj]="{
 			type: 'error',
 			title: 'Sample notification',
 			message: 'Sample error message',
 			showClose: showClose,
 			lowContrast: lowContrast,
 			actions: actions}">
-		</ibm-notification>
-		<ibm-notification [notificationObj]="{
+		</os-notification>
+		<os-notification [notificationObj]="{
 			type: 'info',
 			title: 'Sample notification',
 			message: 'Sample error message',
 			showClose: showClose,
 			lowContrast: lowContrast,
 			actions: actions}">
-		</ibm-notification>
-		<ibm-notification [notificationObj]="{
+		</os-notification>
+		<os-notification [notificationObj]="{
 			type: 'success',
 			title: 'Sample notification',
 			message: 'Sample error message',
 			showClose: showClose,
 			lowContrast: lowContrast,
 			actions: actions}">
-		</ibm-notification>
-		<ibm-notification [notificationObj]="{
+		</os-notification>
+		<os-notification [notificationObj]="{
 			type: 'warning',
 			title: 'Sample notification',
 			message: 'Sample error message',
 			showClose: showClose,
 			lowContrast: lowContrast,
 			actions: actions}">
-		</ibm-notification>
-		<ibm-notification [notificationObj]="{
+		</os-notification>
+		<os-notification [notificationObj]="{
 			type: 'error',
 			title: 'Sample notification',
 			message: 'Sample error message',
@@ -59,7 +59,7 @@ import { Subject } from "rxjs";
 			lowContrast: lowContrast,
 			actions: actions,
 			links: links}">
-		</ibm-notification>
+		</os-notification>
 		`,
 	providers: [NotificationService]
 })
@@ -80,11 +80,11 @@ class NotificationActionStory implements OnInit {
 
 	links = [
 		{
-			href: "https://ibm.com",
+			href: "https://os.com",
 			text: "Link"
 		},
 		{
-			href: "https://ibm.com",
+			href: "https://os.com",
 			text: "Link"
 		}
 	];
@@ -158,34 +158,34 @@ storiesOf("Components|Notification", module)
 	.addDecorator(withKnobs)
 	.add("Basic", () => ({
 		template: `
-			<ibm-notification [notificationObj]="{
+			<os-notification [notificationObj]="{
 				type: 'error',
 				title: 'Sample notification',
 				message: 'Sample error message',
 				showClose: showClose,
 				lowContrast: lowContrast}">
-			</ibm-notification>
-			<ibm-notification [notificationObj]="{
+			</os-notification>
+			<os-notification [notificationObj]="{
 				type: 'info',
 				title: 'Sample notification',
 				message: 'Sample info message',
 				showClose: showClose,
 				lowContrast: lowContrast}">
-			</ibm-notification>
-			<ibm-notification [notificationObj]="{
+			</os-notification>
+			<os-notification [notificationObj]="{
 				type: 'success',
 				title: 'Sample notification',
 				message: 'Sample success message',
 				showClose: showClose,
 				lowContrast: lowContrast}">
-			</ibm-notification>
-			<ibm-notification [notificationObj]="{
+			</os-notification>
+			<os-notification [notificationObj]="{
 				type: 'warning',
 				title: 'Sample notification',
 				message: 'Sample warning message',
 				showClose: showClose,
 				lowContrast: lowContrast}">
-			</ibm-notification>
+			</os-notification>
 		`,
 		props: {
 			showClose: boolean("Show close icon", true),
@@ -213,39 +213,39 @@ storiesOf("Components|Notification", module)
 	}))
 	.add("Toast", () => ({
 		template: `
-			<ibm-toast [notificationObj]="{
+			<os-toast [notificationObj]="{
 				type: 'error',
 				title: 'Sample toast',
 				subtitle: 'Sample subtitle message',
 				caption: 'Sample caption',
 				lowContrast: lowContrast,
 				showClose: showClose
-			}"></ibm-toast>
-			<ibm-toast [notificationObj]="{
+			}"></os-toast>
+			<os-toast [notificationObj]="{
 				type: 'info',
 				title: 'Sample toast',
 				subtitle: 'Sample subtitle message',
 				caption: 'Sample caption',
 				lowContrast: lowContrast,
 				showClose: showClose
-			}"></ibm-toast>
-			<ibm-toast [notificationObj]="{
+			}"></os-toast>
+			<os-toast [notificationObj]="{
 				type: 'success',
 				title: 'Sample toast',
 				subtitle: 'Sample subtitle message',
 				caption: 'Sample caption',
 				lowContrast: lowContrast,
 				showClose: showClose
-			}"></ibm-toast>
-			<ibm-toast [notificationObj]="{
+			}"></os-toast>
+			<os-toast [notificationObj]="{
 				type: 'warning',
 				title: 'Sample toast',
 				subtitle: 'Sample subtitle message',
 				caption: 'Sample caption',
 				lowContrast: lowContrast,
 				showClose: showClose
-			}"></ibm-toast>
-			<ibm-toast [notificationObj]="{
+			}"></os-toast>
+			<os-toast [notificationObj]="{
 				type: 'error',
 				title: 'Sample toast',
 				subtitle: 'Sample subtitle message',
@@ -253,18 +253,18 @@ storiesOf("Components|Notification", module)
 				lowContrast: lowContrast,
 				showClose: showClose,
 				links: links
-			}"></ibm-toast>
+			}"></os-toast>
 		`,
 		props: {
 			showClose: boolean("Show close icon", true),
 			lowContrast: boolean("Low Contrast", false),
 			links: [
 				{
-					href: "https://ibm.com",
+					href: "https://os.com",
 					text: "Link"
 				},
 				{
-					href: "https://ibm.com",
+					href: "https://os.com",
 					text: "Link"
 				}
 			]
@@ -272,7 +272,7 @@ storiesOf("Components|Notification", module)
 	}))
 	.add("With custom content", () => ({
 		template: `
-			<ibm-toast [notificationObj]="{
+			<os-toast [notificationObj]="{
 				type: 'error',
 				template: customToastContent,
 				title: 'Sample title',
@@ -282,8 +282,8 @@ storiesOf("Components|Notification", module)
 				myCaption: 'Sample custom caption',
 				showClose: showClose
 			}">
-			</ibm-toast>
-			<ibm-notification [notificationObj]="{
+			</os-toast>
+			<os-notification [notificationObj]="{
 				type: 'warning',
 				template: customNotificationContent,
 				title: 'Sample notification',
@@ -292,28 +292,28 @@ storiesOf("Components|Notification", module)
 				},
 				showClose: showClose
 			}">
-			</ibm-notification>
+			</os-notification>
 			<ng-template #customToastContent let-data>
-				<h3 ibmToastTitle>{{data.title}}</h3>
-				<p ibmToastSubtitle>{{data.myData.subtitle}}</p>
-				<p ibmToastCaption>{{data.myCaption}}</p>
+				<h3 osToastTitle>{{data.title}}</h3>
+				<p osToastSubtitle>{{data.myData.subtitle}}</p>
+				<p osToastCaption>{{data.myCaption}}</p>
 				<div class="actions">
 					<div class="secondary-toast-button">
-						<button ibmButton="secondary" size="sm">Still Working</button>
+						<button osButton="secondary" size="sm">Still Working</button>
 					</div>
 					<div class="primary-toast-button">
-						<button ibmButton="primary" size="sm">Archive</button>
+						<button osButton="primary" size="sm">Archive</button>
 					</div>
 				</div>
 			</ng-template>
 			<ng-template #customNotificationContent let-data>
-				<p ibmNotificationTitle>{{data.title}}</p>
-				<p ibmNotificationSubtitle>{{data.myData.subtitle}}</p>
+				<p osNotificationTitle>{{data.title}}</p>
+				<p osNotificationSubtitle>{{data.myData.subtitle}}</p>
 			</ng-template>
 		`,
 		encapsulation: ViewEncapsulation.None,
 		styles: [`
-			ibm-toast {
+			os-toast {
 				width: 450px;
 			}
 
@@ -338,11 +338,11 @@ storiesOf("Components|Notification", module)
 	}))
 	.add("Documentation", () => ({
 		template: `
-			<ibm-documentation src="documentation/components/Notification.html"></ibm-documentation>
+			<os-documentation src="documentation/components/Notification.html"></os-documentation>
 		`
 	}))
 	.add("Toast Documentation", () => ({
 		template: `
-			<ibm-documentation src="documentation/components/Toast.html"></ibm-documentation>
+			<os-documentation src="documentation/components/Toast.html"></os-documentation>
 		`
 	}));

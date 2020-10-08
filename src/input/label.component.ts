@@ -15,26 +15,26 @@ import { TextArea } from "./text-area.directive";
  * [See demo](../../?path=/story/input--label)
  *
  * ```html
- * <ibm-label labelState="success">
+ * <os-label labelState="success">
  * 	<label label>Field with success</label>
  * 	<input type="text" class="input-field">
- * </ibm-label>
+ * </os-label>
  *
- * <ibm-label labelState="warning">
+ * <os-label labelState="warning">
  * 	<label label>Field with warning</label>
  * 	<input type="text" class="input-field">
- * </ibm-label>
+ * </os-label>
  *
- * <ibm-label labelState="error">
+ * <os-label labelState="error">
  * 	<label label>Field with error</label>
  * 	<input type="text" class="input-field">
- * </ibm-label>
+ * </os-label>
  * ```
  *
  * <example-url>../../iframe.html?id=input--label</example-url>
  */
 @Component({
-	selector: "ibm-label",
+	selector: "os-label",
 	template: `
 		<label
 			[for]="labelInputID"
@@ -68,7 +68,7 @@ export class Label implements AfterContentInit {
 	 * The id of the input item associated with the `Label`. This value is also used to associate the `Label` with
 	 * its input counterpart through the 'for' attribute.
 	 */
-	labelInputID = "ibm-label-" + Label.labelCounter;
+	labelInputID = "os-label-" + Label.labelCounter;
 	/**
 	 * The class of the wrapper
 	 */

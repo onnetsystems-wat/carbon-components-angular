@@ -35,7 +35,7 @@ storiesOf("Components|Tooltip", module)
 				<div class="bx--tooltip__label">
 					{{triggerText}}
 					<span
-						[ibmTooltip]="template"
+						[osTooltip]="template"
 						[offset]="offset"
 						trigger="click"
 						[placement]="placement">
@@ -44,7 +44,7 @@ storiesOf("Components|Tooltip", module)
 						</div>
 					</span>
 				</div>
-				<ibm-placeholder></ibm-placeholder>
+				<os-placeholder></os-placeholder>
 			</div>
 		`,
 		props: {
@@ -66,13 +66,13 @@ storiesOf("Components|Tooltip", module)
 					</ng-template>
 
 					<span
-						[ibmTooltip]="template"
+						[osTooltip]="template"
 						[offset]="offset"
 						trigger="click"
 						[placement]="placement">
 						{{triggerText}}
 					</span>
-					<ibm-placeholder></ibm-placeholder>
+					<os-placeholder></os-placeholder>
 				</div>
 			`,
 			props: {
@@ -94,7 +94,7 @@ storiesOf("Components|Tooltip", module)
 					</ng-template>
 
 					<span
-						[ibmTooltip]="template"
+						[osTooltip]="template"
 						[offset]="offset"
 						trigger="click"
 						[placement]="placement">
@@ -104,7 +104,7 @@ storiesOf("Components|Tooltip", module)
 							</svg>
 						</div>
 					</span>
-					<ibm-placeholder></ibm-placeholder>
+					<os-placeholder></os-placeholder>
 				</div>
 			`,
 			props: {
@@ -123,13 +123,13 @@ storiesOf("Components|Tooltip", module)
 						</div>
 					</ng-template>
 					<span
-						[ibmTooltip]="template"
+						[osTooltip]="template"
 						[offset]="offset"
 						trigger="hover"
 						[placement]="placement">
 						{{triggerText}}
 					</span>
-					<ibm-placeholder></ibm-placeholder>
+					<os-placeholder></os-placeholder>
 				</div>
 				<div>
 					<ng-template #template2 let-tooltip="tooltip">
@@ -139,12 +139,12 @@ storiesOf("Components|Tooltip", module)
 						</div>
 					</ng-template>
 					<span
-						[ibmTooltip]="template2"
+						[osTooltip]="template2"
 						trigger="hover"
 						[placement]="placement">
 						{{triggerText}}
 					</span>
-					<ibm-placeholder></ibm-placeholder>
+					<os-placeholder></os-placeholder>
 				</div>
 			</div>
 			`,
@@ -160,7 +160,7 @@ storiesOf("Components|Tooltip", module)
 				<div class="bx--tooltip__label">
 					{{triggerText}}
 					<span
-						ibmTooltip="Hello, World"
+						osTooltip="Hello, World"
 						[offset]="offset"
 						[isOpen]="isOpen"
 						trigger="click"
@@ -170,7 +170,7 @@ storiesOf("Components|Tooltip", module)
 						</div>
 					</span>
 				</div>
-				<ibm-placeholder></ibm-placeholder>
+				<os-placeholder></os-placeholder>
 			</div>
 		`,
 		props: {
@@ -203,10 +203,10 @@ storiesOf("Components|Tooltip", module)
 				}"
 				trigger="hover"
 				[placement]="'bottom'"
-				ibmEllipsisTooltip>
+				osEllipsisTooltip>
 					Tooltip for ellipsis because I can and I am really really long
 			</span>
-			<ibm-placeholder></ibm-placeholder>
+			<os-placeholder></os-placeholder>
 		`,
 		props: {
 			showFullText: boolean("Show full text", false)
@@ -214,6 +214,6 @@ storiesOf("Components|Tooltip", module)
 	}))
 	.add("Documentation", () => ({
 		template: `
-			<ibm-documentation src="documentation/directives/TooltipDirective.html"></ibm-documentation>
+			<os-documentation src="documentation/directives/TooltipDirective.html"></os-documentation>
 		`
 	}));

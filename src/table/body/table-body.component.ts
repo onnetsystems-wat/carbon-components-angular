@@ -11,12 +11,12 @@ import { TableRowSize } from "../table.types";
 
 @Component({
 	// tslint:disable-next-line: component-selector
-	selector: "[ibmTableBody]",
+	selector: "[osTableBody]",
 	template: `
 		<ng-container *ngIf="model">
 			<ng-container *ngFor="let row of model.data; let i = index">
 				<tr
-					ibmTableRow
+					osTableRow
 					[model]="model"
 					[row]="row"
 					[size]="size"
@@ -43,8 +43,8 @@ import { TableRowSize } from "../table.types";
 				</tr>
 				<tr
 					*ngIf="model.isRowExpanded(i) && !model.isRowFiltered(i)"
-					ibmTableExpandedRow
-					ibmExpandedRowHover
+					osTableExpandedRow
+					osExpandedRowHover
 					[row]="row"
 					[expanded]="model.isRowExpanded(i)"
 					[skeleton]="skeleton">
@@ -95,7 +95,7 @@ export class TableBody {
 	 *
 	 * Example:
 	 * ```
-	 * <ibm-table [selectionLabelColumn]="0"></ibm-table>
+	 * <os-table [selectionLabelColumn]="0"></os-table>
 	 * <!-- results in aria-label="Select first column value"
 	 * (where "first column value" is the value of the first column in the row -->
 	 * ```
