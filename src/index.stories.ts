@@ -18,7 +18,6 @@ import { BeeModule, DocumentModule } from "@carbon/icons-angular";
 					Documentation
 					<svg ibmIconDocument size="20" class="bx--btn__icon"></svg>
 				</a>
-				
 			</div>
 		</section>
 	`,
