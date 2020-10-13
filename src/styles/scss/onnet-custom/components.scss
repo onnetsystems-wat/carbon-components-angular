@@ -282,11 +282,82 @@
 .#{$prefix}--tooltip {
   border-radius: 8px;
 }
-.bx--tooltip__trigger.bx--tooltip__trigger--definition + .bx--assistive-text {
+.#{$prefix}--tooltip__trigger.#{$prefix}--tooltip__trigger--definition + .#{$prefix}--assistive-text {
   border-radius: 8px;
 }
 
 
+// UI-Shell
+.#{$prefix}--header {
+  background-color: $ui-02;
+  border-color: $ui-01;
+}
 
+a.#{$prefix}--header__name, a.#{$prefix}--header__name:hover {
+  color: $text-01;
+}
 
+.#{$prefix}--header__nav::before {
+  background-color: $ui-03;
+}
+
+a.#{$prefix}--header__menu-item {
+  color: $text-01;
+  height: calc(100% - 10px);
+  margin: 5px;
+  border-radius: 6px;
+}
+
+a.#{$prefix}--header__menu-item:hover {
+  color: $text-01;
+  background-color: $ui-01;
+}
+
+a.#{$prefix}--header__menu-item:active {
+  color: $text-01;
+  background-color: $ui-03;
+}
+
+a.#{$prefix}--header__menu-item:focus {
+  color: $text-01;
+  font-weight: 500;
+  background-color: $ui-01;
+}
+
+a.#{$prefix}--header__menu-item[aria-current='page'], .#{$prefix}--header__menu-item--current {
+  background-color: $ui-03;
+  font-weight: 500;
+}
+
+a.#{$prefix}--header__menu-item[aria-current='page']::after, .#{$prefix}--header__menu-item--current::after {
+  display: none;
+}
+
+.#{$prefix}--header__menu-trigger > svg, .#{$prefix}--header__menu-arrow, a.#{$prefix}--header__menu-item:hover > svg {
+  fill: $text-01;
+}
+
+.#{$prefix}--header__action {
+  border-radius: 6px;
+}
+
+.#{$prefix}--header__action:hover {
+  background-color: $ui-01;
+}
+
+.#{$prefix}--header__menu-title[aria-expanded='true'] {
+  color: $text-01;
+  background-color: $ui-02;
+}
+
+.#{$prefix}--header__menu-title[aria-expanded='true'] + .#{$prefix}--header__menu {
+  background-color: $ui-02;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.#{$prefix}--header__menu-title[aria-expanded='true'] + .#{$prefix}--header__menu .bx--header__menu-item:hover {
+  color: $text-01;
+  background-color: $ui-01;
+}
 
