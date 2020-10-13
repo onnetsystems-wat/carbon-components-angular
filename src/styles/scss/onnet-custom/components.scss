@@ -337,6 +337,10 @@ a.#{$prefix}--header__menu-item[aria-current='page']::after, .#{$prefix}--header
   fill: $text-01;
 }
 
+.#{prefix}--header__action > svg {
+  fill: $text-01;
+}
+
 .#{$prefix}--header__action {
   border-radius: 6px;
 }
