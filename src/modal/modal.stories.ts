@@ -6,9 +6,9 @@ import {
 	boolean
 } from "@storybook/addon-knobs/angular";
 
-import { ModalModule } from "../";
-import { Component, Input, Inject } from "@angular/core";
-import { ModalService } from "../";
+import { ModalModule } from "../modal";
+import { Component, Input, Inject, AfterContentInit } from "@angular/core";
+import { ModalService } from "../modal";
 import { DocumentationModule } from "./../documentation-component/documentation.module";
 import {
 	ModalButton,

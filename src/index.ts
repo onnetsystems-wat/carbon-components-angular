@@ -1,6 +1,7 @@
 export * from "@onnetsystems-wat/onnet-design-systems/accordion";
 export * from "@onnetsystems-wat/onnet-design-systems/breadcrumb";
 export * from "@onnetsystems-wat/onnet-design-systems/button";
+export * from "@onnetsystems-wat/onnet-design-systems/cards";
 export * from "@onnetsystems-wat/onnet-design-systems/checkbox";
 export * from "@onnetsystems-wat/onnet-design-systems/code-snippet";
 export * from "@onnetsystems-wat/onnet-design-systems/combobox";

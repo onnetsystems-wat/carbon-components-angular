@@ -10,6 +10,9 @@ npm run ng:build
 #copy styles to dist
 cp -r ./src/styles ./dist/styles
 
+#copy npmrc to dist
+cp -r ./.npmrc ./dist
+
 # move/generate/update meta files into dist
 gulp buildMeta
 

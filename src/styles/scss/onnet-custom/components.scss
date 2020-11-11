@@ -33,6 +33,13 @@
 }
 
 
+//Cards Styling
+.#{$prefix}--card{
+  background-color: $ui-02;
+  border-radius: 6px;
+  padding: $spacing-04 $spacing-05
+}
+
 // Checkbox
 .#{$prefix}--checkbox-label::before{
   border: 1px solid $ui-03;
@@ -364,4 +371,5 @@ a.#{$prefix}--header__menu-item[aria-current='page']::after, .#{$prefix}--header
   color: $text-01;
   background-color: $ui-01;
 }
+
 
