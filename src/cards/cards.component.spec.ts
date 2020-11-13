@@ -9,9 +9,7 @@ import BDDTestParser from "exported-tests/src/parsers/BDD";
 
 @Component({
 	template: `
-	<os-card
-		
-	</os-card>
+		<os-card> </os-card>
 	`
 })
 class CardTest {
@@ -22,7 +20,7 @@ class CardTest {
 	onIndeterminateChange() {}
 }
 
-const testingSetup = (CardComponent) => {
+const testingSetup = cardComponent => {
 	// Due to TestBed being used outside the test suite, it'll need to be reset
 	TestBed.resetTestingModule();
 	// configureTestingModule normally happens in `beforeEach`, but needed here because
@@ -32,8 +30,7 @@ const testingSetup = (CardComponent) => {
 		imports: [CommonModule, FormsModule]
 	});
 
-	return TestBed.createComponent(CardComponent);
+	return TestBed.createComponent(cardComponent);
 };
 
 const setupFixture = testingSetup(CardTest);
-
