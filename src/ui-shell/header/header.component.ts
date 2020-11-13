@@ -50,7 +50,8 @@ import { I18n } from "@onnetsystems-wat/onnet-design-systems/i18n";
 				<a
 					*ngSwitchCase="true"
 					class="bx--header__name"
-					[routerLink]="route">
+					[routerLink]="route"
+					routerLinkActive="active">
 					<span class="bx--header__name--prefix">{{brand}}&nbsp;</span>
 					{{name}}
 				</a>

@@ -140,15 +140,26 @@
 
 
 // Modal
+
 .#{$prefix}--modal-container {
   padding: $spacing-05;
   border-radius: 8px;
   background-color: $ui-background;
 }
-
-.#{$prefix}--modal-footer button.#{$prefix}--btn {
-  flex: 0 1 30%; 
-  margin-left: $spacing-02;
+.#{$prefix}--modal-footer {
+  height: max-content;
+  button.#{$prefix}--btn {
+    flex: 0 1 30%; 
+    margin-left: $spacing-02;
+    min-height: 1rem;
+    height: 1rem;
+    padding: 1rem;
+  }
+}
+@media(min-width:768px){
+  .#{$prefix}--modal-content--overflow-indicator{
+    display: none;
+  }
 }
 
 
@@ -169,6 +180,30 @@
   border: 1px solid $ui-03;
 }
 
+
+//Overflow menu items
+.#{$prefix}--header__action--active{
+  border: none;
+}
+.#{$prefix}--overflow-menu.#{$prefix}--overflow-menu--open, .#{$prefix}--overflow-menu.#{$prefix}--overflow-menu--open .#{$prefix}--overflow-menu__trigger{
+  box-shadow: none;
+  background-color: transparent;
+}
+.#{$prefix}--overflow-menu:hover, .#{$prefix}--overflow-menu__trigger:hover {
+  background: transparent;
+}
+.#{$prefix}--overflow-menu.#{$prefix}--overflow-menu--open:hover{
+  background-color: transparent;
+}
+.#{$prefix}--overflow-menu-options--open{
+  background: $ui-02;
+  padding: $spacing-02;
+  border-radius: 6px;
+}
+
+.#{$prefix}--overflow-menu-options__btn{
+  color: $text-01;
+}
 
 // Pagination
 .#{$prefix}--pagination {
@@ -298,8 +333,11 @@
 .#{$prefix}--header {
   background-color: $ui-02;
   border-color: $ui-01;
+  padding: 0 2rem;
 }
-
+a.#{$prefix}--header__name{
+  padding: 0 2rem 0 0;
+}
 a.#{$prefix}--header__name, a.#{$prefix}--header__name:hover {
   color: $text-01;
 }
@@ -353,7 +391,11 @@ a.#{$prefix}--header__menu-item[aria-current='page']::after, .#{$prefix}--header
 }
 
 .#{$prefix}--header__action:hover {
-  background-color: $ui-01;
+  background-color: transparent;
+}
+
+.#{prefix}--header__global {
+  align-items: center;
 }
 
 .#{$prefix}--header__menu-title[aria-expanded='true'] {
@@ -371,5 +413,4 @@ a.#{$prefix}--header__menu-item[aria-current='page']::after, .#{$prefix}--header
   color: $text-01;
   background-color: $ui-01;
 }
-
 

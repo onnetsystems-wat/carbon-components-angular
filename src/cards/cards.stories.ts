@@ -13,7 +13,7 @@ storiesOf("Components|Card", module).addDecorator(
 	.addDecorator(withKnobs)
 	.add("Basic", () => ({
 		template: `
-		<os-card
+		<os-card>
 				
 		</os-card>
 	`
